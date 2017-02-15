@@ -1,0 +1,67 @@
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, button, select, textarea, input, label {
+  font-family: 'Avenir', Futura, Helvetica, Arial, sans-serif;
+}
+
+// svg {
+// 	display: inline-block;
+// 	fill: currentColor;
+// 	width: 16px;
+// 	height: 16px;
+// }
+
+$main-teal: #0fa1ba;
+
+/* Text Highlight */
+::selection {
+    color: #FFF;
+    background: #13B9E0;
+}
+
+/* Global Styles */
+
+.space {
+    height: 1px;
+}
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.hidden {
+    display: none;
+}
+.clear {
+    clear: both;
+}
+@media only screen and (min-width: 64.063em) {
+    .tablet-clear {
+        clear: both;
+    }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.mobiletotablet-clear {
+		clear: both;
+	}
+}
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+img.floatleft,
+.img.floatright {
+    position: relative;
+}
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}

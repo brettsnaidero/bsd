@@ -21,7 +21,7 @@ function styleTags(styles) {
 }
 
 function scriptTag(jsFilePath) {
-  return `<script type="text/javascript" src="${jsFilePath}"></script>`;
+  return `<script type="text/javascript" src="${jsFilePath}"></script><script type="text/javascript" src="./js/page.js"></script>`;
 }
 
 function scriptTags(jsFilePaths) {

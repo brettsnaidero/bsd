@@ -1,0 +1,100 @@
+
+/* Footer */
+footer {
+}
+
+/* Footer Social */
+footer .social {
+  padding: 40px 60px 60px 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer .social li {
+  float: left;
+  margin-left: 20px;
+}
+
+footer .social li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-indent: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+footer .social li a svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: lighten($shape-color,25%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer .social li a:hover svg,
+footer .social li a:focus svg {
+	fill: $secondary;
+}
+
+/* Scroll */
+a.scroll {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px 60px 60px 90px;
+  font-size: 9px;
+  font-size: .9rem;
+  color: lighten($shape-color,25%);
+  line-height: 24px;
+
+  span {
+    opacity: 0.5;
+  }
+}
+
+.mouse-scroll-anim {
+    width: 20px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid lighten($shape-color,25%);
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+
+.mouse-scroll-anim:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    width: 2px;
+    height: 4px;
+    border-radius: 1px;
+    background: lighten($shape-color,25%);
+    animation: scrollwheel 2.5s linear infinite;
+    transform: translateX(-50%)
+}
+
+@keyframes scrollwheel {
+    68% {
+        height: 4px;
+        top: 6px;
+    }
+
+    76% {
+        height: 8px;
+        top: 6px;
+    }
+
+    84%, 92% {
+        top: 10px;
+        height: 4px;
+    }
+}

@@ -1,0 +1,97 @@
+.profile {
+	max-height: 800px;
+  height: 100vh;
+  padding: 220px 0;
+  position: relative;
+
+  @supports (display: flex) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+	.profile {
+		max-height: initial;
+		min-height: auto;
+		padding: 100px 0;
+	}
+}
+
+.profile .row {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @supports (display: flex) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+	.profile .row {
+		max-width: 800px;
+	}
+}
+
+.profile .l-col {
+  width: 60%;
+  float: left;
+}
+
+.profile .r-col {
+  width: 32%;
+  float: right;
+}
+
+@media screen and (max-width: 860px) {
+	.profile .row {
+		max-width: 100%;
+		padding: 0 60px;
+
+		@supports (display: flex) {
+	   	flex-wrap: wrap;
+	  }
+	}
+	.profile .l-col,
+	.profile .r-col {
+	  width: 100%;
+	  float: none;
+	}
+}
+
+.profile p {
+  color: #FFF;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+  margin: 30px 0;
+}
+
+.profile .title {
+  color: #FFF;
+  margin: 10px 0;
+}
+
+.profile li {
+  width: 50%;
+  float: left;
+  margin: 5px 0;
+  color: lighten($shape-color,25%);
+  line-height: 1.35;
+  font-family: monospace;
+}
+
+.profile .image {
+  padding-top: 66.666%;
+  background-size: cover;
+
+  margin-bottom: 30px;
+
+  background-color: $background-color;
+  background-blend-mode: multiply;
+}
