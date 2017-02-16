@@ -13,8 +13,8 @@
 
 @media screen and (max-width: $tablet) {
 	.profile {
-		max-height: initial;
-		min-height: auto;
+		height: auto;
+		max-height: none;
 		padding: 100px 0;
 	}
 }

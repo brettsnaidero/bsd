@@ -22,7 +22,7 @@ export default class MobileNav extends Component {
           <div>
 
             {/* Mobile Nav */}
-            <nav className="pushy pushy-left">
+            <nav className={"pushy" + (this.props.mobileMenuActive ? " active" : "")}>
               {/* Main Nav */}
               <ul className="primary">
                 <li className="pushy-submenu pushy-submenu-closed">

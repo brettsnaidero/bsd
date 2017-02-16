@@ -124,12 +124,12 @@ export default class Home extends Component {
 	render() {
         return (
             <div>
-				<Header />
-				<Intro />
-				<Profile />
-				<Showcase />
-				<Writings />
-				<Contact />
+							<Header />
+							<Intro />
+							<Profile />
+							<Showcase />
+							<Writings />
+							<Contact />
             </div>
         );
     }

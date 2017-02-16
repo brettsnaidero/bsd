@@ -13,18 +13,28 @@ export default class Header extends Component {
         super(props);
 
         this.state = {
-
+					mobileMenuActive: false
         }
     }
 
 	componentDidMount() {
 	}
 
+	toggleMobileMenu() {
+		console.log(this);
+		this.setState({
+			mobileMenuActive: !this.state.mobileMenuActive
+		})
+	}
+
 	render() {
         return (
           <div>
 
-            <MobileNav />
+            <MobileNav
+							mobileMenuActive={this.state.mobileMenuActive}
+							toggleMobileMenu={this.toggleMobileMenu.bind(this)}
+						/>
 
             {/* Header */}
             <div className="header-holder">
@@ -41,11 +51,12 @@ export default class Header extends Component {
                 </nav>
                 <div className="c2a">
                   <a href="#contact" title>Let’s chat!</a>
-                  <button className="menu-btn">
+                  <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
                     <div className="icon">
                       <span />
                       <span />
                       <span />
+											<span />
                     </div>
                     Menu
                   </button>
