@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import * as _ from "lodash";
 
 // Components
-import Header from '../bits/header';
 import Intro from '../bits/intro';
 import Profile from '../bits/profile';
 import Showcase from '../bits/showcase';
@@ -124,7 +123,6 @@ export default class Home extends Component {
 	render() {
         return (
             <div>
-							<Header />
 							<Intro />
 							<Profile />
 							<Showcase />

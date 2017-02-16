@@ -16,8 +16,10 @@ $secondary: #ff0b81;
 @import 'elements/_work';
 @import 'elements/_contact';
 @import 'elements/_profile';
-@import 'elements/_modals';
 @import 'elements/_content';
+@import 'elements/_notfound';
+
+@import 'elements/_work-page';
 
 @import 'plugins/_nav';
 @import 'plugins/_slick';

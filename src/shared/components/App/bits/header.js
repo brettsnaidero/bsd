@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Utils
 import * as _ from "lodash";
@@ -39,18 +40,24 @@ export default class Header extends Component {
             {/* Header */}
             <div className="header-holder">
               <header id="header">
-                <a className="logo" href="#">
+                <Link to="/" className="logo">
                   <img src="../img/logo.svg" alt="Brett Snaidero" />
-                </a>
+                </Link>
                 <nav className="main-nav">
                   <ul>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#showcase">Work</a></li>
-                    <li><a href="#writings">Writing</a></li>
+                    <li>
+											<Link to="/#profile">Profile</Link>
+										</li>
+                    <li>
+											<Link to="/#work">Work</Link>
+										</li>
+                    <li>
+											<Link to="/#writings">Writing</Link>
+										</li>
                   </ul>
                 </nav>
                 <div className="c2a">
-                  <a href="#contact" title>Let’s chat!</a>
+                  <Link to="/#contact" title="Contact">Let’s chat!</Link>
                   <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
                     <div className="icon">
                       <span />

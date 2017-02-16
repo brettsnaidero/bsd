@@ -229,7 +229,6 @@ header .menu-btn {
 	  transition: 0.25s ease-in-out;
 	}
 
-
 	span:nth-child(1) {
 	  top: 0px;
 	}
@@ -264,6 +263,37 @@ header .menu-btn {
 	}
 }
 
+header.stuck .menu-btn {
+	margin: 5px 0;
+	height: 30px;
+	width: 30px;
+
+	span {
+		height: 3px;
+	}
+
+	span:nth-child(1) {
+	  top: 0px;
+	}
+
+	span:nth-child(2),
+	span:nth-child(3) {
+	  top: 14px;
+	}
+
+	span:nth-child(4) {
+	  top: 28px;
+	}
+
+	&.open span:nth-child(1) {
+	  top: 14px;
+	}
+
+	&.open span:nth-child(4) {
+	  top: 14px;
+	}
+}
+
 @media screen and (max-width: $mobile) {
   header .menu-btn {
     display: block;
@@ -271,4 +301,13 @@ header .menu-btn {
   header .c2a a {
     display: none;
   }
+}
+
+@keyframes example {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

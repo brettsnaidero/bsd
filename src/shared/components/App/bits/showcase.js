@@ -19,6 +19,7 @@ export default class Showcase extends Component {
 					loadingModal: false,
 					showcaseItems: [
 						{
+							id: "mmj",
 							title: "MMJ Real Estate",
 							subtitle: "Real Estate Website",
 							image: "img/work/mmj.png",
@@ -50,6 +51,7 @@ export default class Showcase extends Component {
 							]
 						},
 						{
+							id: "illawarradj",
 							title: "Illawarra DJ",
 							subtitle: "Entertainment Business",
 							image: "img/work/iydj.jpg",
@@ -77,6 +79,7 @@ export default class Showcase extends Component {
 							]
 						},
 						{
+							id: "bowser",
 							title: "Bowser Browser",
 							subtitle: "Cheap Petrol Finder",
 							image: "img/work/bowser.jpg",
@@ -104,6 +107,7 @@ export default class Showcase extends Component {
 							]
 						},
 						{
+							id: "leagueandlegends",
 							title: "League & Legends",
 							subtitle: "E-Commerce Website",
 							image: "img/work/landl.jpg",
@@ -132,6 +136,7 @@ export default class Showcase extends Component {
 							]
 						},
 						{
+							id: "polidex",
 							title: "Polidex",
 							subtitle: "Politician Reference Site",
 							image: "img/work/polidex.jpg",
@@ -159,6 +164,7 @@ export default class Showcase extends Component {
 							]
 						},
 						{
+							id: "kidzwish",
 							title: "KidzWish Australia",
 							subtitle: "Charity Website",
 							image: "img/work/kidzwish.jpg",
@@ -195,112 +201,26 @@ export default class Showcase extends Component {
 
 	}
 
-	showItem(num) {
-		this.openModal(num);
-	}
-
-	prevModal() {
-			let newNum = 0;
-			if(this.state.activeModal === 0) {
-				newNum = (this.state.showcaseItems.length - 1);
-			} else {
-				newNum = this.state.activeModal - 1;
-			}
-
-			// Close image and show previous one
-			this.refs[this.state.activeModal].toggle();
-			this.refs[newNum].toggle();
-
-			this.setState({
-				activeModal: newNum
-			});
-	}
-
-	nextModal() {
-			let newNum = 0;
-			if(this.state.activeModal === (this.state.showcaseItems.length - 1)) {
-				newNum = 0;
-			} else {
-				newNum = this.state.activeModal + 1;
-			}
-
-			// Close image and show next one
-			this.refs[this.state.activeModal].toggle();
-			this.refs[newNum].toggle();
-
-			this.setState({
-				activeModal: newNum
-			});
-	}
-
-	openModal(num) {
-		this.setState({
-			isModalActive: true,
-			activeModal: num
-		});
-
-		document.documentElement.style.overflowY = 'hidden';
-	}
-
-	closeModal() {
-		this.setState({
-			isModalActive: false
-		});
-
-		// Close image
-		this.refs[this.state.activeModal].toggle();
-
-		document.documentElement.style.overflowY = 'initial';
-	}
-
 	render() {
         return (
-          <section className="work" id="showcase">
+          <section className="work" id="work">
 
             {/* Shapes */}
 						<Shapes />
 
 						{/* Modal */}
 						<Motion style={{
-							x: ( this.state.isModalActive ? spring(1) : spring(0) )
+							x: ( this.state.isModalActive ? spring(1) : spring(0) ) 
 						}}>
-						{ ({x}) =>
-						<div
-							className={"modal-wrap " + (this.state.isModalActive ? "active" : (x < 1 && x > 0 ? "loading" : "nope" ))}
-							ref="modal"
-							style={{
-								// opacity: `${x}`
-							}}
-						>
-							<div className="modal">
-								<div className="modal-content">
-									<div className={"mod " + (this.state.isModalActive ? "active" : "nope")}></div>
-									{this.state.showcaseItems[this.state.activeModal].content}
-									<div className="showcase-images">
-										{this.state.showcaseItems[this.state.activeModal].imageList.map( (item, index) => (
-											<img alt="Thingo" className="" src={item} key={index} />
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="modal-controls">
-								<button className="close" onClick={ () => this.closeModal() }>
-									<div className="icon"></div>
-									Close
-								</button>
-
-								<div className="middle">
-									<button className="next" onClick={ () => this.nextModal() }>Next</button>
-									<button className="prev" onClick={ () => this.prevModal() }>Prev</button>
-								</div>
-
-								<div className="number">
-									<div className="from">{(this.state.activeModal + 1)}</div>
-									<div className="to">{this.state.showcaseItems.length}</div>
-								</div>
-							</div>
-						</div>
-						}
+							{ ({x}) =>
+								<div
+									className={"modal-wrap"}
+									ref="modal"
+									style={{
+										opacity: `${x}`
+									}}
+								/>
+							}
 						</Motion>
 
             {/* Content */}
@@ -308,10 +228,10 @@ export default class Showcase extends Component {
               <ul>
 								{ this.state.showcaseItems.map( (item, index) => (
 									<ShowcaseItem
+										id={item.id}
 										title={item.title}
 										subtitle={item.subtitle}
 										image={item.image}
-										showItem={this.showItem.bind(this)}
 										num={index}
 										key={index}
 										width={item.width}

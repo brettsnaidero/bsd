@@ -1,0 +1,34 @@
+.work-banner {
+	height: 100vh;
+	background: #000;
+	color: #FFF;
+
+	@supports (display: flex) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.work-banner .row {
+		width: 1400px;
+		margin: 0 auto;
+}
+
+.work-banner .row .text {
+	max-width: 50%;
+}
+
+.work-banner .client {
+	margin-bottom: 15px;
+}
+
+.work-banner h1 {
+	font-size: 90px;
+	// font-size: 2rem;
+}
+
+.work-banner p {
+	margin-top: 50px;
+	line-height: 1.6;
+}

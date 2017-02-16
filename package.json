@@ -17,7 +17,7 @@
     "lint": "eslint src",
     "test": "jest",
     "test:coverage": "jest --coverage",
-		"postinstall": "npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -72,9 +72,11 @@
     "helmet": "3.3.0",
     "hpp": "0.2.1",
     "lodash": "^4.17.4",
+    "nodemailer": "^3.1.1",
     "normalize.css": "5.0.0",
     "offline-plugin": "4.5.4",
     "react": "15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "15.4.2",
     "react-helmet": "3.3.0",
     "react-motion": "^0.4.7",
