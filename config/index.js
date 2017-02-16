@@ -20,7 +20,7 @@ const config = {
   host: getStringEnvVar('SERVER_HOST', 'localhost'),
 
   // The port on which the server should run.
-  port: getIntEnvVar('SERVER_PORT', 1337),
+  port: getIntEnvVar('PORT', 1337),
 
   // The port on which the client bundle development server should run.
   clientDevServerPort: getIntEnvVar('CLIENT_DEVSERVER_PORT', 7331),
