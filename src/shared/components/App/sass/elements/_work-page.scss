@@ -2,6 +2,8 @@
 	height: 100vh;
 	background: #000;
 	color: #FFF;
+	background-position: center;
+	background-size: cover;
 
 	@supports (display: flex) {
 		display: flex;
@@ -11,12 +13,13 @@
 }
 
 .work-banner .row {
-		width: 1400px;
-		margin: 0 auto;
+	padding: 0 60px;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 .work-banner .row .text {
-	max-width: 50%;
+	max-width: 66.666%;
 }
 
 .work-banner .client {
@@ -31,4 +34,11 @@
 .work-banner p {
 	margin-top: 50px;
 	line-height: 1.6;
+}
+
+/* Work Content */
+.work-content {
+	background-color: #FFF;
+	padding: 5em 0;
+	text-align: center;
 }
