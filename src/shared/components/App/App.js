@@ -29,7 +29,7 @@ function App() {
       />
 
     	<Header />
-        
+
     	<Match
     		exactly
     		pattern="/"
@@ -46,6 +46,16 @@ function App() {
     		render={routerProps =>
     			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
     				{ ({ Work }) => Work && <Work {...routerProps} /> }
+    			</CodeSplit>
+    		}
+    	/>
+
+        <Match
+    		exactly
+    		pattern="/writings/:id"
+    		render={routerProps =>
+    			<CodeSplit chunkName="blog" modules={{ Blog: require('./Blog/blog') }}>
+    				{ ({ Blog }) => Blog && <Blog {...routerProps} /> }
     			</CodeSplit>
     		}
     	/>

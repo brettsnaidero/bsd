@@ -15,10 +15,10 @@ export default class Showcase extends Component {
         super(props);
 
         this.state = {
-					isModalActive: false,
-					activeModal: 0,
-					loadingModal: false,
-					showcaseItems: showcaseItems
+			isModalActive: false,
+			activeModal: 0,
+			loadingModal: false,
+			showcaseItems: showcaseItems
         }
     }
 
@@ -31,39 +31,40 @@ export default class Showcase extends Component {
           <section className="work" id="work">
 
             {/* Shapes */}
-						<Shapes />
+			<Shapes />
 
-						{/* Modal */}
-						<Motion style={{
-							x: ( this.state.isModalActive ? spring(1) : spring(0) )
-						}}>
-							{ ({x}) =>
-								<div
-									className={"modal-wrap"}
-									ref="modal"
-									style={{
-										opacity: `${x}`
-									}}
-								/>
-							}
-						</Motion>
+			{/* Modal */}
+			<Motion style={{
+				x: ( this.state.isModalActive ? spring(1) : spring(0) )
+			}}>
+				{ ({x}) =>
+					<div
+						className={"modal-wrap"}
+						ref="modal"
+						style={{
+							opacity: `${x}`
+						}}
+					/>
+				}
+			</Motion>
 
             {/* Content */}
-						<div className="work-listings clearfix">
+			<div className="work-listings clearfix">
               <ul>
-								{ this.state.showcaseItems.map( (item, index) => (
-									<ShowcaseItem
-										id={item.id}
-										title={item.title}
-										subtitle={item.subtitle}
-										image={item.image}
-										num={index}
-										key={index}
-										width={item.width}
-										height={item.height}
-										ref={index}
-									/>
-								))}
+				{ this.state.showcaseItems.map( (item, index) => (
+					<ShowcaseItem
+						id={item.id}
+						title={item.title}
+						subtitle={item.subtitle}
+						image={item.image}
+						num={index}
+						key={index}
+						width={item.width}
+						height={item.height}
+						ref={index}
+
+					/>
+				))}
               </ul>
             </div>
 

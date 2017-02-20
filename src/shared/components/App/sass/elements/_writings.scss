@@ -1,0 +1,76 @@
+/* Writing */
+.home-writings {
+    min-height: 100vh;
+    padding: 200px 0;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.home-writings .row {
+    max-width: 1200px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+
+.home-writings .writings-list {
+    color: #FFF;
+
+    font-size: 24px;
+    font-size: calc(20.4448px + 1.11111vw);
+    line-height: 1.6;
+    margin: 20px 0;
+    margin: 1.25rem 0;
+}
+
+.home-writings .writings-list a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.home-writings .writings-list .Slash {
+    display: inline-block;
+    content: '';
+    height: 2rem;
+    margin-right: 1.5rem;
+    padding-right: 1.5rem;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.home-writings .writings-list sup {
+    display: inline-block;
+    color: rgba(255,255,255,0.5);
+    font-size: .7rem;
+    top: -0.9rem;
+    position: relative;
+    margin-left: .5rem;
+    line-height: 3.33333333rem;
+}
+
+/* Blog Page */
+.blog-page {
+    padding: 240px 0 120px 0;
+}
+
+.blog-page article h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+.Page {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media screen and (min-width: 848px) {
+    .Page {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -3,13 +3,14 @@
   font-family: sans-serif;
 }
 
-$paragraph-colour: #1c1c1c;
-$header-colour: #1c1c1c;
+$paragraph-colour: #FFF;
+$header-colour: #FFF;
 $margin: 30px;
 
 /* Content */
 @mixin content {
     margin: 0;
+    line-height: 1.66666667;
 
     &:before,
     &:after {
@@ -21,68 +22,113 @@ $margin: 30px;
         clear: both;
     }
 
-    h1, h2, h3 {
-        line-height: 1.2;
-    	color: $header-colour;
+    a {
+        text-decoration: none;
+        color: #141414;
+        background-image: -webkit-linear-gradient(#fa004b,#fa004b);
+        background-image: linear-gradient(#fa004b,#fa004b);
+        background-size: 100% .1rem;
+        background-repeat: no-repeat;
+        background-position: left bottom
     }
 
-	h1, h2, h3, h4, h5, h6 {
-		& + p {
-			margin-top: $margin / 2;
-		}
-
-		&:first-child {
-			margin-top: $margin / 2;
-		}
-	}
-
-    h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
+    a:hover {
+        -webkit-animation: linkAnimation .5s ease;
+        animation: linkAnimation .5s ease
     }
 
-    h2 {
-        font-size: 2em;
-        font-weight: bold;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
+    @-webkit-keyframes linkAnimation {
+        0% {
+            background-position: right bottom;
+            background-size: 100% .1rem
+        }
+
+        50% {
+            background-position: right bottom;
+            background-size: 0% .1rem
+        }
+
+        51% {
+            background-position: left bottom;
+            background-size: 0% .1rem
+        }
+
+        100% {
+            background-position: left bottom;
+            background-size: 100% .1rem
+        }
     }
 
-    h3 {
-        font-size: 1.75em;
-        font-weight: bold;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
-    }
+    @keyframes linkAnimation {
+        0% {
+            background-position: right bottom;
+            background-size: 100% .1rem
+        }
 
-    h4 {
-        font-size: 1.675em;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
-    }
+        50% {
+            background-position: right bottom;
+            background-size: 0% .1rem
+        }
 
-    h5 {
-        font-size: 1.5em;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
-    }
+        51% {
+            background-position: left bottom;
+            background-size: 0% .1rem
+        }
 
-    h6 {
-        font-size: 1.25em;
-        margin-top: $margin;
-        margin-bottom: $margin / 2;
+        100% {
+            background-position: left bottom;
+            background-size: 100% .1rem
+        }
     }
 
     p {
-        color: $paragraph-colour;
-		font-size: 18px;
-        font-size: 1.125em;
-        line-height: 1.6;
-        margin-top: $margin;
-        margin-bottom: $margin;
+        margin: 1.66666667rem 0;
+        color: currentColor;
     }
+
+    ul,ol {
+        margin: 1.66666667rem 0;
+        color: currentColor;
+    }
+
+    ul li,ol li {
+        line-height: 1.66666667rem;
+        color: currentColor;
+    }
+
+    ul ul,ol ul,ul ol,ol ol {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+
+    blockquote {
+        line-height: 1.66666667rem;
+        margin: 1.66666667rem 0;
+        padding: 0 1.66666667rem;
+        color: currentColor;
+    }
+
+    h1 {
+        margin: 1.66666667rem 0;
+        font-size: 2rem;
+        line-height: 1.66666667rem;
+        color: currentColor;
+    }
+
+    h2 {
+        margin: 1.66666667rem 0;
+        font-size: 1.2rem;
+        line-height: 1.66666667rem;
+        color: currentColor;
+    }
+
+    h3 {
+        margin: 1.66666667rem 0;
+        font-size: 1rem;
+        line-height: 1.66666667rem;
+        color: currentColor;
+    }
+
 
     img {
         margin: 1.125em 0em;
@@ -147,55 +193,6 @@ $margin: 30px;
     q,
     blockquote {
         font-style: italic;
-    }
-
-    a,
-    a:link,
-    a:visited {
-        color: $header-colour;
-        font-weight: 600;
-        text-decoration: none;
-        position: relative;
-    }
-
-    a:hover,
-    a:focus {
-        text-decoration: underline;
-    }
-
-    a:active,
-    a:focus {
-        color: #008ae0;
-        text-decoration: none;
-        outline: none;
-    }
-
-    ul {
-        margin: 0.5em 0em;
-
-        li {
-            font-size: 1.125em;
-            line-height: 1.5em;
-            color: $paragraph-colour;
-            margin: 0.5em 0em 0.5em 2em;
-            list-style: disc;
-        }
-    }
-
-    ol {
-        list-style: decimal;
-
-        li {
-            color: $paragraph-colour;
-            font-size: 1.125em;
-            line-height: 1.5em;
-            margin: 0.5em 0em 0.5em 2em;
-        }
-    }
-
-    ul li p,
-    ol li p {
-      font-size: 1em;
     }
 
     table {
@@ -264,12 +261,10 @@ $margin: 30px;
     }
 }
 
-.content {
+.content,
+article {
     @include content;
-}
 
-@media screen and (min-width: 800px) {
-  .mainstuff {
-    padding-left: 2rem;
-  }
+    color: #FFF;
+    font-size: 112.5%;
 }

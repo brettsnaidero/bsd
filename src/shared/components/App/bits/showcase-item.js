@@ -35,27 +35,29 @@ export default class ShowcaseItem extends Component {
   render() {
     return (
       <li>
-				<Link to={`/work/${this.props.id}`} className="item"> {/* iseeyou */}
-          <div className="most">
-            <div className="img-mask">
-              <div className="img-spacer"/>
-              <div className="show-mask"/>
-              <div className="img" ref="img" style={{
-                backgroundImage: 'url(' + this.props.image + ')'
-              }}/>
-            </div>
-            <div className="number-label">{(this.props.num + 1)}</div>
-            <div className="text-label">
-              <div className="title">
-                <span>{this.props.title}</span>
+        <ISeeYou>
+    		<Link to={`/work/${this.props.id}`} className="item">
+              <div className="most">
+                <div className="img-mask">
+                  <div className="img-spacer"/>
+                  <div className="show-mask"/>
+                  <div className="img" ref="img" style={{
+                    backgroundImage: 'url(' + this.props.image + ')'
+                  }}/>
+                </div>
+                <div className="number-label">{(this.props.num + 1)}</div>
+                <div className="text-label">
+                  <div className="title">
+                    <span>{this.props.title}</span>
+                  </div>
+                  <div className="desc">
+                    <span>{this.props.subtitle}</span>
+                  </div>
+                </div>
               </div>
-              <div className="desc">
-                <span>{this.props.subtitle}</span>
-              </div>
-            </div>
-          </div>
-          <div className="url">http://mmjrealestate.com.au</div>
-        </Link>
+              <div className="url">http://mmjrealestate.com.au</div>
+            </Link>
+        </ISeeYou>
       </li>
     );
   }

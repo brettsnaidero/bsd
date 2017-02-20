@@ -388,39 +388,39 @@
 }
 
 /* Show Things */
-.js .work .work-listings .item.iseeyou {
+.js .work .work-listings .iseeyou .item {
 	opacity: 1;
 }
 
-.js .work .work-listings .item.iseeyou .show-mask  {
+.js .work .work-listings .iseeyou .item .show-mask  {
 	width: 100%;
 	transition: 1s all ease;
 	background-color: $background-color;
 }
 
-.js .work .work-listings .item.iseeyou.active {
+.js .work .work-listings .iseeyou.active .item {
 	// animation: showItem 0.5s ease 1;
 	animation: none;
 }
 
-.js .work .work-listings .item.iseeyou.active .show-mask {
+.js .work .work-listings .iseeyou.active .item .show-mask {
 	width: 0%;
 }
 
-.js .work .work-listings .item.iseeyou .text-label .title span {
+.js .work .work-listings .iseeyou .item .text-label .title span {
 	display: block;
 	transform: translateY(100%);
 	transition: 0.5s all ease 0.5s;
 }
 
-.js .work .work-listings .item.iseeyou .text-label .desc span {
+.js .work .work-listings .iseeyou .item .text-label .desc span {
 	display: block;
 	transform: translateY(100%);
 	transition: 0.5s all ease 1s;
 }
 
-.js .work .work-listings .item.iseeyou.active .text-label .title span,
-.js .work .work-listings .item.iseeyou.active .text-label .desc span {
+.js .work .work-listings .iseeyou.active .item .text-label .title span,
+.js .work .work-listings .iseeyou.active .item .text-label .desc span {
 	transform: translateY(0%);
 }
 
