@@ -5,6 +5,7 @@ import * as _ from "lodash";
 
 import Shapes from './shapes';
 import Footer from './footer';
+import ISeeYou from './iseeyou';
 
 // App
 export default class Intro extends Component {
@@ -27,12 +28,12 @@ export default class Intro extends Component {
             <div className="image" id="trigger" style={{backgroundImage: 'url(img/home.jpg)'}} />
 
             {/* Designer */}
-            <div className="banner-text iseeyou">
+						<ISeeYou classesForChild="banner-text">
               <h1>Hello, I'm <span className="name">Brett Snaidero</span> —
                 <span className="line">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span>.</span></h1>
-            </div>
+            </ISeeYou>
 
-			<Shapes />
+						<Shapes />
 
             <Footer/>
 

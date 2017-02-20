@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import * as _ from 'lodash';
 
 import Shapes from './shapes';
+import ISeeYou from './iseeyou';
 
 // App
 export default class Contact extends Component {
@@ -38,13 +39,12 @@ export default class Contact extends Component {
 	render() {
         return (
           <section className="home-contact" id="contact">
-			{/* Shapes */}
-			<Shapes/>
-			
+						{/* Shapes */}
+						<Shapes/>
+
             {/* Text */}
-            <div className="banner-text iseeyou">
-              <h2>Let's make something <span>great together —</span>
-              </h2>
+						<ISeeYou classesForChild="banner-text">
+              <h2>Lets make something <span>great together —</span></h2>
               <div className="cols">
                 <div className="left-col">
                   <form>
@@ -95,7 +95,7 @@ export default class Contact extends Component {
                   <p>info@brettsnaidero.com</p>
                 </div>
               </div>
-            </div>
+            </ISeeYou>
           </section>
         );
     }

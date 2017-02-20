@@ -17,11 +17,7 @@ export default class Home extends Component {
 
 	componentDidMount() {
 		this.parallax();
-
-		inView('.iseeyou').on('enter', el => {
-			el.classList.add('active')
-		});
-
+		
 		// Call SVG4Everybody
 		svg4everybody();
 
@@ -51,8 +47,6 @@ export default class Home extends Component {
 			} else {
 			  headerEl.classList.remove('stuck');
 			};
-		  // Work images
-		  // positionWorkImages();
 		}, 100));
 
 		// Toggler

@@ -15,10 +15,10 @@ export default class Showcase extends Component {
         super(props);
 
         this.state = {
-			isModalActive: false,
-			activeModal: 0,
-			loadingModal: false,
-			showcaseItems: showcaseItems
+					isModalActive: false,
+					activeModal: 0,
+					loadingModal: false,
+					showcaseItems: showcaseItems
         }
     }
 

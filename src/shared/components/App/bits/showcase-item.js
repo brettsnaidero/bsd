@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import * as _ from "lodash";
 
 import {Motion, spring} from 'react-motion';
+import ISeeYou from './iseeyou';
 
 // App
 export default class ShowcaseItem extends Component {
@@ -34,7 +35,7 @@ export default class ShowcaseItem extends Component {
   render() {
     return (
       <li>
-				<Link to={`/work/${this.props.id}`} className="item iseeyou">
+				<Link to={`/work/${this.props.id}`} className="item"> {/* iseeyou */}
           <div className="most">
             <div className="img-mask">
               <div className="img-spacer"/>

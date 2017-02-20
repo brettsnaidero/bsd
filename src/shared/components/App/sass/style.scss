@@ -50,13 +50,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Show Things */
-.js .iseeyou,
-.js .iseeyou {
+.iseeyou,
+.iseeyou {
 	opacity: 0;
 }
 
-.js .iseeyou.active,
-.js .iseeyou.active {
+.iseeyou.active,
+.iseeyou.active {
 	animation: showThing 0.5s ease 1;
 	opacity: 1;
 }
