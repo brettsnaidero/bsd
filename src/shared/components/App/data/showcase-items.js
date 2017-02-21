@@ -2,179 +2,126 @@ import React from 'react';
 
 const showcaseItems = [
     {
-        id: "mmj",
-        title: "MMJ Real Estate",
-        subtitle: "Real Estate Website",
-        image: "img/work/mmj.png",
+        id: 'mmj',
+        title: 'MMJ Real Estate',
+        subtitle: 'Real Estate Website',
+        image: 'img/work/mmj.png',
         width: 360,
         height: 450,
-        content: (
-            <div className="content">
-                <h1>MMJ Real Estate</h1>
-                <div className="what">Real Estate Website</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2017</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">MMJ Real Estate</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Product</div>
-                        <div className="answer">Real Estate Site</div>
-                    </div>
-                </div>
-            </div>
+        period: '',
+        client: '',
+        description: (
+            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country. They are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.</p>
         ),
-        imageList: [
-            "img/work/iydj.jpg"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/mmj.jpg'
+            }
+        }
     },
     {
-        id: "illawarradj",
-        title: "Illawarra DJ",
-        subtitle: "Entertainment Business",
-        image: "img/work/iydj.jpg",
+        id: 'illawarradj',
+        title: 'Illawarra DJ',
+        subtitle: 'Entertainment Business',
+        image: 'img/work/iydj.jpg',
         width: 240,
         height: 320,
-        content: (
-            <div className="content">
-                <h1>Illawarra DJ</h1>
-                <div className="what">Business/Website</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2016</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">Myself!</div>
-                    </div>
-                </div>
-            </div>
+        period: '',
+        client: '',
+        description: (
+            <p>Another side project of mine, the Illawarra DJ site gave people on the South Coast an easy way to organise a DJ for their parties and events. This was a project that was cooked up by a friend of mine, and I took on the design and website development for the idea. I designed the brand for the site first, putting together an angular and geometric logo and pairing it with a dark, club-inspired colour scheme to give the site a stylish vibe. This brand was then applied to the website, which I built into a simple CMS installation to give us quick control over the content on the site.</p>
         ),
-        imageList: [
-            "img/work/show-iydj.jpg"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/iydj.jpg'
+            }
+        }
     },
     {
-        id: "bowser",
-        title: "Bowser Browser",
-        subtitle: "Cheap Petrol Finder",
-        image: "img/work/bowser.jpg",
+        id: 'bowser',
+        title: 'Bowser Browser',
+        subtitle: 'Cheap Petrol Finder',
+        image: 'img/work/bowser.jpg',
         width: 240,
         height: 320,
-        content: (
-            <div className="content">
-                <h1>Bowser Browser</h1>
-                <div className="what">Petrol Finder Web App</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2017</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">Myself!</div>
-                    </div>
-                </div>
-            </div>
+        period: '',
+        client: '',
+        description: (
+            <p>In late 2016, I took a General Assembly course to build up my Javascript skills. As part of the course, I completed this as a major project, utilising React to develop a simple web app for finding chaep petrol. I hooked in to a freely available API provided by the NSW government, this site visualises Petrol Stations and their daily set prices, allowing people to quickly find the cheapest petrol available to them.</p>
         ),
-        imageList: [
-            "img/work/iydj.jpg"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/show-landl.jpg'
+            }
+        }
     },
     {
-        id: "leagueandlegends",
-        title: "League & Legends",
-        subtitle: "E-Commerce Website",
-        image: "img/work/landl.jpg",
+        id: 'leagueandlegends',
+        title: 'League & Legends',
+        subtitle: 'E-Commerce Website',
+        image: 'img/work/landl.jpg',
         width: 240,
         height: 320,
-        content: (
-            <div className="content">
-                <h1>League &amp; Legends</h1>
-                <div className="what">E-Commerce Website</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2017</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">League &amp; Legends</div>
-                    </div>
-                </div>
-            </div>
+        period: '',
+        client: '',
+        description: (
+            <p>League and Legends are a successful online store, who sell a large variety of NRL Merchandise, right across Australia. Since their original website was launched, the usage of mobile tablets has increased and so has the number of people using them to purchase online.</p>
         ),
-        imageList: [
-            "img/work/show-landl.jpg",
-            "img/work/show-landl2.jpg"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/show-landl.jpg'
+            },
+            item: {
+                type: 'text',
+                content: 'In early 2015, the Internetrix team were tasked with the responsive redesign of the League & Legends website to increase mobile friendliness, in recognition to the fact that it would lead to higher conversion rates.',
+            },
+            item: {
+                type: 'text',
+                content: 'Since we completed the responsive upgrade, not only have League and Legends seen a rapid rise in conversion rates, but their website has also been ‘visually refreshed’, helping to better reflect the vibrant energy of the League & Legends brand.'
+            }
+        }
     },
     {
-        id: "polidex",
-        title: "Polidex",
-        subtitle: "Politician Reference Site",
-        image: "img/work/polidex.jpg",
+        id: 'polidex',
+        title: 'Polidex',
+        subtitle: 'Politician Reference Site',
+        image: 'img/work/polidex.jpg',
         width: 240,
         height: 320,
-        content: (
-            <div className="content">
-                <h1>Polidex</h1>
-                <div className="what">Web App</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2017</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">Myself!</div>
-                    </div>
-                </div>
-            </div>
+        period: '',
+        client: '',
+        description: (
+            <p><strong>Polidex</strong> is a side-project I began in 2015, with the aim of making it a little easier to keep track of Australian politics. Built with the React Javascript library, the site uses public data to generate a directory of Australian federal politicians, with some insightful information on each politician. The directory is easily searchable, and allows users to quickly sort through the politicians currently sitting in our two parliamentary houses.</p>
         ),
-        imageList: [
-            "img/work/show-polidex.png"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/show-polidex.png'
+            }
+        }
     },
     {
-        id: "kidzwish",
-        title: "KidzWish Australia",
-        subtitle: "Charity Website",
-        image: "img/work/kidzwish.jpg",
+        id: 'internetrix',
+        title: 'Internetrix',
+        subtitle: 'Digital Agency',
+        image: 'img/work/internetrix.jpg',
         width: 240,
         height: 320,
-        content: (
-            <div className="content">
-                <h1>KidzWish Australia</h1>
-                <div className="what">Charity Website</div>
-                <p>In an ultra-modern company with over 60 production and packaging lines Royal Herkel manufactures more than 1500 products for private labels and brands: from nutritional supplements to medical devices, from pharmaceutical products to cosmetics. Together with the client we created a flexible and royal website.</p>
-                <div className="showcase-info">
-                    <div className="each">
-                        <div className="title">Period</div>
-                        <div className="answer">2017</div>
-                    </div>
-                    <div className="each">
-                        <div className="title">Client</div>
-                        <div className="answer">KidzWish Australia</div>
-                    </div>
-                </div>
-            </div>
+        period: '2015-2016',
+        client: 'Internetrix',
+        description: (
+            <p>When I started at Internetrix as an Interactive Designer in 2014, the agency was undergoing a shift in brand, as it moved into a new physical space and new ownership took helm. I had a unique opportunity to contribute to the development of the Internetrix brand over my 4 years there, working on the internal website, branding, marketing, internal processes, and much, much more.</p>
         ),
-        imageList: [
-            "img/work/iydj.jpg",
-            "img/work/iydj.jpg",
-            "img/work/iydj.jpg"
-        ]
+        imageList: {
+            item: {
+                type: 'image',
+                content: 'img/work/iydj.jpg'
+            }
+        }
     }
 ];
 

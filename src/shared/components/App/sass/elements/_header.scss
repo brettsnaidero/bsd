@@ -128,6 +128,7 @@ header nav ul li a {
   letter-spacing: 0.1em;
   font-variant-ligatures: none;
   font-weight: 500;
+  cursor: pointer;
 
   &:before {
     content: '';
@@ -181,6 +182,7 @@ header .c2a a {
     border: 2px solid $shape-color;
     border-radius: 3px;
     font-variant-ligatures: none;
+    cursor: pointer;
 
     transition: 1s all ease;
 }

@@ -11,7 +11,7 @@ export default class ISeeYou extends Component {
       super(props);
 
       this.state = {
-				visisble: false
+		visisble: false
       }
   }
 
@@ -25,11 +25,11 @@ export default class ISeeYou extends Component {
 
 	render() {
       return (
-				<VisibilitySensor scrollCheck scrollDelay={100} onChange={this.handleInview.bind(this)} partialVisibility={true}> 
-					<div className={ "iseeyou " + ( this.props.classesForChild ? this.props.classesForChild : "" ) + " " + (this.state.visible ? "active" : "inactive")}>
-						{this.props.children}
-					</div>
-				</VisibilitySensor>
+		<VisibilitySensor scrollCheck scrollDelay={50} onChange={this.handleInview.bind(this)} partialVisibility={true}>
+			<div className={ "iseeyou " + ( this.props.classesForChild ? this.props.classesForChild : "" ) + " " + (this.state.visible ? "active" : "inactive")}>
+				{this.props.children}
+			</div>
+		</VisibilitySensor>
       );
   }
 };

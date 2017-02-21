@@ -35,63 +35,67 @@ export default class WorkPage extends Component {
 	render() {
         return (
             <div>
-								{/* Banner */}
-								<section
-									className="work-banner"
-									style={{
-										backgroundImage: 'url(../' + this.state.page.image + ')'
-									}}
-								>
-									<div className="row">
-										<ISeeYou classesForChild="text">
-											<div className="client">Client: {this.state.page.title}</div>
-											<h1>{this.state.page.title}</h1>
-										</ISeeYou>
-									</div>
-								</section>
-								{/* Content */}
-								<section className="work-content">
-									<div className="row">
-										<ISeeYou classesForChild="text">
-												<p>The <strong>British Airways</strong> lounges at Heathrow Airport have a combined footfall of over 155,000 every month. That’s almost two million people that pass through these areas every year. BA approached us requiring a way of advertising to their passengers using digital signage.</p>
-										</ISeeYou>
-										<div className="side">
-											<ISeeYou>
-												<div className="bit">
-														<div className="title">Client</div>
-														<div>British Airways</div>
-												</div>
-											</ISeeYou>
-											<ISeeYou>
-												<div className="bit">
-														<div className="title">Expertise</div>
-														<div>Apps, Strategy, Security</div>
-												</div>
-											</ISeeYou>
-										</div>
-									</div>
-								</section>
-								{/* Images */}
-								<section className="work-images">
-									<div className="row">
-										<ISeeYou>
-											<img src={"../" + this.state.page.image} />
-										</ISeeYou>
-										<ISeeYou>
-											<img src={"../" + this.state.page.image} />
-										</ISeeYou>
-										<ISeeYou>
-											<img src={"../" + this.state.page.image} />
-										</ISeeYou>
-									</div>
-								</section>
-								<section className="work-contact">
-									{/* <Shapes /> */}
-									<div className="row">
-										<h2>That was a fun project :)</h2>
-										<p>If you want to work with me on other fun projects, please get in touch.</p>
-									</div>
-								</section>
+				{/* Banner */}
+				<section
+					className="work-banner"
+					style={{
+						backgroundImage: 'url(../' + this.state.page.image + ')'
+					}}
+				>
+					<div className="row">
+						<ISeeYou classesForChild="text">
+							<div className="client">Client: {this.state.page.title}</div>
+							<h1>{this.state.page.title}</h1>
+						</ISeeYou>
+					</div>
+				</section>
+				{/* Content */}
+				<section className="work-content">
+					<div className="row">
+						<ISeeYou classesForChild="text">
+							{this.state.page.description}
+						</ISeeYou>
+						<div className="side">
+							<ISeeYou>
+								<div className="bit">
+									<div className="title">Client</div>
+									<div>{this.state.page.client}</div>
+								</div>
+							</ISeeYou>
+							<ISeeYou>
+								<div className="bit">
+									<div className="title">Expertise</div>
+									<div>{this.state.page.expertise}</div>
+								</div>
+							</ISeeYou>
+						</div>
+					</div>
+				</section>
+				{/* Images */}
+				<section className="work-images">
+					<div className="row">
+						{_.map(this.state.page.imageList, (each, key) => (
+							<div>
+							{ each.type === 'image' ? (
+								<ISeeYou>
+									<img key={key} src={"../" + each.content} />
+								</ISeeYou>
+							) : (
+								<ISeeYou>
+									<p key={key}>{each.content}</p>
+								</ISeeYou>
+							) }
+							</div>
+						))}
+					</div>
+				</section>
+				<section className="work-contact">
+					{/* <Shapes /> */}
+					<div className="row">
+						<h2>That was a fun project :)</h2>
+						<p>If you want to work with me on other fun projects, please get in touch.</p>
+					</div>
+				</section>
             </div>
         );
     }

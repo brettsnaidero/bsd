@@ -103,8 +103,8 @@
 
 .work-images img {
 	display: block;
-	width: 100%;
-	// margin: 1.25em 0;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 /* Contact */
