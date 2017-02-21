@@ -5246,6 +5246,12 @@ react-router@4.0.0-alpha.6:
     query-string "4.2.3"
     react-broadcast "^0.1.2"
 
+react-scroll:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.4.6.tgz#fcfa942e622aae0fd31ca0b7eb9fad8275a25ce6"
+  dependencies:
+    object-assign "^4.0.1"
+
 react-side-effect@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.0.2.tgz#98e354decdbf0281e4223d87852d33e345eda561"

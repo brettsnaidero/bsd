@@ -10,14 +10,36 @@ import Showcase from '../bits/showcase';
 import Writings from '../bits/writings';
 import Contact from '../bits/contact';
 
+import Scroll from 'react-scroll';
+const LocalLink  = Scroll.Link;
+const Element    = Scroll.Element;
+const Events     = Scroll.Events;
+const scroll     = Scroll.animateScroll;
+const scrollSpy  = Scroll.scrollSpy;
+
 export default class Home extends Component {
 	constructor(props) {
-        super(props);
+    super(props);
+  }
+
+	componentDidMount() {
+    this.scroll();
+  }
+
+	scroll() {
+    const { id } = this.props;
+    if (!id) {
+      return;
     }
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
 
 	componentDidMount() {
 		this.parallax();
-		
+
 		// Call SVG4Everybody
 		svg4everybody();
 
@@ -117,11 +139,21 @@ export default class Home extends Component {
 	render() {
         return (
             <div>
-							<Intro />
-							<Profile />
-							<Showcase />
-							<Writings />
-							<Contact />
+							<Element name="intro">
+								<Intro />
+							</Element>
+							<Element name="profile">
+								<Profile />
+							</Element>
+							<Element name="showcase">
+								<Showcase />
+							</Element>
+							<Element name="writing">
+								<Writings />
+							</Element>
+							<Element name="contact">
+								<Contact />
+							</Element>
             </div>
         );
     }

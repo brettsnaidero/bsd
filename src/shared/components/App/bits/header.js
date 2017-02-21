@@ -8,15 +8,22 @@ import MobileNav from "./mobile-nav";
 
 // import Logo from "../img/logo.svg";
 
+import Scroll from 'react-scroll';
+const LocalLink  = Scroll.Link;
+const Element    = Scroll.Element;
+const Events     = Scroll.Events;
+const scroll     = Scroll.animateScroll;
+const scrollSpy  = Scroll.scrollSpy;
+
 // App
 export default class Header extends Component {
 	constructor(props) {
-        super(props);
+      super(props);
 
-        this.state = {
-					mobileMenuActive: false
-        }
-    }
+      this.state = {
+				mobileMenuActive: false
+      }
+  }
 
 	componentDidMount() {
 	}
@@ -46,18 +53,18 @@ export default class Header extends Component {
                 <nav className="main-nav">
                   <ul>
                     <li>
-											<Link to="/#profile">Profile</Link>
+											<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
 										</li>
                     <li>
-											<Link to="/#work">Work</Link>
+											<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
 										</li>
                     <li>
-											<Link to="/#writings">Writing</Link>
+											<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
 										</li>
                   </ul>
                 </nav>
                 <div className="c2a">
-                  <Link to="/#contact" title="Contact">Let’s chat!</Link>
+                  <LocalLink to="contact" title="Contact">Let’s chat!</LocalLink>
                   <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
                     <div className="icon">
                       <span />

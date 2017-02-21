@@ -15,52 +15,52 @@ import { safeConfigGet } from '../../utils/config';
 function App() {
   return (
     <div>
-      {/*
-        All of the following will be injected into our page header.
-        @see https://github.com/nfl/react-helmet
-      */}
-      <Helmet
-        htmlAttributes={safeConfigGet(['htmlPage', 'htmlAttributes'])}
-        titleTemplate={safeConfigGet(['htmlPage', 'titleTemplate'])}
-        defaultTitle={safeConfigGet(['htmlPage', 'defaultTitle'])}
-        meta={safeConfigGet(['htmlPage', 'meta'])}
-        link={safeConfigGet(['htmlPage', 'links'])}
-        script={safeConfigGet(['htmlPage', 'scripts'])}
-      />
+	      {/*
+	        All of the following will be injected into our page header.
+	        @see https://github.com/nfl/react-helmet
+	      */}
+	      <Helmet
+	        htmlAttributes={safeConfigGet(['htmlPage', 'htmlAttributes'])}
+	        titleTemplate={safeConfigGet(['htmlPage', 'titleTemplate'])}
+	        defaultTitle={safeConfigGet(['htmlPage', 'defaultTitle'])}
+	        meta={safeConfigGet(['htmlPage', 'meta'])}
+	        link={safeConfigGet(['htmlPage', 'links'])}
+	        script={safeConfigGet(['htmlPage', 'scripts'])}
+	      />
 
-    	<Header />
+	    	<Header />
 
-    	<Match
-    		exactly
-    		pattern="/"
-    		render={routerProps =>
-    			<CodeSplit chunkName="home" modules={{ Home: require('./Home/home') }}>
-    				{ ({ Home }) => Home && <Home {...routerProps} /> }
-    			</CodeSplit>
-    		}
-    	/>
+	    	<Match
+	    		exactly
+	    		pattern="/"
+	    		render={routerProps =>
+	    			<CodeSplit chunkName="home" modules={{ Home: require('./Home/home') }}>
+	    				{ ({ Home }) => Home && <Home {...routerProps} /> }
+	    			</CodeSplit>
+	    		}
+	    	/>
 
-        <Match
-    		exactly
-    		pattern="/work/:id"
-    		render={routerProps =>
-    			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
-    				{ ({ Work }) => Work && <Work {...routerProps} /> }
-    			</CodeSplit>
-    		}
-    	/>
+	      <Match
+	    		exactly
+	    		pattern="/work/:id"
+	    		render={routerProps =>
+	    			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
+	    				{ ({ Work }) => Work && <Work {...routerProps} /> }
+	    			</CodeSplit>
+	    		}
+	    	/>
 
-        <Match
-    		exactly
-    		pattern="/writings/:id"
-    		render={routerProps =>
-    			<CodeSplit chunkName="blog" modules={{ Blog: require('./Blog/blog') }}>
-    				{ ({ Blog }) => Blog && <Blog {...routerProps} /> }
-    			</CodeSplit>
-    		}
-    	/>
+	      <Match
+	    		exactly
+	    		pattern="/writings/:id"
+	    		render={routerProps =>
+	    			<CodeSplit chunkName="blog" modules={{ Blog: require('./Blog/blog') }}>
+	    				{ ({ Blog }) => Blog && <Blog {...routerProps} /> }
+	    			</CodeSplit>
+	    		}
+	    	/>
 
-    	<Miss component={NotFound} />
+	    	<Miss component={NotFound} />
     </div>
   );
 }

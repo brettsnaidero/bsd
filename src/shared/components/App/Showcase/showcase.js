@@ -3,23 +3,27 @@ import React, { Component } from 'react';
 // Utils
 import * as _ from 'lodash';
 
-
 import showcaseItems from '../data/showcase-items.js';
 import Shapes from '../bits/shapes';
 import ISeeYou from '../bits/iseeyou';
 
 export default class WorkPage extends Component {
 	constructor(props) {
-        super(props);
+      super(props);
 
-				this.state = {
-					page: {},
-					visibility: {
-						bannertext: false,
-						maintext: false
-					}
+			this.state = {
+				page: {},
+				visibility: {
+					bannertext: false,
+					maintext: false
 				}
-    }
+			}
+  }
+
+	componentDidMount() {
+		// Scroll to top on load
+		window.scrollTo(0,0);
+	}
 
 	componentWillMount() {
 		let page = _.find(showcaseItems, {'id': this.props.params.id});

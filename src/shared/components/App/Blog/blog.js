@@ -8,9 +8,10 @@ export default class WritingsPage extends Component {
         super(props);
     }
 
-	componentDidMount() {
-
-	}
+		componentDidMount() {
+			// Scroll to top on load
+			window.scrollTo(0,0);
+		}
 
 	render() {
 		console.log(this.props.params.id);

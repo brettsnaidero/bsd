@@ -25,7 +25,7 @@ export default class ISeeYou extends Component {
 
 	render() {
       return (
-				<VisibilitySensor onChange={this.handleInview.bind(this)} partialVisibility={true}> 
+				<VisibilitySensor scrollCheck scrollDelay={100} onChange={this.handleInview.bind(this)} partialVisibility={true}> 
 					<div className={ "iseeyou " + ( this.props.classesForChild ? this.props.classesForChild : "" ) + " " + (this.state.visible ? "active" : "inactive")}>
 						{this.props.children}
 					</div>
