@@ -12,22 +12,23 @@ export default class Contact extends Component {
       super(props);
 
       this.state = {
-				url: '/api/comments',
-				author: '',
-				text: ''
+			url: '/sayHello',
+			author: '',
+			text: ''
       }
   }
 
 	handleAuthorChange(e) {
     this.setState({
-			author: e.target.value
-		});
+		author: e.target.value
+	});
   }
 
   handleTextChange(e) {
+	  console.log(e, this);
     this.setState({
-			text: e.target.value
-		});
+		text: e.target.value
+	});
   }
 
   handleSubmit(e) {
@@ -48,7 +49,7 @@ export default class Contact extends Component {
   }
 
 	handleCommentSubmit(comment) {
-	 $.ajax({ 
+	 $.ajax({
 		 url: this.state.url,
 		 dataType: 'json',
 		 type: 'POST',
@@ -60,47 +61,52 @@ export default class Contact extends Component {
 			 console.error(this.state.url, status, err.toString());
 		 }.bind(this)
 	 });
- }
+		fetch(this.state.url, {
+			method: 'post',
+			body: JSON.stringify({
+				data: comment
+			}).replace(/{|}/gi, "")
+		})
+	}
 
 	render() {
         return (
           <section className="home-contact" id="contact">
-						{/* Shapes */}
-						<Shapes/>
+			{/* Shapes */}
+			<Shapes/>
 
             {/* Text */}
-						<ISeeYou classesForChild="banner-text">
-							<div className="row">
+			<ISeeYou classesForChild="banner-text">
+				<div className="row">
 	              <h2>Lets make something <span>great together —</span></h2>
 	              <div className="cols">
 	                <div className="left-col">
-	                  <form className="commentForm" onSubmit={this.handleSubmit}>
+	                  <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
 	                    <div className="field">
 	                      <input
-													type="text"
-													placeholder="Name*"
-													value={this.state.author}
-          								onChange={this.handleAuthorChange}
-												/>
+							type="text"
+							placeholder="Name*"
+							value={this.state.author}
+							onChange={this.handleAuthorChange.bind(this)}
+							/>
 	                    </div>
 	                    <div className="field">
 	                      <input
-													type="text"
-													placeholder="Company"
-													value={this.state.text}
-          								onChange={this.handleTextChange}
-												/>
+							type="text"
+							placeholder="Company"
+							value={this.state.text}
+          					onChange={this.handleTextChange.bind(this)}
+							/>
 	                    </div>
 	                    {/*
 	                    <div className="field">
 	                      <textarea
-													rows={5}
-													placeholder="Message*"
-													defaultValue={""}
-													name="message"
-												/>
-	                    </div>
-											*/}
+							rows={5}
+							placeholder="Message*"
+							defaultValue={""}
+							name="message"
+						/>
+	                    </div> 	*/}
 	                    <div className="field">
 	                      <input type="submit" value="Send Enquiry" />
 	                    </div>
@@ -111,7 +117,7 @@ export default class Contact extends Component {
 	                  <p>info@brettsnaidero.com</p>
 	                </div>
 	              </div>
-							</div>
+				</div>
             </ISeeYou>
           </section>
         );

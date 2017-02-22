@@ -21,7 +21,7 @@ export default class Header extends Component {
       super(props);
 
       this.state = {
-				mobileMenuActive: false
+		mobileMenuActive: false
       }
   }
 
@@ -40,27 +40,34 @@ export default class Header extends Component {
           <div>
 
             <MobileNav
-							mobileMenuActive={this.state.mobileMenuActive}
-							toggleMobileMenu={this.toggleMobileMenu.bind(this)}
-						/>
+				mobileMenuActive={this.state.mobileMenuActive}
+				toggleMobileMenu={this.toggleMobileMenu.bind(this)}
+			/>
 
             {/* Header */}
             <div className="header-holder">
               <header id="header">
                 <Link to="/" className="logo">
-                  <img src="../img/logo.svg" alt="Brett Snaidero" />
+					<svg viewBox="0 0 60 60">
+						<path className="shape" d="M52.4,25.7l-8.5-8.5l1.4-1.4c2.4-2.4,2.4-6.2,0-8.5L41,3l-5.7,5.7l0,0C30.6,4,23,4,18.3,8.7L4.1,22.9l17.1,17.1l-4.3,4.3
+		c-2.4,2.4-2.4,6.2,0,8.5l4.3,4.3l8.5-8.5l8.5,8.5l14.2-14.2C57.1,38.1,57.1,30.4,52.4,25.7z"/>
+						<path className="line" d="M21.1,39.9L4.1,22.9L18.3,8.7C23,4,30.6,4,35.3,8.7"/>
+						<path className="line" d="M43.9,17.2l8.5,8.5c4.7,4.7,4.7,12.3,0,17.1L38.2,57l-8.5-8.5"/>
+						<path className="line" d="M52.4,25.7L21.1,57l-4.3-4.3c-2.4-2.4-2.4-6.2,0-8.5l27-27"/>
+						<path className="line" d="M12.6,31.4L41,3l4.3,4.3c2.4,2.4,2.4,6.2,0,8.5l-1.4,1.4"/>
+					</svg>
                 </Link>
                 <nav className="main-nav">
                   <ul>
                     <li>
-											<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
-										</li>
+						<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
+					</li>
                     <li>
-											<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
-										</li>
+						<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
+					</li>
                     <li>
-											<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
-										</li>
+						<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
+					</li>
                   </ul>
                 </nav>
                 <div className="c2a">
@@ -70,7 +77,7 @@ export default class Header extends Component {
                       <span />
                       <span />
                       <span />
-											<span />
+					  <span />
                     </div>
                     Menu
                   </button>

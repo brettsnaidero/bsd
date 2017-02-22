@@ -117,11 +117,7 @@ $sizing-ratio: 1;
   height: 100vh;
   left: 0;
   top: 0;
-  opacity: 0;
-  background-size: cover;
-
-  background-color: $background-color;
-  background-blend-mode: multiply;
+  background: linear-gradient(45deg, rgba($secondary,0.1) 0%, rgba($secondary,0) 100%); 
 }
 
 /**** Shapes ****/

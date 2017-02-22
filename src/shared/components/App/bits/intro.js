@@ -25,7 +25,8 @@ export default class Intro extends Component {
           <section className="home" id="parallaxText">
 
             {/* Image */}
-            <div className="image" id="trigger" style={{backgroundImage: 'url(img/home.jpg)'}} />
+            <div className="image" id="trigger" />
+			{/* style={{backgroundImage: 'url(img/home.jpg)'}} */}
 
             {/* Designer */}
 						<ISeeYou classesForChild="banner-text">

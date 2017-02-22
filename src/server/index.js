@@ -13,6 +13,7 @@ import errorHandlers from './middleware/errorHandlers';
 import config from '../../config';
 
 import nodemailer from 'nodemailer';
+import smtpTransport from 'nodemailer-smtp-transport';
 
 // Create our express based server.
 const app = express();
@@ -23,35 +24,37 @@ router.post('/', handleSayHello);
 
 function handleSayHello(req, res) {
     // Not the movie transporter!
-    let transporter = nodemailer.createTransport({
-        service: 'Gmail',
+    var transporter = nodemailer.createTransport(smtpTransport({
+        service: "hotmail",
         auth: {
-            user: 'brett.snaidero@internetrix.com.au', // Your email id
-            pass: 'yUu2vXx9' // Your password
+            user: "brettsnaidero@hotmail.com",
+            pass: "yUu2vXx9"
         }
-    });
+    }));
 
-		let text = 'Hello world from \n\n' + req.body.name;
+    console.log('Req', req, 'Res:', res);
 
-		let mailOptions = {
-	    from: 'brett.snaidero@internetrix.com.au>', // sender address
-	    to: 'brettsnaidero@hotmail.com', // list of receivers
-	    subject: 'Email Example', // Subject line
-	    text: text //, // plaintext body
-	    // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
-		};
+	let text = 'Hello world from \n\n' + 'Hello'; //req.body.name
 
-		transporter.sendMail(mailOptions, function(error, info){
+	let mailOptions = {
+        from: 'brettsnaidero@hotmail.com', // sender address
+        to: 'brettsnaidero@hotmail.com', // list of receivers
+        subject: 'Email Example', // Subject line
+        text: text //, // plaintext body
+        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
 	    if (error) {
 	        console.log(error);
 	        res.json({
-						yo: 'error'
-					});
+				yo: 'error'
+			});
 	    } else {
 	        console.log('Message sent: ' + info.response);
 	        res.json({
-						yo: info.response
-					});
+				yo: info.response
+			});
 	    };
 	});
 }
