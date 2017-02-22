@@ -38,7 +38,7 @@ export default class Home extends Component {
   }
 
 	componentDidMount() {
-		this.parallax();
+		// this.parallax();
 
 		// Call SVG4Everybody
 		svg4everybody();

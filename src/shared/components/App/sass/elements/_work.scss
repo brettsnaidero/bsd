@@ -2,6 +2,7 @@
 	position: relative;
 	min-height: 100vh;
 	padding: 200px 0;
+	color: $text-color;
 }
 
 
@@ -174,13 +175,14 @@
 
 .work .work-listings li .item {
 	display: block;
+	color: #FFF;
 	text-decoration: none;
 }
 
 .work .work-listings li .item .most {
 	display: block;
 	position: relative;
-	color: #FFF;
+	color: currentColor;
 }
 
 .work .work-listings li .url {
@@ -188,7 +190,7 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	color: #FFF;
+	color: currentColor;
 	opacity: 0;
 }
 
@@ -207,8 +209,8 @@
 }
 
 .work .work-listings .item .img-mask {
-	// clip: rect(0px, 0px, 0px, 0px);
-	// clip-path: inset(0px 0px 0px 0px);
+	clip: rect(0px, 0px, 0px, 0px);
+	clip-path: inset(0px 0px 0px 0px);
 	transition: all .35s ease-out;
 	position: relative;
 	overflow: hidden;
@@ -219,8 +221,8 @@
 }
 
 .work .work-listings .item:hover .most .img-mask {
-	// clip: rect(20px, 20px, 20px, 20px);
-	// clip-path: inset(20px 20px 20px 20px);
+	clip: rect(20px, 20px, 20px, 20px);
+	clip-path: inset(20px 20px 20px 20px);
 }
 
 .work .work-listings .item .img-spacer {
@@ -241,7 +243,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-
+	transform: scale(1);
 	transition: 1s all ease;
 
 	// background-blend-mode: multiply;
@@ -260,6 +262,11 @@
 		background-repeat: repeat;
 		animation: grain 4s steps(8) infinite;
 	}
+}
+
+
+.work .work-listings .item:hover .img {
+	transform: scale(1.1);
 }
 
 @keyframes grain {
@@ -337,7 +344,7 @@
 		right: 100%;
 		height: 2px;
 		width: 30px;
-		background-color: #FFF;
+		background-color: currentColor;
 	}
 }
 
@@ -365,8 +372,8 @@
 	font-size: 24px;
 	font-size: 1.5rem;
 	line-height: 1.35;
-	color: #ffffff;
-	font-weight: 500;
+	color: currentColor;
+	font-weight: bold;
 
 	overflow: hidden;
 	white-space: nowrap;
@@ -379,7 +386,7 @@
 
 .work .work-listings .item .text-label .desc {
 	line-height: 1.35;
-	color: #ffffff;
+	color: currentColor;
 	margin: 2px 0 0 0;
 	opacity: 0.75;
 

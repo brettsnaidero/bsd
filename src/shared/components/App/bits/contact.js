@@ -12,29 +12,55 @@ export default class Contact extends Component {
       super(props);
 
       this.state = {
-				name: '',
-				company: '',
-				email: '',
-				message: ''
+				url: '/api/comments',
+				author: '',
+				text: ''
       }
   }
 
-  handleTextChange(e) {
-		let newState = {};
-		newState[e.target.name] = e.target.value;
+	handleAuthorChange(e) {
+    this.setState({
+			author: e.target.value
+		});
+  }
 
-    this.setState(newState);
+  handleTextChange(e) {
+    this.setState({
+			text: e.target.value
+		});
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    var author = this.state.author.trim();
+    var text = this.state.text.trim();
+    if (!text || !author) {
+      return;
+    }
+    this.handleCommentSubmit({
+			author: author,
+			text: text
+		});
+    this.setState({
+			author: '',
+			text: ''
+		});
   }
 
 	handleCommentSubmit(comment) {
-  }
-
-	componentDidMount() {
-	}
+	 $.ajax({ 
+		 url: this.state.url,
+		 dataType: 'json',
+		 type: 'POST',
+		 data: comment,
+		 success: function(data) {
+			 console.log('Success!');
+		 }.bind(this),
+		 error: function(xhr, status, err) {
+			 console.error(this.state.url, status, err.toString());
+		 }.bind(this)
+	 });
+ }
 
 	render() {
         return (
@@ -44,57 +70,48 @@ export default class Contact extends Component {
 
             {/* Text */}
 						<ISeeYou classesForChild="banner-text">
-              <h2>Lets make something <span>great together —</span></h2>
-              <div className="cols">
-                <div className="left-col">
-                  <form>
-                    <div className="field">
-                      <input
-												type="text"
-												placeholder="Name*"
-												value={this.state.name}
-												name="name"
-					          		onChange={this.handleTextChange}
-											/>
-                    </div>
-                    <div className="field">
-                      <input
-												type="text"
-												placeholder="Company"
-												value={this.state.company}
-												name="company"
-												onChange={this.handleTextChange}
-											/>
-                    </div>
-                    <div className="field">
-                      <input
-												type="email"
-												placeholder="Email*"
-												value={this.state.email}
-												name="email"
-												onChange={this.handleTextChange}
-											/>
-                    </div>
-                    <div className="field">
-                      <textarea
-												rows={5}
-												placeholder="Message*"
-												defaultValue={""}
-												value={this.state.message}
-												name="message"
-												onChange={this.handleTextChange}
-											/>
-                    </div>
-                    <div className="field">
-                      <input type="submit" defaultValue="Send Enquiry" />
-                    </div>
-                  </form>
-                </div>
-                <div className="right-col">
-                  <h5>Email</h5>
-                  <p>info@brettsnaidero.com</p>
-                </div>
-              </div>
+							<div className="row">
+	              <h2>Lets make something <span>great together —</span></h2>
+	              <div className="cols">
+	                <div className="left-col">
+	                  <form className="commentForm" onSubmit={this.handleSubmit}>
+	                    <div className="field">
+	                      <input
+													type="text"
+													placeholder="Name*"
+													value={this.state.author}
+          								onChange={this.handleAuthorChange}
+												/>
+	                    </div>
+	                    <div className="field">
+	                      <input
+													type="text"
+													placeholder="Company"
+													value={this.state.text}
+          								onChange={this.handleTextChange}
+												/>
+	                    </div>
+	                    {/*
+	                    <div className="field">
+	                      <textarea
+													rows={5}
+													placeholder="Message*"
+													defaultValue={""}
+													name="message"
+												/>
+	                    </div>
+											*/}
+	                    <div className="field">
+	                      <input type="submit" value="Send Enquiry" />
+	                    </div>
+	                  </form>
+	                </div>
+	                <div className="right-col">
+	                  <h5>Email</h5>
+	                  <p>info@brettsnaidero.com</p>
+	                </div>
+	              </div>
+							</div>
             </ISeeYou>
           </section>
         );

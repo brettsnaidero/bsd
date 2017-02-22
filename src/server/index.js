@@ -12,8 +12,49 @@ import offlinePage from './middleware/offlinePage';
 import errorHandlers from './middleware/errorHandlers';
 import config from '../../config';
 
+import nodemailer from 'nodemailer';
+
 // Create our express based server.
 const app = express();
+
+const router = express.Router();
+app.use('/sayHello', router);
+router.post('/', handleSayHello);
+
+function handleSayHello(req, res) {
+    // Not the movie transporter!
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'brett.snaidero@internetrix.com.au', // Your email id
+            pass: 'yUu2vXx9' // Your password
+        }
+    });
+
+		let text = 'Hello world from \n\n' + req.body.name;
+
+		let mailOptions = {
+	    from: 'brett.snaidero@internetrix.com.au>', // sender address
+	    to: 'brettsnaidero@hotmail.com', // list of receivers
+	    subject: 'Email Example', // Subject line
+	    text: text //, // plaintext body
+	    // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+		};
+
+		transporter.sendMail(mailOptions, function(error, info){
+	    if (error) {
+	        console.log(error);
+	        res.json({
+						yo: 'error'
+					});
+	    } else {
+	        console.log('Message sent: ' + info.response);
+	        res.json({
+						yo: info.response
+					});
+	    };
+	});
+}
 
 // Don't expose any software information to potential hackers.
 app.disable('x-powered-by');

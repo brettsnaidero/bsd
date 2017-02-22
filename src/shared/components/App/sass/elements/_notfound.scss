@@ -2,6 +2,7 @@
 	height: 100vh;
 	text-align: center;
 	padding: 0 40px;
+	color: $text-color;
 
 	@supports (display: flex) {
 		display: flex;
@@ -11,15 +12,15 @@
 }
 
 .notfound h1 {
-	color: #FFF;
+	color: currentColor;
 	font-size: 32px;
 	font-size: 2rem;
 }
 
 .notfound p {
-	color: #FFF;
+	color: currentColor;
 	margin-top: 20px;
-	
+
 	font-size: 24px;
 	font-size: 1.5rem;
 }

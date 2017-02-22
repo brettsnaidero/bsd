@@ -30,7 +30,7 @@ export default class Intro extends Component {
             {/* Designer */}
 						<ISeeYou classesForChild="banner-text">
               <h1>Hello, I'm <span className="name">Brett Snaidero</span> —
-                <span className="line">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span>.</span></h1>
+                <span className="line">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span> <span className="hash">*</span></span></h1>
             </ISeeYou>
 
 						<Shapes />

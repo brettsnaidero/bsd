@@ -1,8 +1,8 @@
-$main-colour: blue;
+$main-colour: $secondary;
 
 /* Enquiry Form */
 form {
-	color: #FFFFFF;
+	color: currentColor;
 }
 
 form:after {
@@ -286,7 +286,7 @@ form {
 			line-height: 60px;
 			padding: 0 32px 0 32px;
 			background: none;
-			color: #FFF;
+			color: $text-color;
 			font-family: 'Avenir', sans-serif;
 			font-size: 20px;
 
@@ -303,7 +303,7 @@ form {
 
         &:hover,
 				&:focus {
-					color: #FFF;
+					color: $text-color;
 					background-color: $main-colour;
 					border-color: $main-colour;
         }

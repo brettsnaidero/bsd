@@ -76,13 +76,17 @@ export default class WorkPage extends Component {
 					<div className="row">
 						{_.map(this.state.page.imageList, (each, key) => (
 							<div>
-							{ each.type === 'image' ? (
+							{ each.type == 'image' ? (
 								<ISeeYou>
-									<img key={key} src={"../" + each.content} />
+									<div className="image-bit">
+										<img key={key} src={"../" + each.content} />
+									</div>
 								</ISeeYou>
 							) : (
 								<ISeeYou>
-									<p key={key}>{each.content}</p>
+									<div className="text-bit">
+										<p key={key}>{each.content}</p>
+									</div>
 								</ISeeYou>
 							) }
 							</div>

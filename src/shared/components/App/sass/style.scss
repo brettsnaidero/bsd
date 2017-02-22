@@ -4,9 +4,11 @@
 @import 'primary/_print';
 @import 'primary/_screen';
 
-$background-color: #250d8a;
-$shape-color: #2c50ff; //252bff
+$background-color: #3f25ac; //#250d8a;
+$shape-color: #656dff; // #2c50ff;
+//252bff
 $secondary: #ff0b81;
+$text-color: #fff;
 
 ::selection { background: #ff0b81; }
 

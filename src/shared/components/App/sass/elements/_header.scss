@@ -144,7 +144,7 @@ header nav ul li a {
   }
   &:hover,
 	&.active {
-	  color: #FFF;
+	  color: $text-color;
   }
   &:hover:before,
 	&.active:before {
@@ -175,7 +175,7 @@ header .c2a a {
     display: block;
     line-height: 20px;
     text-decoration: none;
-    color: #fff;
+    color: $text-color;
     position: relative;
     letter-spacing: 0.1em;
     font-weight: 500;
@@ -224,7 +224,7 @@ header .menu-btn {
 	  position: absolute;
 	  height: 4px;
 	  width: 100%;
-	  background: #fff;
+	  background: $text-color;
 	  border-radius: 9px;
 	  opacity: 1;
 	  left: 0;

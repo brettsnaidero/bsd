@@ -61,12 +61,12 @@
 .work-content .row .text {
 	max-width: 66.666%;
 
-	font-size: 24px;
-    font-size: calc((24px - 320px * .01111) + 1.11111vw);
-	line-height: 1.6;
+	font-size: 20px;
+  font-size: calc((24px - 320px * .01111) + 1.11111vw);
+	line-height: 1.45;
 	color: $shape-color;
 
-	margin: 1.25rem 0;
+	margin: 1rem 0;
 
 	strong {
 		font-weight: bold;
@@ -93,6 +93,7 @@
 
 .work-images {
 	background-color: #FFF;
+	margin-top: -60px;
 }
 
 .work-images .row {
@@ -107,12 +108,26 @@
 	margin: 0 auto;
 }
 
+.work-images .image-bit,
+.work-images .text-bit {
+	padding: 60px 0;
+}
+
+.work-images .text-bit {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.work-images .text-bit p {
+	font-size: 20px;
+	line-height: 1.6;
+}
+
 /* Contact */
 .work-contact {
 	background-color: #FFF;
-	background: linear-gradient(to bottom, #FFF 0%, lighten($background-color,50%) 100%);
 	text-align: center;
-	padding: 10em 0;
+	padding: 60px 0 120px 0;
 }
 
 .work-contact .row {
