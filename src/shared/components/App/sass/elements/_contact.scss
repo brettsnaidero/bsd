@@ -178,18 +178,20 @@ form {
     input[type="file"],
     textarea {
         width: 100%;
-        font-size: 18px;
-        font-size: 1.125rem;
-        line-height: 20px;
-        line-height: 1.25rem;
-        border: 1px solid #191e27;
-		color: #191e27;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 24px;
+        line-height: 1.5rem;
+        border: 2px solid #FFF;
+				color: #191e27;
         background-clip: padding-box;
-        padding: 12px;
+        padding: 20px;
         margin: 0;
         transition: border 0.5s;
+				border-radius: 2px;
 
-		font-family: 'Avenir', sans-serif;
+				font-family: 'Avenir', sans-serif;
+				font-family: monospace;
 
         -moz-appearance: none;
         -webkit-appearance: none;
@@ -214,8 +216,8 @@ form {
         &.required:focus,
         &:focus {
             outline: none;
-            border: 1px solid #23b7fb;
-            box-shadow: 0 0 3px rgb(98, 206, 255);
+            border-color: #23b7fb;
+            box-shadow: 0 0 10px rgba(#23b7fb, 1);
         }
 
         /* Placeholder */

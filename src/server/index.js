@@ -14,9 +14,13 @@ import config from '../../config';
 
 import nodemailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
+import bodyParser from 'body-parser';
 
 // Create our express based server.
 const app = express();
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 const router = express.Router();
 app.use('/sayHello', router);
@@ -32,31 +36,29 @@ function handleSayHello(req, res) {
         }
     }));
 
-    console.log('Req', req, 'Res:', res);
+		let text = 'From \n\n' + req.body.name + 'Message \n\n' + req.body.text; //req.body.name
 
-	let text = 'Hello world from \n\n' + 'Hello'; //req.body.name
+		let mailOptions = {
+	      from: 'brettsnaidero@hotmail.com', // sender address
+	      to: 'brettsnaidero@hotmail.com', // list of receivers
+	      subject: 'Email Example', // Subject line
+	      text: text //, // plaintext body
+	      // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+		};
 
-	let mailOptions = {
-        from: 'brettsnaidero@hotmail.com', // sender address
-        to: 'brettsnaidero@hotmail.com', // list of receivers
-        subject: 'Email Example', // Subject line
-        text: text //, // plaintext body
-        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
-	};
-
-	transporter.sendMail(mailOptions, function(error, info){
-	    if (error) {
-	        console.log(error);
-	        res.json({
-				yo: 'error'
-			});
-	    } else {
-	        console.log('Message sent: ' + info.response);
-	        res.json({
-				yo: info.response
-			});
-	    };
-	});
+		transporter.sendMail(mailOptions, function(error, info){
+		    if (error) {
+		        console.log(error);
+		        res.json({
+							yo: 'error'
+						});
+		    } else {
+		        console.log('Message sent: ' + info.response);
+		        res.json({
+							yo: info.response
+						});
+		    };
+		});
 }
 
 // Don't expose any software information to potential hackers.

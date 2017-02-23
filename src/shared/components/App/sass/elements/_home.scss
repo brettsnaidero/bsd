@@ -117,7 +117,7 @@ $sizing-ratio: 1;
   height: 100vh;
   left: 0;
   top: 0;
-  background: linear-gradient(45deg, rgba($secondary,0.1) 0%, rgba($secondary,0) 100%); 
+  background: linear-gradient(45deg, rgba($secondary,0.1) 0%, rgba($secondary,0) 100%);
 }
 
 /**** Shapes ****/
@@ -477,16 +477,52 @@ $sizing-ratio: 1;
 }
 
 .home-contact .right-col h5 {
-    margin: 5px 0;
+    margin: 15px 0 5px 0;
     color: $text-color;
     line-height: 1.35;
+}
+
+.home-contact .right-col h5:first-of-type {
+	margin: 5px 0;
 }
 
 .home-contact .right-col p {
     margin: 5px 0;
     color: #acbaff;
-    line-height: 1.35;
+		font-size: 18px;
+		font-size: 1.125rem;
+    line-height: 1.4;
     font-family: monospace;
+}
+
+.home-contact .right-col a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.home-contact .right-col ul {
+	list-style: none;
+}
+
+.home-contact .right-col li {
+    margin: 5px 0;
+    color: #acbaff;
+		font-size: 18px;
+		font-size: 1.125rem;
+    line-height: 1.4;
+    font-family: monospace;
+		padding-left: 20px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			width: 10px;
+			height: 2px;
+			background-color: #acbaff;
+		}
 }
 
 /* Home Contact Header */

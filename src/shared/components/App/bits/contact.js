@@ -12,39 +12,60 @@ export default class Contact extends Component {
       super(props);
 
       this.state = {
-			url: '/sayHello',
-			author: '',
-			text: ''
+				success: false,
+				url: '/sayHello',
+				contactname: '',
+				text: '',
+				email: ''
       }
   }
 
-	handleAuthorChange(e) {
+	handleNameChange(e) {
     this.setState({
-		author: e.target.value
-	});
+			contactname: e.target.value
+		});
   }
 
-  handleTextChange(e) {
-	  console.log(e, this);
+  handleEmailChange(e) {
     this.setState({
-		text: e.target.value
-	});
+			email: e.target.value
+		});
+  }
+
+	validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+	}
+
+	handleTextChange(e) {
+    this.setState({
+			text: e.target.value
+		});
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    var author = this.state.author.trim();
+		// Validate email field
+		if (this.validateEmail(e.target.value)) {
+
+	  } else {
+
+	  }
+    var contactname = this.state.contactname.trim();
     var text = this.state.text.trim();
-    if (!text || !author) {
+		var email = this.state.email.trim();
+    if (!text || !contactname || !email) {
       return;
     }
     this.handleCommentSubmit({
-			author: author,
-			text: text
+			name: contactname,
+			text: text,
+			email: email
 		});
     this.setState({
-			author: '',
-			text: ''
+			name: '',
+			text: '',
+			email: ''
 		});
   }
 
@@ -55,7 +76,9 @@ export default class Contact extends Component {
 		 type: 'POST',
 		 data: comment,
 		 success: function(data) {
-			 console.log('Success!');
+			 this.setState({
+				 success: true
+			 });
 		 }.bind(this),
 		 error: function(xhr, status, err) {
 			 console.error(this.state.url, status, err.toString());
@@ -81,41 +104,55 @@ export default class Contact extends Component {
 	              <h2>Lets make something <span>great together —</span></h2>
 	              <div className="cols">
 	                <div className="left-col">
-	                  <form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
+									{ this.state.success ? (
+										<div className="success">
+											Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
+										</div>
+									) : (
+										<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
 	                    <div className="field">
 	                      <input
-							type="text"
-							placeholder="Name*"
-							value={this.state.author}
-							onChange={this.handleAuthorChange.bind(this)}
-							/>
+												type="text"
+												placeholder="Name*"
+												value={this.state.contactname}
+												onChange={this.handleNameChange.bind(this)}
+											/>
 	                    </div>
 	                    <div className="field">
 	                      <input
-							type="text"
-							placeholder="Company"
-							value={this.state.text}
-          					onChange={this.handleTextChange.bind(this)}
-							/>
+												type="text"
+												placeholder="Email*"
+												value={this.state.email}
+					          		onChange={this.handleEmailChange.bind(this)}
+											/>
 	                    </div>
-	                    {/*
 	                    <div className="field">
 	                      <textarea
-							rows={5}
-							placeholder="Message*"
-							defaultValue={""}
-							name="message"
-						/>
-	                    </div> 	*/}
+													rows={5}
+													placeholder="Message*"
+													defaultValue={""}
+													name="message"
+													value={this.state.text}
+						          		onChange={this.handleTextChange.bind(this)}
+												/>
+											</div>
 	                    <div className="field">
 	                      <input type="submit" value="Send Enquiry" />
 	                    </div>
 	                  </form>
+									)}
 	                </div>
 	                <div className="right-col">
-	                  <h5>Email</h5>
-	                  <p>info@brettsnaidero.com</p>
-	                </div>
+	                  <h5>What should I chat about?</h5>
+	                  <p>I am currently open to job offers in Sydney or Melbourne, looking specifically for roles where I can use my front-end development expertise to achieve goals.</p>
+										<h5>Icebreakers</h5>
+	                  <p>Please feel very welcome talk to me about the following things:</p>
+										<ul>
+											<li>Ritz crackers > Jatz crackers?</li>
+											<li>How good was <a href="#">Party Down</a></li>
+											<li>Paul F. Tompkins on podcasts</li>
+										</ul>
+									</div>
 	              </div>
 				</div>
             </ISeeYou>
