@@ -5,9 +5,13 @@
 @import 'primary/_screen';
 
 $background-color: #2d168f; //#250d8a;
-$shape-color: #4751fc; // #2c50ff;
-//252bff
-$secondary: #ff0b81;
+$secondary-color: #2f3aff; // #2c50ff;
+$shape-color: rgba(#b5c0ce,0.8);//252bff
+// body {
+// 	--main-color: black;
+// }
+// $shape-color: var(--main-color);
+$third-color: #ff0b81;
 $text-color: #fff;
 
 ::selection { background: #ff0b81; }
@@ -20,7 +24,7 @@ $text-color: #fff;
 @import 'elements/_profile';
 @import 'elements/_content';
 @import 'elements/_notfound';
-
+@import 'elements/_shapes';
 @import 'elements/_work-page';
 @import 'elements/_writings';
 

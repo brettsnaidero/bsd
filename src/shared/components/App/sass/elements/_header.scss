@@ -109,7 +109,7 @@ header a.logo {
       transition: 0.25s all ease;
   }
   svg path.shape {
-      fill: rgba(darken($background-color, 10%),0.25);
+      fill: rgba(darken($background-color, 10%),0.1);
       transition: 0.25s all ease;
   }
 }
@@ -117,7 +117,10 @@ header a.logo {
 header a.logo:hover,
 header a.logo:focus {
     svg .line {
-        stroke: darken($background-color, 10%);
+        stroke: $third-color;
+    }
+    svg path.shape {
+        fill: rgba(darken($background-color, 10%),0);
     }
 }
 
@@ -149,7 +152,7 @@ header nav ul li a {
   display: block;
   line-height: 20px;
   text-decoration: none;
-  color: lighten($shape-color,25%);
+  color: lighten($secondary-color,25%);
   position: relative;
   letter-spacing: 0.1em;
   font-variant-ligatures: none;
@@ -163,7 +166,7 @@ header nav ul li a {
     left: 0%;
     height: 2px;
     width: 0%;
-    background-color: $secondary;
+    background-color: $third-color;
     border-radius: 1px;
     transition: 0.25s all ease;
     z-index: -1;
@@ -191,9 +194,6 @@ header nav ul li a {
 }
 
 /*  */
-header .c2a {
-}
-
 header .c2a a {
     padding: 18px 26px;
 
@@ -205,7 +205,7 @@ header .c2a a {
     position: relative;
     letter-spacing: 0.1em;
     font-weight: 500;
-    border: 2px solid $shape-color;
+    border: 2px solid $secondary-color;
     border-radius: 3px;
     font-variant-ligatures: none;
     cursor: pointer;
@@ -221,8 +221,9 @@ header .c2a a {
 }
 
 header .c2a a:hover,
-header .c2a a:focus {
-	border-color: $secondary;
+header .c2a a:focus,
+header .c2a a.active {
+	border-color: $third-color;
 }
 
 /* Mobile Menu Toggle */
@@ -347,4 +348,54 @@ header.stuck .menu-btn {
 	100% {
 		opacity: 1;
 	}
+}
+
+/* Light Header */
+header.stuck.light {
+    background: #FFF;
+}
+
+header.light .menu-btn span {
+    background: #000;
+}
+
+header.light a.logo {
+  svg path.line {
+      stroke: $secondary-color;
+  }
+  svg path.shape {
+      fill: rgba(darken($background-color, 10%),0.1);
+  }
+}
+
+header.light a.logo:hover,
+header.light a.logo:focus {
+    svg .line {
+        stroke: $third-color;
+    }
+    svg path.shape {
+        fill: rgba(darken($background-color, 10%),0);
+    }
+}
+
+header.light nav ul li a {
+  color: lighten(#000,25%);
+
+  &:before {
+    background-color: $third-color;
+  }
+  &:hover,
+	&.active {
+	  color: $third-color;
+  }
+}
+header.light .c2a a {
+    color: #000;
+    border: 2px solid $secondary-color;
+}
+
+header.light .c2a a:hover,
+header.light .c2a a:focus,
+header.light .c2a a.active {
+	border-color: $third-color;
 }

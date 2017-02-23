@@ -1,10 +1,10 @@
 .work-banner {
 	height: 100vh;
-	background: #000;
-	background-color: $background-color;
+	background: #FFF;
+	// background-color: $background-color;
 	color: #FFF;
-	background-position: center;
-	background-size: cover;
+	// background-position: center;
+	// background-size: cover;
 
 	@supports (display: flex) {
 		display: flex;
@@ -28,10 +28,12 @@
 	font-size: 1.25em;
 	margin-bottom: 15px;
 	color: rgb(172, 186, 255);
+	font-family: monospace;
 }
 
 .work-banner h1 {
 	font-size: 90px;
+	color: $secondary-color;
 }
 
 .work-banner p {
@@ -64,7 +66,7 @@
 	font-size: 20px;
   font-size: calc((24px - 320px * .01111) + 1.11111vw);
 	line-height: 1.45;
-	color: $shape-color;
+	color: $secondary-color;
 
 	margin: 1rem 0;
 
@@ -139,7 +141,7 @@
 	font-size: 24px;
     font-size: calc((24px - 320px * .01111) + 1.11111vw);
 	line-height: 1.6;
-	color: $shape-color;
+	color: $secondary-color;
 }
 
 .work-contact p {

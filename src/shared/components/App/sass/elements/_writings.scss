@@ -22,8 +22,9 @@
     font-size: 24px;
     font-size: calc(20.4448px + 1.11111vw);
     line-height: 1.6;
-		position: relative;
-		padding-right: 30%;
+	position: relative;
+	padding-right: 30%;
+    line-height: 1.2;
 }
 
 .home-writings .writings-list .image {
@@ -42,29 +43,19 @@
 
 .home-writings .writings-list a {
     color: $text-color;
-		position: relative;
+	position: relative;
     text-decoration: none;
 }
 
 .home-writings .writings-list a:hover,
 .home-writings .writings-list a:focus {
-	color: $secondary;
-}
-
-.home-writings .writings-list .Slash {
-    display: inline-block;
-    content: '';
-    height: 2rem;
-    margin-right: 1.5rem;
-    padding-right: 1.5rem;
-    border-right: 1px solid rgba($text-color,0.5);
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+	color: $third-color;
 }
 
 .home-writings .writings-list sup {
+    font-family: monospace;
     display: inline-block;
-    color: rgba($text-color,0.5);
+    color: #acbaff;
     font-size: .7rem;
     top: -0.9rem;
     position: relative;
@@ -74,6 +65,7 @@
 
 /* Blog Page */
 .blog-page {
+    background: #FFF;
     padding: 240px 0 120px 0;
 }
 

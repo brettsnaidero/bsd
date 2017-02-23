@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // Utils
 import * as _ from 'lodash';
 
+import Header from '../bits/header';
+
 import showcaseItems from '../data/showcase-items.js';
 import Shapes from '../bits/shapes';
 import ISeeYou from '../bits/iseeyou';
@@ -35,13 +37,15 @@ export default class WorkPage extends Component {
 	render() {
         return (
             <div>
+				<Header styling="light" />
 				{/* Banner */}
 				<section
 					className="work-banner"
-					style={{
-						backgroundImage: 'url(../' + this.state.page.image + ')'
-					}}
+					// style={{
+					// 	backgroundImage: 'url(../' + this.state.page.image + ')'
+					// }}
 				>
+					<Shapes />
 					<div className="row">
 						<ISeeYou classesForChild="text">
 							<div className="client">Client: {this.state.page.title}</div>

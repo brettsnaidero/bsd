@@ -42,7 +42,7 @@ $menu_width: 100%;
         }
 
         a:hover {
-            color: $secondary;
+            color: $third-color;
         }
     }
 
@@ -93,7 +93,7 @@ $menu_width: 100%;
     }
 
     .social li a:hover svg {
-        fill: $secondary;
+        fill: $third-color;
     }
     /* Search */
     .search-field {

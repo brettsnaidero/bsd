@@ -1,0 +1,315 @@
+/**** Shapes ****/
+@keyframes show-shapes {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+@keyframes show-shapes2 {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  10% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+@keyframes show-shapes3 {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  20% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+@keyframes show-shapes4 {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  30% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+@keyframes show-shapes5 {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  40% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+@keyframes show-shapes6 {
+	0% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  50% {
+		transform: translate(-50%, -500%);
+    opacity: 0;
+	}
+  100% {
+		transform: translate(-50%, -50%);
+    opacity: 1;
+	}
+}
+
+
+/* Squiggle */
+.squiggle {
+  width: 50px * $sizing-ratio;
+  height: 50px * $sizing-ratio;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  z-index: 3;
+
+  animation: show-shapes 2s ease 0s normal;
+
+  &.second {
+    top: 55%;
+    left: 10%;
+    animation: show-shapes2 2.2s ease 0s normal;
+
+    svg {
+      stroke: $shape-color;
+    }
+  }
+
+  svg {
+    position: absolute;
+    bottom: -48px * $sizing-ratio;
+    left: -48px * $sizing-ratio;
+    width: 100px * $sizing-ratio;
+    height: 100px * $sizing-ratio;
+
+    transition: 1s all ease;
+
+    fill: none;
+    stroke: $shape-color;
+    stroke-miterlimit: 10;
+    stroke-width: 8;
+    stroke-linecap: round;
+
+    stroke-dasharray: 190;
+    stroke-dashoffset: 186;
+
+    transform: translate(0, 0);
+
+    animation-duration: 3s;
+    animation-name: squiggle;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    animation-timing-function: linear;
+  }
+
+  &:hover svg,
+  &.second:hover svg {
+    stroke: $third-color;
+  }
+}
+
+@keyframes squiggle {
+  0% {
+    stroke-dashoffset: 186;
+    transform: translate(0, 0);
+  }
+  100% {
+    stroke-dashoffset: 355;
+    transform: translate((43px * $sizing-ratio), (-43px * $sizing-ratio));
+  }
+}
+
+/* Cross */
+.cross-holder {
+  position: absolute;
+  width: 40px * $sizing-ratio;
+  height: 40px * $sizing-ratio;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 25%;
+  animation: show-shapes3 2.4s ease 0s normal;
+
+  .cross {
+    position: absolute;
+    width: 40px * $sizing-ratio;
+    height: 40px * $sizing-ratio;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    animation-delay: 0s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 40px * $sizing-ratio;
+      width: 4px * $sizing-ratio;
+      border-radius: 2px * $sizing-ratio;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px * $sizing-ratio;
+      left: 50%;
+      margin-left: -2px * $sizing-ratio;
+      background-color: $shape-color;
+      transition: 1s all ease;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px * $sizing-ratio;
+      height: 4px * $sizing-ratio;
+      border-radius: 2px * $sizing-ratio;
+      margin-top: -2px * $sizing-ratio;
+      margin-left: -20px * $sizing-ratio;
+      background-color: $shape-color;
+      transition: 1s all ease;
+    }
+  }
+  &:hover .cross:before,
+  &:hover .cross:after {
+    background-color: $third-color;
+  }
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(90deg);
+	}
+  100% {
+		transform: rotate(90deg);
+	}
+}
+
+/* Triangle */
+.triangle {
+  position: absolute;
+  height: 30px * $sizing-ratio;
+  width: 55px * $sizing-ratio;
+  transform: translate(-50%, -50%);
+  top: 85%;
+  left: 35%;
+  animation: show-shapes4 2.6s ease 0s normal;
+
+  svg {
+    fill: none;
+    stroke: $shape-color;
+    stroke-miterlimit: 10;
+    stroke-width: 8;
+    stroke-linecap: round;
+
+    transition: 1s all ease;
+  }
+
+  &:hover svg {
+    stroke: $third-color;
+  }
+}
+
+.semicircle {
+  width: 55px * $sizing-ratio;
+  height: 55px * $sizing-ratio;
+  position: absolute;
+  top: 20%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  animation: show-shapes5 2.8s ease 0s normal;
+
+  svg {
+    fill: none;
+    stroke: $shape-color;
+    stroke-miterlimit: 10;
+    stroke-width: 8;
+    stroke-linecap: round;
+
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100;
+
+    animation-name: semicircle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+
+    transition: 1s all ease;
+  }
+  &:hover svg {
+    stroke: $third-color;
+  }
+}
+
+@keyframes semicircle {
+  0% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: -152;
+  }
+  100% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Circle */
+.circle-holder {
+    width: 40px * $sizing-ratio;
+    height: 40px * $sizing-ratio;
+    position: absolute;
+    top: 40%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: show-shapes6 2s ease 0s normal;
+
+    .circle {
+        width: 40px * $sizing-ratio;
+        height: 40px * $sizing-ratio;
+        border-radius: 50%;
+        border: (4px * $sizing-ratio) solid $shape-color;
+
+        transition: 1s all ease;
+    }
+
+    &:hover .circle {
+      border-color: $third-color;
+    }
+}

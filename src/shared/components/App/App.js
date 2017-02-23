@@ -7,8 +7,6 @@ import { CodeSplit } from 'code-split-component';
 
 import './sass/style.scss';
 
-import Header from './bits/header';
-
 import NotFound from './NotFound/notfound';
 import { safeConfigGet } from '../../utils/config';
 
@@ -27,9 +25,6 @@ function App() {
 	        link={safeConfigGet(['htmlPage', 'links'])}
 	        script={safeConfigGet(['htmlPage', 'scripts'])}
 	      />
-
-	    	<Header />
-
 	    	<Match
 	    		exactly
 	    		pattern="/"

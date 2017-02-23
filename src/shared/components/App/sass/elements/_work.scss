@@ -385,13 +385,17 @@
 }
 
 .work .work-listings .item .text-label .desc {
-	line-height: 1.35;
-	color: currentColor;
 	margin: 2px 0 0 0;
-	opacity: 0.75;
-
 	overflow: hidden;
 	white-space: nowrap;
+
+	color: #acbaff;
+	font-size: 20px;
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.4;
+	font-family: monospace;
+	opacity: 0.75;
 }
 
 /* Show Things */

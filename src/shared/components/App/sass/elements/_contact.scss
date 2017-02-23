@@ -1,4 +1,4 @@
-$main-colour: $secondary;
+$main-colour: $third-color;
 
 /* Enquiry Form */
 form {
@@ -102,8 +102,8 @@ form {
 
     /* Fields */
     .field {
-        margin: 12px 0px;
-        margin: 0.75rem 0rem;
+        margin: 20px 0px;
+        margin: 1.25rem 0rem;
 
         &.half {
             width: 48.5%;
@@ -183,9 +183,9 @@ form {
         line-height: 24px;
         line-height: 1.5rem;
         border: 2px solid #FFF;
-				color: #191e27;
+		color: #191e27;
         background-clip: padding-box;
-        padding: 20px;
+        padding: 18px;
         margin: 0;
         transition: border 0.5s;
 				border-radius: 2px;
@@ -292,7 +292,7 @@ form {
 			font-family: 'Avenir', sans-serif;
 			font-size: 20px;
 
-			border: 2px solid $shape-color;
+			border: 2px solid $secondary-color;
 
         cursor: pointer;
         margin: 12px 0px;

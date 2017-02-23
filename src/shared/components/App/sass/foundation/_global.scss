@@ -104,7 +104,7 @@ $global-right: if($global-text-direction == rtl, left, right);
 
 // Internal variables used for colors
 $primary-color: map-get($foundation-palette, primary);
-$secondary-color: map-get($foundation-palette, secondary);
+$third-color-color: map-get($foundation-palette, secondary);
 $success-color: map-get($foundation-palette, success);
 $warning-color: map-get($foundation-palette, warning);
 $alert-color: map-get($foundation-palette, alert);

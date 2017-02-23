@@ -30,7 +30,7 @@ footer .social li a svg {
   display: block;
   width: 20px;
   height: 20px;
-  fill: lighten($shape-color,25%);
+  fill: lighten($secondary-color,25%);
   position: absolute;
   top: 0;
   left: 0;
@@ -38,7 +38,7 @@ footer .social li a svg {
 
 footer .social li a:hover svg,
 footer .social li a:focus svg {
-	fill: $secondary;
+	fill: $third-color;
 }
 
 /* Scroll */
@@ -50,7 +50,7 @@ a.scroll {
   padding: 40px 60px 60px 90px;
   font-size: 9px;
   font-size: .9rem;
-  color: lighten($shape-color,25%);
+  color: lighten($secondary-color,25%);
   line-height: 24px;
 
   span {
@@ -62,7 +62,7 @@ a.scroll {
     width: 20px;
     height: 24px;
     border-radius: 12px;
-    border: 2px solid lighten($shape-color,25%);
+    border: 2px solid lighten($secondary-color,25%);
     display: inline-block;
     position: absolute;
     top: 40px;
@@ -77,7 +77,7 @@ a.scroll {
     width: 2px;
     height: 4px;
     border-radius: 1px;
-    background: lighten($shape-color,25%);
+    background: lighten($secondary-color,25%);
     animation: scrollwheel 2.5s linear infinite;
     transform: translateX(-50%)
 }

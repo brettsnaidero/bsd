@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Header from '../bits/header';
+
 // App
 export default class NotFound extends Component {
 	constructor(props) {
@@ -12,12 +14,13 @@ export default class NotFound extends Component {
 
 	render() {
         return (
-					<div>
-            <div className="notfound">
-							<h1>Page not found!</h1>
-							<p>Stay calm. Remember your training! And return <span>Home...</span></p>
-            </div>
-					</div>
+		<div>
+			<Header />
+			<div className="notfound">
+				<h1>Page not found!</h1>
+				<p>Stay calm. Remember your training! And return <span>Home...</span></p>
+			</div>
+		</div>
         );
     }
 };

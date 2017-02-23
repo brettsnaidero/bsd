@@ -45,28 +45,28 @@ export default class Contact extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-		// Validate email field
-		if (this.validateEmail(e.target.value)) {
+	// Validate email field
+	if (this.validateEmail(e.target.value)) {
 
-	  } else {
+	} else {
 
-	  }
+	}
     var contactname = this.state.contactname.trim();
     var text = this.state.text.trim();
-		var email = this.state.email.trim();
+	var email = this.state.email.trim();
     if (!text || !contactname || !email) {
       return;
     }
     this.handleCommentSubmit({
-			name: contactname,
-			text: text,
-			email: email
-		});
+		name: contactname,
+		text: text,
+		email: email
+	});
     this.setState({
-			name: '',
-			text: '',
-			email: ''
-		});
+		name: '',
+		text: '',
+		email: ''
+	});
   }
 
 	handleCommentSubmit(comment) {
