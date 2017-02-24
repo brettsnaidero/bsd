@@ -21,6 +21,21 @@
     font-style: bold;
 }
 
+/* Fonts */
+@font-face {
+    font-family: 'Maison';
+    src: url('../fonts/maison-regular.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Maison';
+    src: url('../fonts/maison-bold.woff2') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Avenir */
 @font-face {
     font-family: 'Avenir';
