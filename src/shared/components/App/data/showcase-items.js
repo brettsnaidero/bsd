@@ -23,7 +23,11 @@ const showcaseItems = [
 						{
 							type: 'text',
 							content: `They are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.`
-						}
+						},
+						{
+                type: 'image',
+                content: 'img/work/show-mmj2.jpg'
+            }
         ]
     },
     {
