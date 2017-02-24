@@ -26,7 +26,7 @@ export default class Intro extends Component {
 
             {/* Image */}
             <div className="image" id="trigger" />
-			{/* style={{backgroundImage: 'url(img/home.jpg)'}} */}
+						{/* style={{backgroundImage: 'url(img/home.jpg)'}} */}
 
             {/* Designer */}
 						<ISeeYou classesForChild="banner-text">

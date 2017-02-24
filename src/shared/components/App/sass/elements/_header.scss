@@ -152,7 +152,7 @@ header nav ul li a {
   display: block;
   line-height: 20px;
   text-decoration: none;
-  color: lighten($secondary-color,25%);
+  color: $slight;
   position: relative;
   letter-spacing: 0.1em;
   font-variant-ligatures: none;
@@ -364,7 +364,7 @@ header.light a.logo {
       stroke: $secondary-color;
   }
   svg path.shape {
-      fill: rgba(darken($background-color, 10%),0.1);
+      fill: none;
   }
 }
 

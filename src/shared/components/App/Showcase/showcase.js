@@ -37,7 +37,7 @@ export default class WorkPage extends Component {
 	render() {
         return (
             <div>
-				<Header styling="light" />
+				<Header nothome={true} />
 				{/* Banner */}
 				<section
 					className="work-banner"
@@ -97,13 +97,14 @@ export default class WorkPage extends Component {
 						))}
 					</div>
 				</section>
+				{/*
 				<section className="work-contact">
-					{/* <Shapes /> */}
+					 <Shapes />
 					<div className="row">
 						<h2>That was a fun project :)</h2>
 						<p>If you want to work with me on other fun projects, please get in touch.</p>
 					</div>
-				</section>
+				</section> */}
             </div>
         );
     }

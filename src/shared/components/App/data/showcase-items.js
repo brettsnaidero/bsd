@@ -8,16 +8,22 @@ const showcaseItems = [
         image: 'img/work/mmj.png',
         width: 360,
         height: 450,
-        period: '',
-        client: '',
+        period: '2016-2017',
+				team: 'Internetrix',
+        client: 'MMJ Real Estate',
+				expertise: 'Design',
         description: (
-            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country. They are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.</p>
+            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
         ),
         imageList: [
             {
                 type: 'image',
-                content: 'img/work/mmj.jpg'
-            }
+                content: 'img/work/show-mmj.jpg'
+            },
+						{
+							type: 'text',
+							content: `They are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.`
+						}
         ]
     },
     {

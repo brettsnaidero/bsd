@@ -19,7 +19,7 @@ export default class WritingsPage extends Component {
 		console.log(this.props.params.id);
 		return (
 			<div>
-				<Header styling="light" />
+				<Header nothome={true} />
 
 				<section className="blog-page">
 					<article className="Article Page">

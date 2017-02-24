@@ -117,7 +117,8 @@ $sizing-ratio: 1;
   height: 100vh;
   left: 0;
   top: 0;
-  background: linear-gradient(0deg, rgba($third-color,0.075) 0%, rgba($third-color,0) 100%);
+	// box-shadow: inset 0px 0px 500px rgba($third-color,0.1);
+  background: linear-gradient(0deg, rgba(#3e276c,0.75) 0%, rgba($background-color,1) 100%);
 }
 
 /* Home Contact */
@@ -142,8 +143,8 @@ $sizing-ratio: 1;
 }
 
 .home-contact .banner-text h2 {
-    font-size: 48px;
-    font-size: 3rem;
+		font-size: 40px;
+		font-size: 2.5rem;
     line-height: 1.35;
     margin-bottom: 20px;
     color: $text-color;
@@ -174,7 +175,7 @@ $sizing-ratio: 1;
 
 .home-contact .right-col p {
     margin: 5px 0;
-    color: #acbaff;
+    color: $slight;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.4;
@@ -192,7 +193,7 @@ $sizing-ratio: 1;
 
 .home-contact .right-col li {
     margin: 5px 0;
-    color: #acbaff;
+    color: $slight;
 	font-size: 20px;
 	font-size: 1.25rem;
     line-height: 1.4;
@@ -207,7 +208,7 @@ $sizing-ratio: 1;
 			left: 0px;
 			width: 10px;
 			height: 1px;
-			background-color: #acbaff;
+			background-color: $slight;
 		}
 }
 

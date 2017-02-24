@@ -64,6 +64,15 @@ export default class Shapes extends Component {
               <div className="circle-holder layer6">
                   <div className="circle"/>
               </div>
+							{/* Long diag 45deg */}
+							<div className="longdiag longdiag-right">
+								<div className="line-hold">
+						      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+						        <line className="first" x1="7.3" y1="7.3" x2="42.7" y2="42.7"></line>
+						        <line className="second" x1="7.3" y1="7.3" x2="42.7" y2="42.7"></line>
+						      </svg>
+								</div>
+				    </div>
           </div>
         );
     }

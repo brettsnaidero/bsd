@@ -313,3 +313,67 @@
       border-color: $third-color;
     }
 }
+
+/* Diagonal line 45deg */
+.longdiag-right {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 85%;
+    left: 90%;
+		transform: translate(-50%, -50%);
+		animation: show-shapes 2s ease 0s normal;
+
+		.line-hold {
+			transform: rotate(180deg);
+			height: 50px;
+	    width: 50px;
+		}
+}
+
+.longdiag .first {
+    animation-delay: 0s;
+}
+
+.longdiag .second {
+    animation-delay: 1s;
+}
+
+.longdiag line {
+    fill: none;
+    stroke: $shape-color;
+    stroke-miterlimit: 10;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100;
+    animation-name: linepush;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+}
+
+@keyframes linepush {
+  0% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100;
+  }
+  25% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -20;
+  }
+  50% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -30;
+  }
+  75% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+}
