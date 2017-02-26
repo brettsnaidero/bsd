@@ -30,11 +30,11 @@
 	color: #a0a0a0;
 	font-family: monospace;
 }
- 
+
 .work-banner h1 {
 	font-size: 64px;
 	font-size: calc(64px + 1.11111vw);
-	color: $background-color;
+	color: $background-color-two;
 }
 
 @media screen and (max-width: 1400px) {
@@ -64,7 +64,6 @@
 
 	@supports(display: flex) {
 		display: flex;
-
 	}
 }
 
@@ -74,7 +73,7 @@
 	font-size: 20px;
   font-size: calc((24px - 320px * .01111) + 1.11111vw);
 	line-height: 1.45;
-	color: $secondary-color;
+	color: $background-color-two;
 
 	margin: 1rem 0;
 
@@ -87,6 +86,23 @@
 	max-width: 33.333%;
 	text-align: left;
 	padding-left: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+	.work-content .row {
+		padding: 0 40px;
+
+		@supports(display: flex) {
+			flex-wrap: wrap;
+		}
+	}
+	.work-content .row .text,
+	.work-content .row .side {
+		padding: 0;
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+	}
 }
 
 .work-content .row .bit {

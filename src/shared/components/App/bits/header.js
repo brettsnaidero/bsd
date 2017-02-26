@@ -40,9 +40,9 @@ export default class Header extends Component {
           <div>
 
             <MobileNav
-							mobileMenuActive={this.state.mobileMenuActive}
-							toggleMobileMenu={this.toggleMobileMenu.bind(this)}
-						/>
+				mobileMenuActive={this.state.mobileMenuActive}
+				toggleMobileMenu={this.toggleMobileMenu.bind(this)}
+			/>
 
             {/* Header */}
             <div className="header-holder">
@@ -66,42 +66,42 @@ export default class Header extends Component {
                 <nav className="main-nav">
                   <ul>
                     <li>
-											{ this.props.nothome ? (
-												<Link to="/#profile">Profile</Link>
-											) : (
-												<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
-											)}
-										</li>
+						{ this.props.nothome ? (
+							<Link to="/#profile">Profile</Link>
+						) : (
+							<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
+						)}
+					</li>
                     <li>
-											{ this.props.nothome ? (
-												<Link to="/#work">Work</Link>
-											) : (
-												<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
-											)}
-										</li>
+						{ this.props.nothome ? (
+							<Link to="/#work">Work</Link>
+						) : (
+							<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
+						)}
+					</li>
                     <li>
-											{ this.props.nothome ? (
-												<Link to="/#writing">Writing</Link>
-											) : (
-												<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
-											)}
-										</li>
+						{ this.props.nothome ? (
+							<Link to="/#writing">Writing</Link>
+						) : (
+							<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
+						)}
+					</li>
                   </ul>
                 </nav>
                 <div className="c2a">
-									{ this.props.nothome ? (
-										<Link to="/#contact">Let’s chat!</Link>
-									) : (
-										<LocalLink to="contact" spy={true} smooth={true} offset={50} duration={500}>Let’s chat!</LocalLink>
-									)}
+					{ this.props.nothome ? (
+						<Link to="/#contact">Let’s chat!</Link>
+					) : (
+						<LocalLink to="contact" spy={true} smooth={true} offset={50} duration={500}>Let’s chat!</LocalLink>
+					)}
                   <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
-                    <div className="icon">
-                      <span />
-                      <span />
-                      <span />
-					  					<span />
-                    </div>
                     Menu
+					<div className="icon">
+                      <span />
+                      <span />
+                      <span />
+					  <span />
+                    </div>
                   </button>
                 </div>
               </header>
