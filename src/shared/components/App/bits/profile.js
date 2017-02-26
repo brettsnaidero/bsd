@@ -27,19 +27,18 @@ export default class Profile extends Component {
 
             {/* Content */}
             <div className="row">
-							<ISeeYou classesForChild="l-col">
-                <p className="">Brett is a designer and front-end developer, who sometimes likes to write about himself in the third person.</p>
-                <p className="">He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
-								<p className="">He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
+				<ISeeYou classesForChild="l-col">
+                <p className="">Brett is a designer and front-end developer, who sometimes likes to write about himself in the third person. He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
+				<p className="">He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
               </ISeeYou>
               <div className="r-col">
-								<ISeeYou>
-                	<div className="image" style={{backgroundImage: 'url(img/home.jpg)'}} />
-								</ISeeYou>
-								<ISeeYou>
+					<ISeeYou>
+                	<img src="img/profile.jpg" alt="Brett Snaidero - Diagonal line extraordinare" />
+					</ISeeYou>
+					<ISeeYou>
                 	<div className="title">Skills that pay the bills</div>
-								</ISeeYou>
-								<ISeeYou>
+					</ISeeYou>
+					<ISeeYou>
 	                <ul>
 	                  <li>UX Design</li>
 	                  <li>Interaction Design</li>

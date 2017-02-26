@@ -178,20 +178,18 @@ form {
     input[type="file"],
     textarea {
         width: 100%;
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 24px;
-        line-height: 1.5rem;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 20px;
+        line-height: 1.25rem;
         border: 2px solid #FFF;
 		color: #191e27;
         background-clip: padding-box;
         padding: 18px;
         margin: 0;
         transition: border 0.5s;
-				border-radius: 2px;
-
-				font-family: 'Avenir', sans-serif;
-				font-family: 'Consolas', monospace;
+		border-radius: 2px;
+		font-family: monospace;
 
         -moz-appearance: none;
         -webkit-appearance: none;
@@ -284,15 +282,14 @@ form {
     input[type="submit"],
     input[type="button"],
     button {
-			border-radius: 4px;
-			line-height: 60px;
-			padding: 0 32px 0 32px;
-			background: none;
-			color: $text-color;
-			font-family: 'Avenir', sans-serif;
-			font-size: 20px;
+		border-radius: 4px;
+		line-height: 60px;
+		padding: 0 32px 0 32px;
+		background: none;
+		color: $text-color;
+		font-size: 20px;
 
-			border: 2px solid $secondary-color;
+		border: 2px solid rgba($slight,0.5);
 
         cursor: pointer;
         margin: 12px 0px;

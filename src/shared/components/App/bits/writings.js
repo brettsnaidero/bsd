@@ -28,12 +28,12 @@ export default class Writings extends Component {
 
 						<div className="row">
 
-							<div className="writings-list">
+							<ul className="writings-list">
 								{/* Image */}
 								<div className="image"></div>
 
 								{/* Links */}
-								<div>
+								<li>
 									<Link to="/writings/id">
 										New Site Vibes
 										<sup>
@@ -41,9 +41,9 @@ export default class Writings extends Component {
 										</sup>
 										<span className="Slash"></span>
 									</Link>
-								</div>
+								</li>
 
-								<div>
+								<li>
 									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
 										A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS!
 										<sup>
@@ -51,9 +51,9 @@ export default class Writings extends Component {
 										</sup>
 										<span className="Slash"></span>
 									</a>
-								</div>
+								</li>
 
-								<div>
+								<li>
 									<a href="#" data-color_from="#2BC0E4" data-color_to="#EAECC6" className="IndexLink">
 										A Complete Guide To Implementing An SVG Icon System
 										<sup>
@@ -61,9 +61,9 @@ export default class Writings extends Component {
 										</sup>
 										<span className="Slash"></span>
 									</a>
-								</div>
+								</li>
 
-								<div>
+								<li>
 									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
 										Deciding to Design in the Browser
 										<sup>
@@ -71,9 +71,9 @@ export default class Writings extends Component {
 										</sup>
 										<span className="Slash"></span>
 									</a>
-								</div>
+								</li>
 
-								<div>
+								<li>
 									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
 										On Brand
 										<sup>
@@ -81,8 +81,8 @@ export default class Writings extends Component {
 										</sup>
 										<span className="Slash"></span>
 									</a>
-								</div>
-							</div>
+								</li>
+							</ul>
 
 							<div></div>
 

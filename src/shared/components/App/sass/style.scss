@@ -4,16 +4,17 @@
 @import 'primary/_print';
 @import 'primary/_screen';
 
-$background-color: #182a53; //#250d8a;
-$secondary-color: #5d2fff; // #2c50ff;
-$shape-color: rgba(#5d2fff,0.8);//252bff
+$background-color: #251371;
+$background-color-two: #6206cb;
+$secondary-color: #bdbbff;
 // body {
 // 	--main-color: black;
 // }
 // $shape-color: var(--main-color);
 $third-color: #ff0b81;
 $text-color: #fff;
-$slight: #b6b5eb;
+$shape-color: rgba(lighten($background-color-two,10%),0.5);
+$slight: #9592fa;
 
 ::selection { background: #ff0b81; }
 

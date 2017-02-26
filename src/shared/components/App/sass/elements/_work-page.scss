@@ -28,12 +28,20 @@
 	font-size: 1.25em;
 	margin-bottom: 15px;
 	color: #a0a0a0;
-	font-family: 'Consolas', monospace;
+	font-family: monospace;
+}
+ 
+.work-banner h1 {
+	font-size: 64px;
+	font-size: calc(64px + 1.11111vw);
+	color: $background-color;
 }
 
-.work-banner h1 {
-	font-size: 90px;
-	color: $secondary-color;
+@media screen and (max-width: 1400px) {
+	.work-banner h1 {
+		font-size: 48px;
+		font-size: calc(48px + 1.11111vw);
+	}
 }
 
 .work-banner p {
@@ -89,7 +97,7 @@
 
 .work-content .row .title {
 	margin: 0 0 1rem 0;
-	font-family: 'Consolas', monospace;
+	font-family: monospace;
 	color: #a0a0a0;
 }
 

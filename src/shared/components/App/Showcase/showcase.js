@@ -45,7 +45,6 @@ export default class WorkPage extends Component {
 					// 	backgroundImage: 'url(../' + this.state.page.image + ')'
 					// }}
 				>
-					<Shapes />
 					<div className="row">
 						<ISeeYou classesForChild="text">
 							<div className="client">Client: {this.state.page.title}</div>

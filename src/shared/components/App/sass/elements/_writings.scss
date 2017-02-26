@@ -27,6 +27,11 @@
     line-height: 1.2;
 }
 
+.home-writings .writings-list li {
+    margin: 16px 0;
+    margin: 1rem 0;
+}
+
 .home-writings .writings-list .image {
 	position: absolute;
 	top: 0;
@@ -53,7 +58,7 @@
 }
 
 .home-writings .writings-list sup {
-    font-family: 'Consolas', monospace;
+    font-family: monospace;
     display: inline-block;
     color: $slight;
     font-size: .7rem;

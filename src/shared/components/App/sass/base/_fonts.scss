@@ -1,22 +1,22 @@
 /* Fonts */
 @font-face {
     font-family: 'New Transport';
+    src: url('../fonts/NewTransport-Regular.ttf');
+    // src: url('../fonts/New_Transport-MediumWEB.eot?#iefix') format('embedded-opentype'),
+    //      url('../fonts/New_Transport-MediumWEB.woff') format('woff'),
+    //      url('../fonts/New_Transport-MediumWEB.woff2') format('truetype'),
+    //      url('../fonts/New_Transport-MediumWEB.svg#New_Transport-MediumWEB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
     src: url('../fonts/New_Transport-MediumWEB.eot');
     src: url('../fonts/New_Transport-MediumWEB.eot?#iefix') format('embedded-opentype'),
          url('../fonts/New_Transport-MediumWEB.woff') format('woff'),
          url('../fonts/New_Transport-MediumWEB.woff2') format('truetype'),
          url('../fonts/New_Transport-MediumWEB.svg#New_Transport-MediumWEB') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
- 
-@font-face {
-    font-family: 'New Transport';
-    src: url('../fonts/New_Transport-BoldWEB.eot');
-    src: url('../fonts/New_Transport-BoldWEB.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/New_Transport-BoldWEB.woff') format('woff'),
-         url('../fonts/New_Transport-BoldWEB.woff2') format('truetype'),
-         url('../fonts/New_Transport-BoldWEB.svg#New_Transport-BoldWEB') format('svg');
     font-weight: bold;
     font-style: normal;
 }
