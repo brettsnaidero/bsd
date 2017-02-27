@@ -36,12 +36,12 @@ function handleSayHello(req, res) {
         }
     }));
 
-		let text = 'From \n\n' + req.body.name + 'Message \n\n' + req.body.text; //req.body.name
+		let text = 'From: \n\n' + req.body.name + '\n\nEmail: \n\n' + req.body.email + '\n\nMessage: \n\n' + req.body.text; //req.body.name
 
 		let mailOptions = {
 	      from: 'brettsnaidero@hotmail.com', // sender address
 	      to: 'brettsnaidero@hotmail.com', // list of receivers
-	      subject: 'Email Example', // Subject line
+	      subject: 'Brett Snaidero - Website Enquiry', // Subject line
 	      text: text //, // plaintext body
 	      // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
 		};
@@ -50,13 +50,13 @@ function handleSayHello(req, res) {
 		    if (error) {
 		        console.log(error);
 		        res.json({
-							yo: 'error'
-						});
+					yo: 'error'
+				});
 		    } else {
 		        console.log('Message sent: ' + info.response);
 		        res.json({
-							yo: info.response
-						});
+					yo: info.response
+				});
 		    };
 		});
 }

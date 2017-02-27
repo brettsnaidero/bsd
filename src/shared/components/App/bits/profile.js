@@ -33,7 +33,9 @@ export default class Profile extends Component {
               </ISeeYou>
               <div className="r-col">
 					<ISeeYou>
-                	<img src="img/profile.jpg" alt="Brett Snaidero - Diagonal line extraordinare" />
+                		<div className="image">
+							<img src="img/profile.jpg" alt="Brett Snaidero - Diagonal line extraordinare" />
+						</div>
 					</ISeeYou>
 					<ISeeYou>
                 	<div className="title">Skills that pay the bills</div>

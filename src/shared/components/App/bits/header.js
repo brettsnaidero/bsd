@@ -42,6 +42,7 @@ export default class Header extends Component {
             <MobileNav
 				mobileMenuActive={this.state.mobileMenuActive}
 				toggleMobileMenu={this.toggleMobileMenu.bind(this)}
+				nothome={this.props.nothome}
 			/>
 
             {/* Header */}

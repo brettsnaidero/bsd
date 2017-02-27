@@ -48,13 +48,11 @@ a.scroll {
   bottom: 0;
   left: 0;
   padding: 40px 60px 60px 90px;
-  font-size: 9px;
-  font-size: .9rem;
-  color: lighten($secondary-color,25%);
+  font-size: 12px;
+  color: $slight;
   line-height: 24px;
 
   span {
-    opacity: 0.5;
   }
 }
 

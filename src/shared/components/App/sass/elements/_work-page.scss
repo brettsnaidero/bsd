@@ -13,6 +13,12 @@
 	}
 }
 
+@media screen and (max-width: 800px) {
+	.work-banner {
+		padding: 200px 0 0 0;
+	}
+}
+
 .work-banner .row {
 	padding: 0 60px;
 	max-width: 1400px;

@@ -34,7 +34,7 @@ export default class Writings extends Component {
 
 								{/* Links */}
 								<li>
-									<Link to="/writings/id">
+									<Link to="/writings/uxofasandwich">
 										New Site Vibes
 										<sup>
 											<time className="Date">AUG ‘16</time> {/* datetime="August 1, 2016" */}
