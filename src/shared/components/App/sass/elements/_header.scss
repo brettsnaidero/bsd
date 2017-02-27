@@ -108,11 +108,29 @@ header a.logo {
       stroke-linejoin: round;
       stroke-miterlimit: 10;
       transition: 0.25s all ease;
+			animation-name: showlogo;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			// animation-delay: 2s;
+			stroke-dasharray: 200;
+  		stroke-dashoffset: 0;
   }
   svg path.shape {
       fill: rgba(darken($background-color, 10%),0.1);
       transition: 0.25s all ease;
   }
+}
+
+@keyframes showlogo {
+	0% {
+		stroke-dashoffset: 200;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 
 header a.logo:hover,

@@ -138,7 +138,15 @@ const showcaseItems = [
         imageList: [
             {
                 type: 'image',
-                content: 'img/work/iydj.jpg'
+                content: 'img/work/show-irx.jpg'
+            },
+						{
+                type: 'text',
+                content: 'hello'
+            },
+						{
+                type: 'image',
+                content: 'img/work/show-irx2.jpg'
             }
         ]
     }
