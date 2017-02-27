@@ -11,15 +11,15 @@ import ISeeYou from '../bits/iseeyou';
 
 export default class WorkPage extends Component {
 	constructor(props) {
-      super(props);
+		super(props);
 
-			this.state = {
-				page: {},
-				visibility: {
-					bannertext: false,
-					maintext: false
-				}
+		this.state = {
+			page: {},
+			visibility: {
+				bannertext: false,
+				maintext: false
 			}
+		}
   }
 
 	componentDidMount() {

@@ -12,45 +12,92 @@ export default class Contact extends Component {
       super(props);
 
       this.state = {
-				success: false,
-				url: '/sayHello',
-				contactname: '',
-				text: '',
-				email: ''
+			success: false,
+			url: '/sayHello',
+			contactname: '',
+			contactnameError: false,
+			text: '',
+			textError: false,
+			email: '',
+			emailError: false,
+			emailInvalidError: false,
+			sent: false,
+			sending: false,
+			sentError: false
       }
   }
 
 	handleNameChange(e) {
-    this.setState({
+		this.setState({
 			contactname: e.target.value
 		});
-  }
+		// Validate name
+		if (this.state.contactname.length > 0) {
+			this.setState({
+				contactnameError: false
+			});
+		}
+	}
 
-  handleEmailChange(e) {
-    this.setState({
+	handleEmailChange(e) {
+		this.setState({
 			email: e.target.value
 		});
-  }
+		// Validate email
+		if (this.state.email.length > 0) {
+			this.setState({
+				emailError: false
+			});
+		}
+	}
 
 	validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
 	}
 
 	handleTextChange(e) {
-    this.setState({
+		this.setState({
 			text: e.target.value
 		});
-  }
+		// Validate text
+		if (this.state.text.length > 0) {
+			this.setState({
+				textError: false
+			});
+		}
+	}
 
   handleSubmit(e) {
     e.preventDefault();
-	// Validate email field
-	if (this.validateEmail(e.target.value)) {
-
-	} else {
-
+	// Validate name
+	if (this.state.contactname.length < 1) {
+		this.setState({
+			contactnameError: true
+		});
 	}
+	// Validate message
+	if (this.state.text.length < 1) {
+		this.setState({
+			textError: true
+		});
+	}
+	// Validate email field
+	if (this.state.email.length < 1) {
+		this.setState({
+			emailError: true
+		});
+	}
+	// if (this.validateEmail(this.state.email) == false) {
+	// 	this.setState({
+	// 		emailError: true
+	// 	});
+	// }
+	// Check if any errors before sending
+	if (this.state.contactnameError || this.state.emailError || this.state.textError) {
+		return;
+	}
+	// Send
     var contactname = this.state.contactname.trim();
     var text = this.state.text.trim();
 	var email = this.state.email.trim();
@@ -63,9 +110,7 @@ export default class Contact extends Component {
 		email: email
 	});
     this.setState({
-		name: '',
-		text: '',
-		email: ''
+		sending: true
 	});
   }
 
@@ -77,11 +122,15 @@ export default class Contact extends Component {
 		 data: comment,
 		 success: function(data) {
 			 this.setState({
-				 success: true
+				 sent: true
 			 });
 		 }.bind(this),
 		 error: function(xhr, status, err) {
 			 console.error(this.state.url, status, err.toString());
+			 this.setState({
+				sent: true,
+				sendError: true
+		 	});
 		 }.bind(this)
 	 });
 		fetch(this.state.url, {
@@ -104,38 +153,52 @@ export default class Contact extends Component {
 	              <h2>Lets make something <span>great together —</span></h2>
 	              <div className="cols">
 	                <div className="left-col">
-									{ this.state.success ? (
-										<div className="success">
-											Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
-										</div>
-									) : (
-										<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
+						{ this.state.sent ? (
+							<div className="commentForm">
+								{ this.state.sendError ? (
+									<div className="message success">
+										Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
+									</div>
+								) : (
+									<div className="message failure">
+										Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages :)
+									</div>
+								)}
+							</div>
+						) : (
+							<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
 	                    <div className="field">
 	                      <input
-												type="text"
-												placeholder="Name*"
-												value={this.state.contactname}
-												onChange={this.handleNameChange.bind(this)}
-											/>
+							ref="contactname"
+							type="text"
+							placeholder="Name*"
+							value={this.state.contactname}
+							onChange={this.handleNameChange.bind(this)}
+						  />
+						  { this.state.contactnameError ? <div className="message error">Please enter your name</div> : "" }
 	                    </div>
 	                    <div className="field">
 	                      <input
-												type="text"
-												placeholder="Email*"
-												value={this.state.email}
-					          		onChange={this.handleEmailChange.bind(this)}
-											/>
+							ref="email"
+							type="text"
+							placeholder="Email*"
+							value={this.state.email}
+			          		onChange={this.handleEmailChange.bind(this)}
+							/>
+							{ this.state.emailError ? <div className="message error">Please enter your email</div> : "" }
 	                    </div>
 	                    <div className="field">
 	                      <textarea
-													rows={5}
-													placeholder="Message*"
-													defaultValue={""}
-													name="message"
-													value={this.state.text}
-						          		onChange={this.handleTextChange.bind(this)}
-												/>
-											</div>
+							rows={5}
+							ref="text"
+							placeholder="Message*"
+							defaultValue={""}
+							name="message"
+							value={this.state.text}
+			          		onChange={this.handleTextChange.bind(this)}
+						/>
+						{ this.state.textError ? <div className="message error">Please enter your message</div> : "" }
+						</div>
 	                    <div className="field">
 	                      <input type="submit" value="Send Enquiry" />
 	                    </div>

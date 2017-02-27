@@ -27,7 +27,7 @@ export default class Footer extends Component {
             {/* Social */}
             <ul className="social">
               <li>
-                <a href="#">
+                <a href="https://twitter.com/?lang=en" title="Twitter">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" style={{enableBackground: 'new 0 0 48 48'}}>
                     <path id="Twitter" d="M48,8.7c-1.8,0.8-3.7,1.3-5.7,1.6c2-1.2,3.6-3.2,4.3-5.6c-1.9,1.2-4,2-6.3,2.4c-1.8-2-4.4-3.2-7.2-3.2
                                 c-5.4,0-9.8,4.5-9.8,10.1c0,0.8,0.1,1.6,0.3,2.3C15.5,16,8.2,12,3.3,5.8C2.5,7.3,2,9.1,2,10.9c0,3.5,1.7,6.6,4.4,8.4
@@ -38,7 +38,7 @@ export default class Footer extends Component {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/brettsnaidero/" title="Instagram">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" style={{enableBackground: 'new 0 0 48 48'}}>
                     <path id="Instagram" d="M24,0c-6.5,0-7.3,0-9.9,0.1c-2.6,0.1-4.3,0.5-5.8,1.1C6.7,1.9,5.4,2.7,4,4C2.7,5.4,1.9,6.7,1.3,8.3
                                 c-0.6,1.5-1,3.3-1.1,5.8C0,16.7,0,17.5,0,24c0,6.5,0,7.3,0.1,9.9c0.1,2.6,0.5,4.3,1.1,5.8C1.9,41.3,2.7,42.6,4,44

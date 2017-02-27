@@ -20,25 +20,31 @@ form fieldset {
 }
 
 /* Messages (eg. Validation Messages) */
-form .message {
-  padding: 8px 12px;
-  padding: 0.5rem 0.75rem;
+.message {
+  padding: 16px;
   margin: 12px 0px;
   margin: 0.75rem 0rem;
   background: #E3EFF2;
   border: 1px solid #ABC3CA;
   color: rgb(4, 70, 111);
+  border-radius: 2px;
 
-  &.good {
+  &.good,
+  &.success {
     background: rgb(225, 245, 225);
     color: darkgreen;
     border-color: rgb(156, 210, 156);
+	padding: 32px;
+  }
+  &.failure {
+	  padding: 32px;
   }
   &.bad,
-  &.required {
-    background: #FAE4E8;
-    color: rgb(126, 7, 20);
-    border-color: #D29CA6;
+  &.failure,
+  &.error {
+	  background: #ffc6e3;
+	  border: 1px solid #ff8aa7;
+	  color: #340018;
   }
 }
 
