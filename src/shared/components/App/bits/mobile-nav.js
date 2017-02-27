@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 
 // Utils
-import * as _ from "lodash";
+import * as _ from 'lodash';
+
+import { Link } from 'react-router';
+import Scroll from 'react-scroll';
+const LocalLink  = Scroll.Link;
+const Element    = Scroll.Element;
+const Events     = Scroll.Events;
+const scroll     = Scroll.animateScroll;
+const scrollSpy  = Scroll.scrollSpy;
 
 // App
 export default class MobileNav extends Component {
