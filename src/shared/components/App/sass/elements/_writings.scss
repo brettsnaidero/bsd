@@ -22,28 +22,15 @@
     font-size: 24px;
     font-size: calc(20.4448px + 1.11111vw);
     line-height: 1.6;
-	position: relative;
-	padding-right: 30%;
+		position: relative;
     line-height: 1.2;
+		width: 65%;
+		float: left;
 }
 
 .home-writings .writings-list li {
     margin: 16px 0;
     margin: 1rem 0;
-}
-
-.home-writings .writings-list .image {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 35%;
-	height: 100%;
-
-	background-image: url('../img/home.jpg');
-	background-size: cover;
-	background-position: center;
-	background-color: $background-color;
-	background-blend-mode: multiply;
 }
 
 .home-writings .writings-list a {
@@ -90,4 +77,63 @@
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.home-writings .image-holder {
+	width: 35%;
+	position: relative;
+	float: right;
+}
+
+.home-writings .image-holder .slide {
+	background-size: cover;
+	background-position: center;
+	background-color: $background-color;
+	// background-blend-mode: multiply;
+	position: absolute;
+
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	padding-bottom: 110%;
+	width: 75%;
+	z-index: 5;
+	transition: all .2s cubic-bezier(.215,.61,.355,1);
+	
+	// useTranslate3d: true;
+	-webkit-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.home-writings .image-holder .slide:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    -webkit-transform: scale3d(.9,.9,1);
+    transform: scale3d(.9,.9,1);
+    z-index: 4;
+		opacity: 0.75;
+}
+
+.home-writings .image-holder .slide:nth-child(3) {
+		position: absolute;
+		top: 0;
+		right: 10%;
+		-webkit-transform: scale3d(.8,.8,1);
+		transform: scale3d(.8,.8,1);
+		z-index: 3;
+		opacity: 0.5;
+}
+
+.home-writings .image-holder .slide:nth-child(4) {
+		position: absolute;
+		top: 0;
+		right: 15%;
+		-webkit-transform: scale3d(.7,.7,1);
+		transform: scale3d(.7,.7,1);
+		z-index: 2;
+		opacity: 0.25;
 }

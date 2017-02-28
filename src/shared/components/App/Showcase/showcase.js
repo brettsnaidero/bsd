@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Utils
 import * as _ from 'lodash';
@@ -41,14 +42,15 @@ export default class WorkPage extends Component {
 				{/* Banner */}
 				<section
 					className="work-banner"
-					// style={{
-					// 	backgroundImage: 'url(../' + this.state.page.image + ')'
-					// }}
+					style={{
+						backgroundImage: 'url(../' + this.state.page.image + ')'
+					}}
 				>
 					<div className="row">
 						<ISeeYou classesForChild="text">
 							<div className="client">Client: {this.state.page.title}</div>
 							<h1>{this.state.page.title}</h1>
+							<Link to="/#work">See other projects</Link>
 						</ISeeYou>
 					</div>
 				</section>
@@ -71,6 +73,14 @@ export default class WorkPage extends Component {
 									<div>{this.state.page.expertise}</div>
 								</div>
 							</ISeeYou>
+							{this.state.page.team && (
+								<ISeeYou>
+									<div className="bit">
+										<div className="title">Team</div>
+										<div>{this.state.page.team}</div>
+									</div>
+								</ISeeYou>
+							)}
 						</div>
 					</div>
 				</section>

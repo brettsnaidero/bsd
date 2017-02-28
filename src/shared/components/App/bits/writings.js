@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import * as _ from 'lodash';
 
 import Shapes from './shapes';
+import blogItems from '../data/blog-items';
 
 // App
 export default class Writings extends Component {
@@ -12,12 +13,21 @@ export default class Writings extends Component {
         super(props);
 
         this.state = {
-
+					blogList: {}
         }
     }
 
 	componentDidMount() {
+			this.setState({
+				blogList: blogItems
+			})
+	}
 
+	moveBlog(selected) {
+		console.log(selected);
+		let keys = Object.keys(this.state.blogList);
+		let location = keys.indexOf(selected);
+		console.log(keys);
 	}
 
 	render() {
@@ -26,66 +36,32 @@ export default class Writings extends Component {
             {/* Shapes */}
 						<Shapes />
 
-						<div className="row">
+						<div>
+							<div className="row">
 
-							<ul className="writings-list">
 								{/* Image */}
-								<div className="image"></div>
+								<div className="image-holder">
+									{ blogItems.map( (item) => (
+										<div className="slide" style={{ backgroundImage: 'url(' + item.img + ')' }}></div>
+									))}
+								</div>
 
-								{/* Links */}
-								<li>
-									<Link to="/writings/uxofasandwich">
-										New Site Vibes
-										<sup>
-											<time className="Date">AUG ‘16</time> {/* datetime="August 1, 2016" */}
-										</sup>
-										<span className="Slash"></span>
-									</Link>
-								</li>
+								<ul className="writings-list">
+									{/* Links */}
+									{ blogItems.map( (item) => (
+										<li onClick={() => this.moveBlog(item.id) }>
+											{/* <Link to="/writings/uxofasandwich"> */}
+												{ item.title }
+												<sup>
+													<time className="Date">AUG ‘16</time> {/* datetime="August 1, 2016" */}
+												</sup>
+												<span className="Slash"></span>
+											{/* </Link> */}
+										</li>
+									))}
+								</ul>
 
-								<li>
-									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
-										A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS!
-										<sup>
-											<time className="Date">AUG ‘16</time>
-										</sup>
-										<span className="Slash"></span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" data-color_from="#2BC0E4" data-color_to="#EAECC6" className="IndexLink">
-										A Complete Guide To Implementing An SVG Icon System
-										<sup>
-											<time className="Date">NOV ‘16</time>
-										</sup>
-										<span className="Slash"></span>
-									</a>
-								</li>
-
-								<li>
-									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
-										Deciding to Design in the Browser
-										<sup>
-											<time className="Date">AUG ‘16</time>
-										</sup>
-										<span className="Slash"></span>
-									</a>
-								</li>
-
-								<li>
-									<a href="/articles/on-brand" data-color_from="#FF8008" data-color_to="#FFC837" className="IndexLink">
-										On Brand
-										<sup>
-											<time className="Date">AUG ‘16</time>
-										</sup>
-										<span className="Slash"></span>
-									</a>
-								</li>
-							</ul>
-
-							<div></div>
-
+							</div>
 						</div>
 
           </section>

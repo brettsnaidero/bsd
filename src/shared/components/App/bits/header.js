@@ -47,7 +47,10 @@ export default class Header extends Component {
 
             {/* Header */}
             <div className="header-holder">
-              <header id="header" className={this.props.nothome ? 'light' : 'dark'}>
+              <header
+								id="header"
+								className={this.props.nothome && 'light'}
+							>
                 <Link to="/" className="logo">
 					<svg viewBox="0 0 60 60">
 						<defs>

@@ -13,7 +13,7 @@ const showcaseItems = [
         client: 'MMJ Real Estate',
 				expertise: 'Design',
         description: (
-            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
+            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices right across the country. I collaborated with them on their new website, desgining a stylish new web home for the brand.</p>
         ),
         imageList: [
             {
@@ -46,7 +46,7 @@ const showcaseItems = [
         imageList: [
             {
                 type: 'image',
-                content: 'img/work/show-iydj2.jpg'
+                content: 'img/work/show-iydj.jpg'
             },
 						{
 							type: 'text',
@@ -54,7 +54,7 @@ const showcaseItems = [
 						},
 						{
                 type: 'image',
-                content: 'img/work/show-iydj.jpg'
+                content: 'img/work/show-iydj2.jpg'
             }
         ]
     },
