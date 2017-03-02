@@ -6,6 +6,8 @@ import * as _ from 'lodash';
 import blogItems from '../data/blog-items.js';
 import Header from '../bits/header';
 
+import '../sass/highlight.scss';
+
 export default class WritingsPage extends Component {
 	constructor(props) {
 		super(props);

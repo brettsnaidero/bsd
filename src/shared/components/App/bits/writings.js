@@ -93,8 +93,8 @@ export default class Writings extends Component {
 
 								</div>
 
-								{/* More */}
-								<button className="more">More Articles</button>
+								{/* More
+								<button className="more">More Articles</button> */}
 
 							</div>
 						</div>
