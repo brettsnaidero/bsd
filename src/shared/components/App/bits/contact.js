@@ -189,12 +189,11 @@ export default class Contact extends Component {
 	                    </div>
 	                    <div className="field">
 	                      <textarea
-							rows={5}
-							ref="text"
-							placeholder="Message*"
-							defaultValue={""}
-							name="message"
-							value={this.state.text}
+										rows={5}
+										ref="text"
+										placeholder="Message*"
+										name="message"
+										value={this.state.text}
 			          		onChange={this.handleTextChange.bind(this)}
 						/>
 						{ this.state.textError ? <div className="message error">Please enter your message</div> : "" }

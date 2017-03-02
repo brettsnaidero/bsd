@@ -12,7 +12,7 @@ const showcaseItems = [
 		{
         id: 'uxofasandwich',
         title: 'A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS!',
-				img: 'img/work/mmj.png',
+				img: 'img/work/iydj.jpg',
         content: (
             <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
         )
@@ -20,7 +20,7 @@ const showcaseItems = [
 		{
         id: 'uxofasandwich',
         title: 'A Complete Guide To Implementing An SVG Icon System',
-				img: 'img/work/mmj.png',
+				img: 'img/work/bowser.jpg',
         content: (
             <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
         )
@@ -28,7 +28,15 @@ const showcaseItems = [
 		{
         id: 'uxofasandwich',
         title: 'Deciding to Design in the Browser',
-				img: 'img/work/mmj.png',
+				img: 'img/work/landl.jpg',
+        content: (
+            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
+        )
+    },
+		{
+        id: 'uxofasandwich',
+        title: 'Fifth Article',
+				img: 'img/work/polidex.jpg',
         content: (
             <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
         )
