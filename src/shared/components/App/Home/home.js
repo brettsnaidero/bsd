@@ -20,25 +20,22 @@ const scrollSpy  = Scroll.scrollSpy;
 
 export default class Home extends Component {
 	constructor(props) {
-    super(props);
-  }
+		super(props);
+	}
+
+	scroll(hash) {
+		const element = document.querySelector(hash);
+		console.log(element);
+		if (element) {
+			element.scrollIntoView();
+		}
+	}
 
 	componentDidMount() {
-    this.scroll();
-  }
+		if (this.props.location.hash) {
+			this.scroll(this.props.location.hash);
+		}
 
-	scroll() {
-    const { id } = this.props;
-    if (!id) {
-      return;
-    }
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView();
-    }
-  }
-
-	componentDidMount() {
 		// this.parallax();
 
 		// Call SVG4Everybody

@@ -40,7 +40,8 @@ export default class WritingsPage extends Component {
 
 				<section className="blog-page">
 					<article className="Article Page">
-						<h1>{this.state.page.title} <time>August 10, 2014</time></h1>
+						<h1>{this.state.page.title}</h1>
+						<time>August 10, 2014</time>
 						{this.state.page.content}
 					</article>
 				</section>
