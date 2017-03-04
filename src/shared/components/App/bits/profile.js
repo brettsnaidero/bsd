@@ -28,8 +28,8 @@ export default class Profile extends Component {
             {/* Content */}
             <div className="row">
 				<ISeeYou classesForChild="l-col">
-                <p className="">Brett is a designer and front-end developer, who sometimes likes to write about himself in the third person. He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
-				<p className="">He is driven by a desire to create meaningful and lasting connections with brands and audiences through memorable creative which looks beautiful and works brilliantly.</p>
+                <p className="">Brett is a designer and probably a front-end developer, who sometimes likes to write about himself in the third person. He is driven by a desire to create meaningful and lasting connections with people through beautiful and intuitive digital experiences.</p>
+				<p className="">I make good with the pixels, and then make those pixels move with classy, well composed development.</p>
               </ISeeYou>
               <div className="r-col">
 					<ISeeYou>
@@ -38,20 +38,20 @@ export default class Profile extends Component {
 						</div>
 					</ISeeYou>
 					<ISeeYou>
-                	<div className="title">Skills that pay the bills</div>
+						<div className="skills">
+							<div className="title">Skills that pay the bills</div>
+							<ul>
+							  <li>UX Design</li>
+							  <li>Interaction Design</li>
+							  <li>HTML, CSS, JS</li>
+							  <li>SASS</li>
+							  <li>Grunt/Gulp/Webpack</li>
+							  <li>Git</li>
+							  <li>React</li>
+							  <li>Proficient in Microsoft Word 😋</li>
+							</ul>
+						</div>
 					</ISeeYou>
-					<ISeeYou>
-	                <ul>
-	                  <li>UX Design</li>
-	                  <li>Interaction Design</li>
-	                  <li>HTML, CSS, JS</li>
-	                  <li>SASS</li>
-	                  <li>Grunt/Gulp/Webpack</li>
-	                  <li>Git</li>
-	                  <li>React</li>
-	                  <li>Proficient in Microsoft Word 😋</li>
-	                </ul>
-								</ISeeYou>
               </div>
             </div>
           </section>

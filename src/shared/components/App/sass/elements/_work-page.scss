@@ -159,25 +159,26 @@
 }
 
 /* Contact */
-.work-contact {
-	background-color: #FFF;
+.work-footer {
+	background-color: $background-color;
+	position: relative;
 	text-align: center;
 	padding: 60px 0 120px 0;
 }
 
-.work-contact .row {
+.work-footer .row {
 	max-width: 1400px;
 	margin: 0 auto;
 }
 
-.work-contact h2 {
+.work-footer h2 {
 	font-size: 24px;
     font-size: calc((24px - 320px * .01111) + 1.11111vw);
 	line-height: 1.6;
 	color: $secondary-color;
 }
 
-.work-contact p {
+.work-footer p {
 	font-size: 20px;
     font-size: 1.25em;
 	line-height: 1.6;

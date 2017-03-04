@@ -106,14 +106,14 @@ export default class WorkPage extends Component {
 						))}
 					</div>
 				</section>
-				{/*
-				<section className="work-contact">
+
+				<section className="work-footer">
 					 <Shapes />
 					<div className="row">
 						<h2>That was a fun project :)</h2>
 						<p>If you want to work with me on other fun projects, please get in touch.</p>
 					</div>
-				</section> */}
+				</section>
             </div>
         );
     }
