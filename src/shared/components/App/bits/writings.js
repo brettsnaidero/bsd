@@ -53,7 +53,7 @@ export default class Writings extends Component {
 
 	render() {
         return (
-          <section className="home-writings" id="writings">
+          <section className="home-writings">
             {/* Shapes */}
 						<Shapes />
 

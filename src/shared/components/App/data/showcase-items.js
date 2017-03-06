@@ -73,7 +73,7 @@ const showcaseItems = [
         imageList: [
             {
                 type: 'image',
-                content: 'img/work/show-landl.jpg'
+                content: 'img/work/show-bowser1.jpg'
             }
         ]
     },

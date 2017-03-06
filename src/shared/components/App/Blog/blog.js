@@ -36,7 +36,7 @@ export default class WritingsPage extends Component {
 	render() {
 		return (
 			<div>
-				<Header nothome={true} />
+				<Header nothome={true} theme="light" />
 
 				<section className="blog-page">
 					<article className="Article Page">

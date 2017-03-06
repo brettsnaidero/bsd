@@ -5,12 +5,23 @@
 	color: #FFF;
 	background-position: center;
 	background-size: cover;
+	position: relative;
 
 	@supports (display: flex) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
+}
+
+.work-banner:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.375));
 }
 
 @media screen and (max-width: 800px) {
@@ -24,6 +35,8 @@
 	max-width: 1400px;
 	margin: 0 auto;
 	text-align: center;
+	position: relative;
+	z-index: 2;
 }
 
 .work-banner .row .text {
@@ -33,7 +46,8 @@
 	font-size: 20px;
 	font-size: 1.25em;
 	margin-bottom: 15px;
-	color: #a0a0a0;
+	color: #fff;
+	opacity: 0.75;
 	font-family: monospace;
 }
 
@@ -50,9 +64,33 @@
 	}
 }
 
-.work-banner p {
-	margin-top: 50px;
-	line-height: 1.6;
+.work-banner a.back {
+	color: #FFF;
+	text-decoration: none;
+	position: relative;
+	padding-left: 22px;
+	display: inline-block;
+
+	svg {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -7px;
+		height: 14px;
+		width: 14px;
+		fill: #FFF;
+	}
+}
+
+.work-banner a.back:hover,
+.work-banner a.back:focus {
+	color: $third-color;
+
+	svg {
+		fill: $third-color;
+	}
 }
 
 /* Work Content */

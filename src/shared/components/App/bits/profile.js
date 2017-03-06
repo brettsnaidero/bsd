@@ -21,7 +21,7 @@ export default class Profile extends Component {
 
 	render() {
         return (
-          <section className="profile" id="profile">
+          <section className="profile">
             {/* Shapes */}
 			<Shapes/>
 

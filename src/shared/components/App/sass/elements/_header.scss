@@ -419,3 +419,20 @@ header.light .c2a a:focus,
 header.light .c2a a.active {
 	border-color: $third-color;
 }
+
+/* White */
+header.white {
+}
+header.white nav ul li a {
+  color: #FFF;
+}
+
+header.white .c2a a {
+    border: 2px solid #FFF;
+}
+
+header.white .c2a a:hover,
+header.white .c2a a:focus,
+header.white .c2a a.active {
+	border-color: $third-color;
+}

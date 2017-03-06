@@ -23,20 +23,18 @@ export default class Home extends Component {
 		super(props);
 	}
 
-	scroll(hash) {
+	scrollLoad(hash) {
 		const element = document.querySelector(hash);
-		console.log(element);
 		if (element) {
-			element.scrollIntoView();
+			const offset = document.getElementById(location.hash.slice(1)).getBoundingClientRect().top;
+			scroll.scrollMore(offset);
 		}
 	}
 
 	componentDidMount() {
 		if (this.props.location.hash) {
-			this.scroll(this.props.location.hash);
+			this.scrollLoad(this.props.location.hash);
 		}
-
-		// this.parallax();
 
 		// Call SVG4Everybody
 		svg4everybody();
@@ -58,16 +56,16 @@ export default class Home extends Component {
 		};
 
 		// Header stick
-		let headerEl = document.querySelector('#header');
-		let bodyEl = document.querySelector('body');
-		$(window).on('scroll', debounce( function(e) {
-			// Sticky header
-			if (bodyEl.scrollTop > 300) {
-			  headerEl.classList.add('stuck');
-			} else {
-			  headerEl.classList.remove('stuck');
-			};
-		}, 100));
+		// let headerEl = document.querySelector('#header');
+		// let bodyEl = document.querySelector('body');
+		// $(window).on('scroll', debounce( function(e) {
+		// 	// Sticky header
+		// 	if (bodyEl.scrollTop > 300) {
+		// 	  headerEl.classList.add('stuck');
+		// 	} else {
+		// 	  headerEl.classList.remove('stuck');
+		// 	};
+		// }, 100));
 
 		// Toggler
 		var togglerElements = document.querySelectorAll('.toggler');
@@ -82,75 +80,23 @@ export default class Home extends Component {
 		});
 	}
 
-	parallax() {
-		// init controller
-		var controller = new ScrollMagic.Controller();
-
-		// create a scene
-		var tween = new TimelineMax ()
-			.add([
-		    // Squiggle 1
-				TweenMax.fromTo("#parallaxText .layer1", 1, {
-		      scale: 1, autoAlpha: 1, top: 75 + "%"
-		    }, {
-		      top: 95 + "%", ease: Linear.easeNone
-		    }),
-		    // Squiggle 2
-				TweenMax.fromTo("#parallaxText .layer2", 1, {
-		      scale: 1, autoAlpha: 1, top: 55 + "%"
-		    }, {
-		      top: 75 + "%", ease: Linear.easeNone
-		    }),
-		    // Cross
-				TweenMax.fromTo("#parallaxText .layer3", 1, {
-		      scale: 1, autoAlpha: 1, top: 30 + "%"
-		    }, {
-		      top: 50 + "%", ease: Linear.easeNone
-		    }),
-		    // Triangle
-				TweenMax.fromTo("#parallaxText .layer4", 1, {
-		      scale: 1, autoAlpha: 1, top: 85 + "%"
-		    }, {
-		      top: 105 + "%", ease: Linear.easeNone
-		    }),
-		    // Semicircle
-				TweenMax.fromTo("#parallaxText .layer5", 1, {
-		      scale: 1, autoAlpha: 1, top: 20 + "%"
-		    }, {
-		      top: 40 + "%", ease: Linear.easeNone
-		    }),
-		    // Circle
-				TweenMax.fromTo("#parallaxText .layer6", 1, {
-		      scale: 1, autoAlpha: 1, top: 40 + "%"
-		    }, {
-		      top: 60 + "%", ease: Linear.easeNone
-		    })
-			]);
-
-		// build scene
-		var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: $(window).height()})
-			.setTween(tween)
-			// .addIndicators()
-			.addTo(controller);
-	}
-
 	render() {
         return (
-            <div>
-				<Header />
-				<Element name="intro">
+            <div id="page">
+				<Header nothome={false} theme="" />
+				<Element name="intro" id="intro">
 					<Intro />
 				</Element>
-				<Element name="profile">
+				<Element name="profile" id="profile">
 					<Profile />
 				</Element>
-				<Element name="showcase">
+				<Element name="work" id="work">
 					<Showcase />
 				</Element>
-				<Element name="writing">
+				<Element name="writing" id="writing">
 					<Writings />
 				</Element>
-				<Element name="contact">
+				<Element name="contact" id="contact">
 					<Contact />
 				</Element>
             </div>

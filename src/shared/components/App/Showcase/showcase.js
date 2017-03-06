@@ -38,7 +38,7 @@ export default class WorkPage extends Component {
 	render() {
         return (
             <div>
-				<Header nothome={true} />
+				<Header nothome={true} theme="white" />
 				{/* Banner */}
 				<section
 					className="work-banner"
@@ -50,7 +50,20 @@ export default class WorkPage extends Component {
 						<ISeeYou classesForChild="text">
 							<div className="client">Client: {this.state.page.title}</div>
 							<h1>{this.state.page.title}</h1>
-							<Link to="/#work">See other projects</Link>
+							<Link className="back" to="/#work">
+								<svg viewBox="0 0 125 125">
+									<rect x="0" width="25" height="25"/>
+									<rect x="50" width="25" height="25"/>
+									<rect x="0" y="50" width="25" height="25"/>
+									<rect x="50" y="50" width="25" height="25"/>
+									<rect x="50" y="100" width="25" height="25"/>
+									<rect x="0" y="100" width="25" height="25"/>
+									<rect x="100" y="100" width="25" height="25"/>
+									<rect x="100" y="50" width="25" height="25"/>
+									<rect x="100" y="0" width="25" height="25"/>
+								</svg>
+								See other projects
+							</Link>
 						</ISeeYou>
 					</div>
 				</section>
@@ -88,17 +101,17 @@ export default class WorkPage extends Component {
 				<section className="work-images">
 					<div className="row">
 						{_.map(this.state.page.imageList, (each, key) => (
-							<div>
+							<div key={key}>
 							{ each.type == 'image' ? (
-								<ISeeYou>
+								<ISeeYou classesForChild="showcase-icu">
 									<div className="image-bit">
-										<img key={key} src={"../" + each.content} />
+										<img src={"../" + each.content} />
 									</div>
 								</ISeeYou>
 							) : (
-								<ISeeYou>
+								<ISeeYou classesForChild="showcase-icu">
 									<div className="text-bit">
-										<p key={key}>{each.content}</p>
+										<p>{each.content}</p>
 									</div>
 								</ISeeYou>
 							) }

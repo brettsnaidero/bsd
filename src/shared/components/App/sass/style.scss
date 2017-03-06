@@ -65,20 +65,38 @@ body::-webkit-scrollbar-thumb {
 	opacity: 0;
 }
 
+.showcase-icu.iseeyou {
+	transform: translateY(20px);
+}
+
 .iseeyou.active,
 .iseeyou.active {
 	animation: showThing 0.5s ease 1;
 	opacity: 1;
 }
 
+.showcase-icu.iseeyou.active {
+	animation: showThingShowcase 0.5s ease 1;
+	transform: translateY(0px);
+}
+
 @keyframes showThing {
 	0% {
 		opacity: 0;
-		// transform: translateY(-100px);
 	}
 	100% {
 		opacity: 1;
-		// transform: translateY(0px);
+	}
+}
+
+@keyframes showThingShowcase {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
