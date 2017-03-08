@@ -121,10 +121,39 @@ export default class WorkPage extends Component {
 				</section>
 
 				<section className="work-footer">
-					 <Shapes />
+
+					{/* Squiggle */}
+					<div className="squiggle">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" style={{
+							enableBackground: 'new 0 0 200 200'
+						}}>
+							<path d="M6.4,206.4c7.1-7.1-5.6-19.9,1.6-27s19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27c7.1-7.1,19.9,5.6,27-1.6
+							  c7.1-7.1-5.6-19.9,1.6-27c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27l0,0c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27
+							  c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27s19.9,5.6,27-1.6"/>
+						</svg>
+					</div>
+
+					{/* Triangle */}
+	                <div className="triangle">
+	                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="75.8 -672.6 110 60" style={{
+	                        enableBackground: 'new 75.8 -672.6 110 60'
+	                    }}>
+	                        <path className="st0" d="M84.2-621l45.2-45.2c0.8-0.8,2-0.8,2.8,0l45.2,45.2c1.3,1.3,0.4,3.4-1.4,3.4H85.6
+	                      C83.8-617.6,82.9-619.8,84.2-621z"/>
+	                    </svg>
+	                </div>
+
+					{/* Circle */}
+	                <div className="circle-holder">
+	                    <div className="circle"/>
+	                </div>
+
 					<div className="row">
 						<h2>That was a fun project :)</h2>
 						<p>If you want to work with me on other fun projects, please get in touch.</p>
+						<Link className="back" to="/#work">
+							Back home
+						</Link>
 					</div>
 				</section>
             </div>
