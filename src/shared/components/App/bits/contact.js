@@ -156,12 +156,12 @@ export default class Contact extends Component {
 						{ this.state.sent ? (
 							<div className="commentForm">
 								{ this.state.sendError ? (
-									<div className="message success">
-										Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
-									</div>
-								) : (
 									<div className="message failure">
 										Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages :)
+									</div>
+								) : (
+									<div className="message success">
+										Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
 									</div>
 								)}
 							</div>

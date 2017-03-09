@@ -16,10 +16,10 @@ import nodemailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
 import bodyParser from 'body-parser';
 
-const password = process.env.OUTLOOK_SECRET;
+const OutlookPassword = process.env.OUTLOOK_SECRET;
 
 // Create our express based server.
-const app = express();
+const app = express(); 
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -34,7 +34,7 @@ function handleSayHello(req, res) {
         service: "hotmail",
         auth: {
             user: "brettsnaidero@hotmail.com",
-            pass: password
+            pass: OutlookPassword
         }
     }));
 
