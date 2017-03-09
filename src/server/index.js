@@ -16,7 +16,7 @@ import nodemailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
 import bodyParser from 'body-parser';
 
-import password from './password';
+const password = process.env.OUTLOOK_SECRET;
 
 // Create our express based server.
 const app = express();
