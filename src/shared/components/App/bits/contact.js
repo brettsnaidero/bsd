@@ -143,7 +143,7 @@ export default class Contact extends Component {
 
 	render() {
         return (
-          <section className="home-contact" id="contact">
+          <section className="home-contact">
 			{/* Shapes */}
 			<Shapes/>
 

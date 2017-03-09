@@ -6,8 +6,6 @@ import * as _ from "lodash";
 
 import MobileNav from "./mobile-nav";
 
-// import Logo from "../img/logo.svg";
-
 import Scroll from 'react-scroll';
 const LocalLink  = Scroll.Link;
 const Element    = Scroll.Element;
@@ -18,18 +16,14 @@ const scrollSpy  = Scroll.scrollSpy;
 // App
 export default class Header extends Component {
 	constructor(props) {
-      super(props);
+		super(props);
 
-      this.state = {
-		mobileMenuActive: false
-      }
-  }
-
-	componentDidMount() {
+		this.state = {
+			mobileMenuActive: false
+		}
 	}
 
 	toggleMobileMenu() {
-		console.log(this);
 		this.setState({
 			mobileMenuActive: !this.state.mobileMenuActive
 		})
@@ -48,18 +42,18 @@ export default class Header extends Component {
             {/* Header */}
             <div className="header-holder">
               <header
-								id="header"
-								className={this.props.nothome && 'light'}
-							>
+				id="header"
+				className={this.props.theme}
+				>
                 <Link to="/" className="logo">
 					<svg viewBox="0 0 60 60">
 						{/*
 						<defs>
-				        <linearGradient id="gradient">
-				          <stop offset="0%" stop-color="#692ec8" />
-				          <stop offset="100%" stop-color="#2f1ca8" />
-				        </linearGradient>
-				    </defs>
+					        <linearGradient id="gradient">
+					          <stop offset="0%" stop-color="#692ec8" />
+					          <stop offset="100%" stop-color="#2f1ca8" />
+					        </linearGradient>
+					    </defs>
 						*/}
 						<path className="shape" d="M52.4,25.7l-8.5-8.5l1.4-1.4c2.4-2.4,2.4-6.2,0-8.5L41,3l-5.7,5.7l0,0C30.6,4,23,4,18.3,8.7L4.1,22.9l17.1,17.1l-4.3,4.3
 		c-2.4,2.4-2.4,6.2,0,8.5l4.3,4.3l8.5-8.5l8.5,8.5l14.2-14.2C57.1,38.1,57.1,30.4,52.4,25.7z"/>
@@ -70,35 +64,37 @@ export default class Header extends Component {
 					</svg>
                 </Link>
                 <nav className="main-nav">
+					{ this.props.nothome ? (
                   <ul>
                     <li>
-						{ this.props.nothome ? (
-							<Link to="/#profile">Profile</Link>
-						) : (
-							<LocalLink to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
-						)}
+						<Link to="/#profile">Profile</Link>
+					</li>
+					<li>
+						<Link to="/#work">Work</Link>
 					</li>
                     <li>
-						{ this.props.nothome ? (
-							<Link to="/#work">Work</Link>
-						) : (
-							<LocalLink to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
-						)}
-					</li>
-                    <li>
-						{ this.props.nothome ? (
-							<Link to="/#writing">Writing</Link>
-						) : (
-							<LocalLink to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
-						)}
+						<Link to="/#writing">Writing</Link>
 					</li>
                   </ul>
+						) : (
+					<ul>
+						<li>
+							<LocalLink activeClass="active" to="profile" spy={true} smooth={true} offset={50} duration={500}>Profile</LocalLink>
+						</li>
+						<li>
+							<LocalLink activeClass="active" to="work" spy={true} smooth={true} offset={50} duration={500}>Work</LocalLink>
+						</li>
+						<li>
+							<LocalLink activeClass="active" to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
+						</li>
+					</ul>
+				)}
                 </nav>
                 <div className="c2a">
 					{ this.props.nothome ? (
 						<Link to="/#contact">Let’s chat!</Link>
 					) : (
-						<LocalLink to="contact" spy={true} smooth={true} offset={50} duration={500}>Let’s chat!</LocalLink>
+						<LocalLink activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>Let’s chat!</LocalLink>
 					)}
                   <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
                     Menu

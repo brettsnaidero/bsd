@@ -28,7 +28,7 @@ export default class Showcase extends Component {
 
 	render() {
         return (
-          <section className="work" id="work">
+          <section className="work">
 
             {/* Shapes */}
 			<Shapes />

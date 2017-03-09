@@ -38,24 +38,6 @@ $sizing-ratio: 1;
 		color: $third-color;
 	}
 
-    .name {
-	  font-weight: bold;
-      position: relative;
-      text-shadow: 0px 0px 25px rgba(#989ecd,0.35);
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0px;
-        height: 2px;
-        width: 100%;
-        border-radius: 1px;
-        background-color: $third-color;
-        z-index: -1;
-      }
-    }
-
     .job {
       position: relative;
       text-shadow: 0px 0px 25px rgba(#989ecd,0.35);
@@ -93,7 +75,49 @@ $sizing-ratio: 1;
   .line {
     // color: $third-color;
     display: block;
+    overflow: hidden;
   }
+}
+
+.home .banner-text h1 .name {
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0px 0px 25px rgba(#989ecd,0.35);
+}
+.home .banner-text h1 .name:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+    height: 2px;
+    width: 0%;
+    border-radius: 1px;
+    background-color: $third-color;
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.home .banner-text.active h1 .name:after {
+    width: 100%;
+}
+
+.home .banner-text.iseeyou .top,
+.home .banner-text.iseeyou .bottom {
+    display: block;
+    transition: 0.5s all ease 0.5s;
+}
+
+.home .banner-text.iseeyou .top {
+    transform: translateY(100%);
+}
+
+.home .banner-text.iseeyou .bottom {
+    transform: translateY(-100%);
+}
+
+.home .banner-text.iseeyou.active .top,
+.home .banner-text.iseeyou.active .bottom {
+    transform: translateY(0%);
 }
 
 @media screen and (max-width: 1400px) {

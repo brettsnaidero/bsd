@@ -29,10 +29,12 @@ export default class Intro extends Component {
 						{/* style={{backgroundImage: 'url(img/home.jpg)'}} */}
 
             {/* Designer */}
-						<ISeeYou classesForChild="banner-text">
-              <h1>Hello, I'm <span className="name">Brett Snaidero</span> —
-                <span className="line">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span> <span className="hash">*</span></span></h1>
-            </ISeeYou>
+			<ISeeYou classesForChild="banner-text">
+				<h1>
+					<span className="line"><span className="top">Hello, I'm <span className="name">Brett Snaidero</span> —</span></span>
+					<span className="line"><span className="bottom">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span> <span className="hash">*</span></span></span>
+				</h1>
+			</ISeeYou>
 
 						<Shapes />
 

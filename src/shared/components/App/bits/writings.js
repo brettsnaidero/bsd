@@ -53,7 +53,7 @@ export default class Writings extends Component {
 
 	render() {
         return (
-          <section className="home-writings" id="writings">
+          <section className="home-writings">
             {/* Shapes */}
 						<Shapes />
 
@@ -83,7 +83,7 @@ export default class Writings extends Component {
 												<Link to={"/writings/" + item.id}>
 													{ item.title }
 													<sup>
-														<time className="Date">AUG ‘16</time> {/* datetime="August 1, 2016" */}
+														<time className="Date">{ item.date }</time>
 													</sup>
 													<span className="Slash"></span>
 												</Link>
