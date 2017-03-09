@@ -5,7 +5,7 @@ const showcaseItems = [
     {
         id: 'uxofasandwich',
         title: 'The UX of a Sandwich',
-		img: 'img/work/mmj.png',
+				img: 'img/work/mmj.png',
         content: (
             <div>
                 <p>Firstly let's address some immediate questions that you probably have:</p>
@@ -46,11 +46,123 @@ const showcaseItems = [
         )
     },
 		{
-        id: 'uxofasandwich',
-        title: 'A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS!',
+        id: 'svg',
+        title: 'An SVG Icon System',
 				img: 'img/work/iydj.jpg',
         content: (
-            <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices across the country.</p>
+					<div>
+						<p className="intro"><strong>Why write about SVG in 2016?</strong> Well I think that although a lot has been said of the benefits of SVG icon systems, there remains a lot of people who still see them as a bit of an unknown. The specifics of how to implement SVG in particular can get some short shrift (although there are some great articles out there). So I thought I'd tell you about one specific use case for SVG, and how to go about implementing that: using <strong>an SVG icon system</strong>, ideally to replace your icon fonts and sprited background-images.</p>
+						<p>Having used this system for a little while now, I'm finally sold that SVG's make for the best icon system available. So what makes a good icon system? Here's a list of criteria for what makes a good icon system (in my opinion):</p>
+						<ul><li><strong>Easily editable: </strong>We should be able to add and remove icons from the set very quickly and easily.</li>
+						<li><strong>Resolution independent / Vector:</strong> The icons should look as crisp as possible on any screen type.</li>
+						<li><strong>Small file size: </strong>Our system should take as little toll on page loading as possible!</li>
+						<li><strong>Utilising spriting and caching: </strong>We should be able to make use of these techniques to minimise the burden on loading.</li>
+						<li><strong>Interactive: </strong>The ability to interact and style the icons using CSS is a huge plus, allowing to more easily manipulate the size, colour, and styling of the icons.</li>
+						<li><strong>Semantic: </strong>The icon system should comply with accessibility standards, and should be bespoke in it's purpose and meaning.</li>
+						</ul><p>While older techniques have individually managed to tick a lot of these boxes, an SVG icon system can tick <strong>all</strong> of these boxes, and once you're versed in the technique, it can be quick and easy to implement and maintain. </p>
+						<h2>Before We Start: Some Helpful Base Knowledge</h2>
+						<p>It can be helpful to have a basic understanding of some of the fundamentals about SVG, so we can understand how our icon system will work. The first thing you should know is how SVG <em>looks</em>.</p>
+						<p>By this I mean how the <em>markup</em> for SVG looks. If you open an SVG file in a text editor, you'll see it looks a bit like HTML, with tags defining the structure of the file. This is because SVG's are XML based, which makes them great for the web.</p>
+						<Highlight className="javascript">
+								&lt;svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+						    &lt;rect width="100%" height="100%" fill="red" /&gt;
+						    &lt;circle cx="150" cy="100" r="80" fill="green" /&gt;
+						    &lt;text x="150" y="125" font-size="60" text-anchor="middle" fill="white"&gt;SVG&lt;/text&gt;
+						&lt;/svg&gt;
+						</Highlight>
+						<p>Now there's a bunch of different ways we can use SVG in our websites:</p>
+						<ul>
+							<li>Embedding this SVG markup directly on our page,</li>
+						<li>Linking an SVG file in an &lt;img&gt; tag,</li>
+						<li>Setting an SVG file as a background image with CSS.</li>
+						</ul>
+						<p>These techniques all have there benefits, but the technique we're going to be using today involves a kind of hybrid of embedding and linking. Hopefully that's mysterious enough to get you to read on...</p>
+						<div className="message">Just a heads up that in this tutorial we'll be using a task runner (choice of <strong>Grunt</strong> or <strong>Gulp</strong>). If you're not using a task runner, then you may want to tackle learning about those before you try and use SVG icons. Chris Coyier wrote <a title="Grunt for People Who Think Things Like Grunt are Weird and Hard" href="https://24ways.org/2013/grunt-is-not-weird-and-hard/" target="_blank">a great article</a> a while back which got me on my way with these, and I'd recommend giving it a read.</div>
+						<h2>Getting Started: Sourcing Your Icons</h2>
+						<p>The first step in getting an icon system on your site is sourcing some icons. The only, perhaps obvious, caveat to this is that we're going to want <strong>vector</strong> icons to make use of the benefits of SVG. For the purposes of this tutorial, let's go grab some icons from <a href="http://www.flaticon.com/">flaticon.com</a>.</p>
+						<p>We want individual, one colour icons at this point. Later we can talk about minimising the file size, and even adding a second colour, but for now this will do.</p>
+						<div className="captionImage center">
+							<img className="center" title="" src="assets/Uploads/ouricons.jpg" alt="Our SVG icons for this tutorial." />
+							<br />
+							<p className="caption center">Icons! This is what we're talking about.</p>
+						</div>
+						<div className="message"><strong>Important note for those using Illustrator:</strong> If you're exporting your SVG files from Illustrator, then all your icons should be made pure black, as in #000000. This is so you can add colour to them using CSS later. You can read more about this <a title="SVG Gotcha #1" href="https://css-tricks.com/gotchas-on-getting-svg-into-production/#article-header-id-5" target="_blank">here</a>.</div>
+						<p>Once we've got our individual SVG icons to start with, we just put the files for these in a folder in our project directory (Something like <strong><em>directory/images/svg-icons/iconname.svg</em></strong>), naming them something simple we can reference later with ease.</p>
+						<p><img className="center" title="" src="assets/Uploads/svgfolder.jpg" alt="SVG&#039;s in a folder." /></p>
+						<p>So you have all your individual icons, and you could go and use them by directly copying them into your page. Hold your horses though, because if you were to do that then you wouldn't get the benefits of caching that comes from having the icons sprited. To do this, we'll be combining those icons into one larger sprite file.</p>
+						<h2>Spriting Your Icons</h2>
+						<p>Now you could maybe do this manually, but that's a task that would take a lot of time and effort (and would need to be redone every time you wanted to change the icon set). Luckily, some clever people have created grunt and gulp (pick your poison) tasks that take care of this for us.</p>
+						<p>Basically, with these tasks, we just need to point to the individual icons, and tell the task where to output the sprited file. We can also pass a few nifty options, but basically when the task is run, a file will be generated which combines all the icons.</p>
+
+						<h4>If you use <strong>Gulp</strong> - <a title="Gulp SVGStore" href="https://github.com/w0rm/gulp-svgstore" target="_blank">https://github.com/w0rm/gulp-svgstore</a></h4>
+						<p>Open your command line of choice, navigate to your project directory, then type:</p>
+						<pre className="language-markup line-numbers"><code>npm intall gulp-svgstore gulp-svgmin --save</code></pre>
+						<p>This will download and install the task locally, from which point you can open your gulpfile.js and configure the task.</p>
+						{/*
+						var svgstore = require('gulp-svgstore');
+						var svgmin = require('gulp-svgmin');
+
+						gulp.task('spritesvg', function () {
+						    return gulp
+						        .src('images/svg-icons/*.svg')
+						        .pipe(svgmin(function (file) {
+						            var prefix = path.basename(file.relative, path.extname(file.relative));
+						            return {
+						                plugins: [{
+						                    cleanupIDs: {
+						                        prefix: prefix + '-',
+						                        minify: true
+						                    }
+						                }]
+						            }
+						        }))
+						        .pipe(svgstore())
+						        .pipe(gulp.dest('images'));
+						});
+						*/}
+						<p>Now, from your command line, you can run <code className="language-powershell">gulp spritesvg</code> and your sprite file will be generated for you, in a jiffy!</p>
+						<Highlight className="html">
+							&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+						    &lt;symbol id="codepen" viewBox="0 0 64 64"&gt;
+						        &lt;title&gt;CodePen&lt;/title&gt;
+						        &lt;path etc.../&gt;
+						    &lt;/symbol&gt;
+						    &lt;symbol id="youtube" viewBox="0 0 64 64"&gt;
+						        &lt;title&gt;YouTube&lt;/title&gt;
+						        &lt;path etc.../&gt;
+						    &lt;/symbol&gt;
+						    &lt;symbol id="twitter" viewBox="0 0 64 64"&gt;
+						        &lt;title&gt;Twitter&lt;/title&gt;
+						        &lt;path etc.../&gt;
+						    &lt;/symbol&gt;
+							&lt;/svg&gt;
+						</Highlight>
+						<p>To add icons to your sprite in the future, all you need to do is add the SVG file to your source folder, and then simply run the grunt/gulp task again. It's really, really easy.</p>
+						<h2>Using Your Icons</h2>
+						<p>Now that you have your icons sprited, they're ready to use, it's time to introduce you to the markup which will represent your icons in the HTML.</p>
+						<Highlight className="javascript">
+							&lt;svg&gt;
+						    &lt;use href="images/sprite.svg#icon-name"&gt;&lt;/use&gt;
+							&lt;/svg&gt;
+						</Highlight>
+						<p>What the &lt;use&gt; tag allows us to do is reference a specific symbol from an SVG file, using an ID. Modern browsers will also let you point towards an external file, as you can see above. This is fantastic because it means we can cache the SVG file, as well as getting the performance benefits of spriting (Just the one HTTP request, thanks)!</p>
+						<h2>Supporting Older Browsers</h2>
+						<p>How far you want to go in terms of supporting older browsers is up to you really, but the least I'd recommend is to use the javascript plugin <a title="svg4everybody on Github" href="https://github.com/jonathantneal/svg4everybody" target="_blank">svg4everybody</a>, which will let you support browsers that don't understand external references in &lt;use&gt; tags. For these browsers, svg4everybody will instead load the SVG file directly onto the page (and hide it), and then update those references to be internal. Pretty nifty.</p>
+						<p>To use svg4everybody, download it <a title="svg4everybody" href="https://github.com/jonathantneal/svg4everybody" target="_blank">directly from Github</a> or install it via Bower, if that's a thing you do:</p>
+						<Highlight className="javascript">bower install svg4everybody --save </Highlight>
+						<p>Then, include the svg4everybody javascript file on your page, and call it:</p>
+						{/*
+						<pre className="language-html line-numbers">
+							<code className="language-html">
+								&lt;script src="/path/to/svg4everybody.js"&gt;&lt;/script&gt;
+						&lt;script&gt;
+						svg4everybody(); // run it now or whenever you are ready
+						&lt;/script&gt;
+						</code>
+						</pre>
+						*/}
+						<p>And that's all there is to it! Easy as pie. Of course, if you need to provide support for legacy browsers such as old IE versions, than you can go even further and provide PNG fallbacks for those older browsers that don't support SVG. If that sounds like something you need, then check out the svg4everybody github page for more information.</p>
+					</div>
         )
     },
 		{

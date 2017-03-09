@@ -80,7 +80,7 @@ export default class Writings extends Component {
 	            					onMouseLeave={ () => this.onMouseLeave(index) }
 												className={ index == this.state.selected ? " selected" : " notselected" }
 											>
-												<Link to="/writings/uxofasandwich">
+												<Link to={"/writings/" + item.id}>
 													{ item.title }
 													<sup>
 														<time className="Date">AUG ‘16</time> {/* datetime="August 1, 2016" */}
