@@ -16,6 +16,7 @@ export default class ISeeYou extends Component {
 	}
 
 	handleInview(isVisible) {
+		window.alert('Change!');
 		if (isVisible == true) {
 			this.setState({
 				visible: true
