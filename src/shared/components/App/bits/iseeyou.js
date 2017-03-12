@@ -16,7 +16,6 @@ export default class ISeeYou extends Component {
 	}
 
 	handleInview(isVisible) {
-		window.alert('Change!');
 		if (isVisible == true) {
 			this.setState({
 				visible: true
@@ -26,7 +25,7 @@ export default class ISeeYou extends Component {
 
 	render() {
       return (
-		<VisibilitySensor scrollCheck scrollDelay={50} onChange={this.handleInview.bind(this)} partialVisibility={true}>
+		<VisibilitySensor scrollCheck={true} scrollDelay={50} onChange={this.handleInview.bind(this)} partialVisibility={true}>
 			<div className={ "iseeyou " + ( this.props.classesForChild ? this.props.classesForChild : "" ) + " " + (this.state.visible ? "active" : "inactive")}>
 				{this.props.children}
 			</div>
