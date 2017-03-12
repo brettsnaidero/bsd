@@ -8,12 +8,12 @@ import VisibilitySensor from 'react-visibility-sensor';
 // App
 export default class ISeeYou extends Component {
 	constructor(props) {
-      super(props);
+		super(props);
 
-      this.state = {
-		visisble: false
-      }
-  }
+		this.state = {
+			visible: false
+		}
+	}
 
 	handleInview(isVisible) {
 		if (isVisible == true) {
