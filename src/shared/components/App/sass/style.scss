@@ -4,8 +4,8 @@
 @import 'primary/_print';
 @import 'primary/_screen';
 
-$background-color: #251371;
-$background-color-two: #6206cb;
+$background-color: #000943;
+$background-color-two: #080562;
 $secondary-color: #bdbbff;
 // body {
 // 	--main-color: black;
@@ -13,8 +13,8 @@ $secondary-color: #bdbbff;
 // $shape-color: var(--main-color);
 $third-color: #ff0b81;
 $text-color: #fff;
-$shape-color: rgba(lighten($background-color-two,10%),0.5);
-$slight: #9592fa;
+$shape-color: #302ad9;
+$slight: #7380ff;
 
 ::selection { background: #ff0b81; }
 

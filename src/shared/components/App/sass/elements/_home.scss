@@ -139,6 +139,14 @@ $sizing-ratio: 1;
   top: 0;
 	// box-shadow: inset 0px 0px 500px rgba($third-color,0.1);
   background: linear-gradient(0deg, $background-color 0%, $background-color-two 100%);
+  // background-color: $background-color-two;
+  // background-image: url(../img/tumblr.jpg);
+  // background-size: cover;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 /* Home Contact */
@@ -160,6 +168,56 @@ $sizing-ratio: 1;
 .home-contact .banner-text {
 	position: relative;
 	color: $text-color;
+}
+
+
+.banner-text .strokereveal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -400px;
+    display: block;
+    width: 800px;
+    height: 400px;
+}
+
+.banner-text svg {
+    display: block;
+    width: 800px;
+    height: 400px;
+
+    .st0 {
+        fill:none;
+        stroke: url(#gradient);
+        stroke-width:100;
+        stroke-linecap:square;
+        stroke-linejoin:bevel;
+        stroke-miterlimit:10;
+        animation: strokeUp 5s linear 1;
+        stroke-dasharray: 2894;
+        stroke-dashoffset: 0;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+    }
+
+}
+
+@keyframes strokeUp {
+    0% {
+        stroke-dasharray: 2894;
+        stroke-dashoffset: 2894;
+    }
+    80% {
+        stroke-dasharray: 2894;
+        stroke-dashoffset: 2894;
+    }
+    100% {
+        stroke-dasharray: 2894;
+        stroke-dashoffset: 0;
+    }
 }
 
 .home-contact .banner-text h2 {
