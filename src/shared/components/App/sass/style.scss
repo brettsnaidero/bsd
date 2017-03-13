@@ -5,7 +5,7 @@
 @import 'primary/_screen';
 
 $background-color: #000943;
-$background-color-two: #080562;
+$background-color-two: #090675;
 $secondary-color: #bdbbff;
 // body {
 // 	--main-color: black;
@@ -13,7 +13,7 @@ $secondary-color: #bdbbff;
 // $shape-color: var(--main-color);
 $third-color: #ff0b81;
 $text-color: #fff;
-$shape-color: #302ad9;
+$shape-color: rgba(#302ad9,0.8);
 $slight: #7380ff;
 
 ::selection { background: #ff0b81; }

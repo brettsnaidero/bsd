@@ -187,13 +187,13 @@ $sizing-ratio: 1;
     width: 800px;
     height: 400px;
 
-    .st0 {
-        fill:none;
+    .line {
+        fill: none;
         stroke: url(#gradient);
-        stroke-width:100;
-        stroke-linecap:square;
-        stroke-linejoin:bevel;
-        stroke-miterlimit:10;
+        stroke-width: 5;
+        stroke-linecap: square;
+        stroke-linejoin: bevel;
+        stroke-miterlimit: 10;
         animation: strokeUp 5s linear 1;
         stroke-dasharray: 2894;
         stroke-dashoffset: 0;
