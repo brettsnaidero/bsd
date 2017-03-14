@@ -85,6 +85,14 @@
 	}
 }
 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+  100% {
+		transform: rotate(360deg);
+	}
+} 
 
 /* Squiggle */
 .squiggle {
@@ -96,11 +104,11 @@
   left: 65%;
   z-index: 3;
 
-  animation: show-shapes 2s ease 0s normal;
+  animation: spin 2s ease 0s normal;
 
   &.second {
-    top: 55%;
-    left: 10%;
+		top: 20%;
+    left: 30%;
     animation: show-shapes2 2.2s ease 0s normal;
 
     svg {
@@ -158,15 +166,15 @@
   width: 40px * $sizing-ratio;
   height: 40px * $sizing-ratio;
   transform: translate(-50%, -50%);
-  top: 30%;
-  left: 25%;
+	top: 25%;
+	left: 85%;
   animation: show-shapes3 2.4s ease 0s normal;
 
   .cross {
     position: absolute;
     width: 40px * $sizing-ratio;
     height: 40px * $sizing-ratio;
-    animation-name: spin;
+    animation-name: spinCross;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: linear;
@@ -208,7 +216,7 @@
   }
 }
 
-@keyframes spin {
+@keyframes spinCross {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -226,8 +234,8 @@
   height: 30px * $sizing-ratio;
   width: 55px * $sizing-ratio;
   transform: translate(-50%, -50%);
-  top: 85%;
-  left: 35%;
+  top: 7.5%;
+  left: 14%;
   animation: show-shapes4 2.6s ease 0s normal;
 
   svg {
@@ -236,6 +244,8 @@
     stroke-miterlimit: 10;
     stroke-width: 8;
     stroke-linecap: round;
+		transform-origin: -(55px * $sizing-ratio) -(30px * $sizing-ratio);
+		transform: rotate(-10deg);
 
     transition: 1s all ease;
   }
@@ -245,12 +255,12 @@
   }
 }
 
-.semicircle {
+.semicircle-line {
   width: 55px * $sizing-ratio;
   height: 55px * $sizing-ratio;
   position: absolute;
-  top: 20%;
-  left: 65%;
+  top: 95%;
+  left: 75%;
   transform: translate(-50%, -50%);
   animation: show-shapes5 2.8s ease 0s normal;
 
@@ -261,31 +271,10 @@
     stroke-width: 8;
     stroke-linecap: round;
 
-    stroke-dasharray: 100;
-    stroke-dashoffset: -100;
-
-    animation-name: semicircle;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: linear;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-
     transition: 1s all ease;
   }
   &:hover svg {
     stroke: $third-color;
-  }
-}
-
-@keyframes semicircle {
-  0% {
-    stroke-dasharray: 40;
-    stroke-dashoffset: -152;
-  }
-  100% {
-    stroke-dasharray: 40;
-    stroke-dashoffset: 0;
   }
 }
 
@@ -314,66 +303,70 @@
     }
 }
 
-/* Diagonal line 45deg */
-.longdiag-right {
-    height: 50px;
-    width: 50px;
+/* BG Circle */
+.bgcircle-holder {
+    width: 120px * $sizing-ratio;
+    height: 120px * $sizing-ratio;
     position: absolute;
-    top: 85%;
-    left: 90%;
-		transform: translate(-50%, -50%);
-		animation: show-shapes 2s ease 0s normal;
+    top: 6%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: show-shapes6 2s ease 0s normal;
 
-		.line-hold {
-			transform: rotate(180deg);
-			height: 50px;
-	    width: 50px;
-		}
+    .circle {
+        width: 120px * $sizing-ratio;
+        height: 120px * $sizing-ratio;
+        border-radius: 50%;
+				background-color: $shape-color;
+				opacity: 0.25;
+
+        transition: 1s all ease;
+    }
 }
 
-.longdiag .first {
-    animation-delay: 0s;
+/* Semicircle */
+.semi-holder {
+	width: 50px * $sizing-ratio;
+	height: 100px * $sizing-ratio;
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+
+	.semicircle {
+		width: 50px * $sizing-ratio;
+		height: 100px * $sizing-ratio;
+		background-color: $shape-color;
+		border-radius: 0 100px 100px 0;
+		opacity: 0.25;
+
+		transform-origin: (50px * $sizing-ratio / 2) (100px * $sizing-ratio / 2);
+		animation: spin 10s linear 0s normal;
+		animation-iteration-count: infinite;
+
+		transition: 1s all ease;
+	}
 }
 
-.longdiag .second {
-    animation-delay: 1s;
-}
+/* Square */
+.square-holder {
+    width: 60px * $sizing-ratio;
+    height: 60px * $sizing-ratio;
+    position: absolute;
+    top: 42%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 
-.longdiag line {
-    fill: none;
-    stroke: $shape-color;
-    stroke-miterlimit: 10;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-dasharray: 100;
-    stroke-dashoffset: -100;
-    animation-name: linepush;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: linear;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-}
+    .square {
+        width: 60px * $sizing-ratio;
+        height: 60px * $sizing-ratio;
+				background-color: $shape-color;
+				opacity: 0.25;
+				transform: rotate(30deg);
 
-@keyframes linepush {
-  0% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: -100;
-  }
-  25% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: -20;
-  }
-  50% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: -30;
-  }
-  75% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-  }
+        transition: 1s all ease;
+    }
 }

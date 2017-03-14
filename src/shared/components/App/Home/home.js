@@ -10,6 +10,7 @@ import Profile from '../bits/profile';
 import Showcase from '../bits/showcase';
 import Writings from '../bits/writings';
 import Contact from '../bits/contact';
+import Shapes from '../bits/shapes';
 
 import Scroll from 'react-scroll';
 const LocalLink  = Scroll.Link;
@@ -56,16 +57,16 @@ export default class Home extends Component {
 		};
 
 		// Header stick
-		// let headerEl = document.querySelector('#header');
-		// let bodyEl = document.querySelector('body');
-		// $(window).on('scroll', debounce( function(e) {
-		// 	// Sticky header
-		// 	if (bodyEl.scrollTop > 300) {
-		// 	  headerEl.classList.add('stuck');
-		// 	} else {
-		// 	  headerEl.classList.remove('stuck');
-		// 	};
-		// }, 100));
+		let headerEl = document.querySelector('#header');
+		let bodyEl = document.querySelector('body');
+		$(window).on('scroll', debounce( function(e) {
+			// Sticky header
+			if (bodyEl.scrollTop > 300) {
+			  headerEl.classList.add('stuck');
+			} else {
+			  headerEl.classList.remove('stuck');
+			};
+		}, 100));
 
 		// Toggler
 		var togglerElements = document.querySelectorAll('.toggler');
@@ -83,22 +84,25 @@ export default class Home extends Component {
 	render() {
         return (
             <div id="page">
-				<Header nothome={false} theme="" />
-				<Element name="intro" id="intro">
-					<Intro />
-				</Element>
-				<Element name="profile" id="profile">
-					<Profile />
-				</Element>
-				<Element name="work" id="work">
-					<Showcase />
-				</Element>
-				<Element name="writing" id="writing">
-					<Writings />
-				</Element>
-				<Element name="contact" id="contact">
-					<Contact />
-				</Element>
+							<Header nothome={false} theme="" />
+							<Element name="intro" id="intro">
+								<Intro />
+							</Element>
+							<div className="shape-holder">
+								<Shapes />
+								<Element name="profile" id="profile">
+									<Profile />
+								</Element>
+								<Element name="work" id="work">
+									<Showcase />
+								</Element>
+								<Element name="writing" id="writing">
+									<Writings />
+								</Element>
+								<Element name="contact" id="contact">
+									<Contact />
+								</Element>
+							</div>
             </div>
         );
     }

@@ -29,6 +29,14 @@ export default class Shapes extends Component {
                         c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27c7.1-7.1,19.9,5.6,27-1.6c7.1-7.1-5.6-19.9,1.6-27s19.9,5.6,27-1.6"/>
                   </svg>
               </div>
+							{/* Square */}
+							<div className="square-holder">
+								<div className="square"></div>
+							</div>
+							{/* Semi */}
+							<div className="semi-holder">
+								<div className="semicircle"></div>
+							</div>
               {/* Squiggle */}
               <div className="squiggle second layer2">
                   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" style={{
@@ -53,26 +61,25 @@ export default class Shapes extends Component {
                   </svg>
               </div>
               {/* Semicircle */}
-              <div className="semicircle layer5">
+              <div className="semicircle-line layer5">
                   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" style={{
                       enableBackground: 'new 0 0 110 110'
                   }}>
                       <path className="st1" d="M89.9,19.1c19.5,19.5,19.5,51.2,0,70.7s-51.2,19.5-70.7,0"/>
                   </svg>
               </div>
+							{/* BG Circle */}
+              <div className="bgcircle-holder layer6">
+                  <div className="circle"/>
+              </div>
               {/* Circle */}
               <div className="circle-holder layer6">
                   <div className="circle"/>
               </div>
-							{/* Long diag 45deg */}
-							<div className="longdiag longdiag-right">
-								<div className="line-hold">
-						      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
-						        <line className="first" x1="7.3" y1="7.3" x2="42.7" y2="42.7"></line>
-						        <line className="second" x1="7.3" y1="7.3" x2="42.7" y2="42.7"></line>
-						      </svg>
-								</div>
-				    </div>
+							{/* Cross */}
+							<div className="cross-holder">
+								<div className="cross"></div>
+							</div>
           </div>
         );
     }

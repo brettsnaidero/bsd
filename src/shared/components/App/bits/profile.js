@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // Utils
 import * as _ from "lodash";
 
-import Shapes from './shapes';
 import ISeeYou from './iseeyou';
 
 // App
@@ -22,8 +21,6 @@ export default class Profile extends Component {
 	render() {
         return (
           <section className="profile">
-            {/* Shapes */}
-			<Shapes/>
 
             {/* Content */}
             <div className="row">

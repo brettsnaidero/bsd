@@ -26,40 +26,54 @@ export default class Intro extends Component {
 
             {/* Image */}
             <div className="image" id="trigger" />
-						{/* style={{backgroundImage: 'url(img/home.jpg)'}} */}
 
             {/* Designer */}
-			<ISeeYou classesForChild="banner-text">
-				<div className="strokereveal">
-					<svg viewBox="0 0 60 60">
-						<defs>
-							<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(0)">
-								<stop offset="0%" stopColor="#3a1fc3"/>
-								<stop offset="100%" stopColor="#0c1b78"/>
-							</linearGradient>
-						</defs>
-						<path className="line" d="M21.1,39.9L4.1,22.9L18.3,8.7C23,4,30.6,4,35.3,8.7"/>
-						<path className="line" d="M43.9,17.2l8.5,8.5c4.7,4.7,4.7,12.3,0,17.1L38.2,57l-8.5-8.5"/>
-						<path className="line" d="M52.4,25.7L21.1,57l-4.3-4.3c-2.4-2.4-2.4-6.2,0-8.5l27-27"/>
-						<path className="line" d="M12.6,31.4L41,3l4.3,4.3c2.4,2.4,2.4,6.2,0,8.5l-1.4,1.4"/>
-					</svg>
-					{/* <svg x="0px" y="0px" viewBox="0 0 692.5 472.7">
-						<polyline className="st0" points="50.6,236.4 247.3,50 50,422.7 444.6,50 247.3,422.7 641.9,50 444.6,422.7 642.5,236.4 "/>
-						<defs>
-							<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(0)">
-								<stop offset="0%" stopColor="#3a1fc3"/>
-								<stop offset="100%" stopColor="#0c1b78"/>
-							</linearGradient>
-						</defs>
-					</svg> */}
-				</div>
-				<h1>
-					<span className="line"><span className="top">Hello, I'm <span className="name">Brett Snaidero</span> —</span></span>
-					<span className="line"><span className="bottom">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span> <span className="hash">*</span></span></span>
-				</h1>
-			</ISeeYou>
+						<ISeeYou classesForChild="banner-text">
+							<div className="strokereveal">
+								<svg x="0px" y="0px" viewBox="0 0 1088 500">
+									<defs>
+						        <filter id="glow">
+						          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+						          <feMerge>
+						            <feMergeNode in="coloredBlur"/>
+						            <feMergeNode in="SourceGraphic"/>
+						          </feMerge>
+						        </filter>
+						      </defs>
+									<path className="lineme" d="M683.8,257.2l68.8-224.4l206-29.5l126.1,179.5l-69.6,178.5l-213.5,30L683.8,257.2z"/>
+									<path className="lineme" d="M752.6,32.7l26.5,46l-95.3,178.4l128.8,53.1l-11,81"/>
+									<path className="lineme" d="M958.6,3.2L779.1,78.7l33.5,231.5l202.5,51l-21-198.5L958.6,3.2z"/>
+									<path className="lineme" d="M779.1,78.7l215,84l90.6,20 M812.6,310.2l181.5-147.5"/>
+									<polygon className="lineme" points="3.3,342.5 63.6,496.8 212,441.1 156.2,285.7 	"/>
+									<polyline className="lineme" points="3.3,342.5 66.5,391.5 212,441.1 	"/>
+									<polyline className="lineme" points="156.2,285.7 66.5,391.5 63.6,496.8 	"/>
+								</svg> 
+							</div>
+							<h1>
+								<span className="line"><span className="top">Hello, I'm <span className="name">Brett Snaidero</span> —</span></span>
+								<span className="line"><span className="bottom">a <span className="job">Digital Designer</span> from <span className="city">Sydney</span> <span className="hash">*</span></span></span>
+							</h1>
+						</ISeeYou>
 
-						<Shapes />
+						{/* Animation! */}
+						<div className="intro-anim">
+							{/* First Row */}
+							{Array.apply(null, Array(9)).map(function(item, i){
+                  return (
+                    <div>
+											<div className={"dot one row-" + (i + 1)}></div>
+											<div className={"dot two row-" + (i + 1)}></div>
+											<div className={"dot three row-" + (i + 1)}></div>
+											<div className={"dot four row-" + (i + 1)}></div>
+											<div className={"dot five row-" + (i + 1)}></div>
+											<div className={"dot six row-" + (i + 1)}></div>
+											<div className={"dot seven row-" + (i + 1)}></div>
+											<div className={"dot eight row-" + (i + 1)}></div>
+											<div className={"dot nine row-" + (i + 1)}></div>
+                    </div>
+                  );
+              }, this)}
+						</div>
 
             <Footer/>
 

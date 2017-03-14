@@ -21,6 +21,7 @@ $slight: #7380ff;
 @import 'elements/_header';
 @import 'elements/_footer';
 @import 'elements/_home';
+@import 'elements/_introanim';
 @import 'elements/_work';
 @import 'elements/_contact';
 @import 'elements/_profile';
@@ -112,4 +113,8 @@ body::-webkit-scrollbar-thumb {
 	overflow: hidden;
 
 	// box-shadow: 0px 0px 50px rgba(0,0,0,0.25);
+}
+
+.shape-holder {
+	position: relative;
 }

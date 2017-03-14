@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // Utils
 import * as _ from 'lodash';
 
-import Shapes from './shapes';
 import ISeeYou from './iseeyou';
 
 // App
@@ -144,9 +143,6 @@ export default class Contact extends Component {
 	render() {
         return (
           <section className="home-contact">
-			{/* Shapes */}
-			<Shapes/>
-
             {/* Text */}
 			<ISeeYou classesForChild="banner-text">
 				<div className="row">

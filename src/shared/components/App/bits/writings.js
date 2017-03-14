@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 // Utils
 import * as _ from 'lodash';
 
-import Shapes from './shapes';
 import blogItems from '../data/blog-items';
 
 // App
@@ -54,8 +53,6 @@ export default class Writings extends Component {
 	render() {
         return (
           <section className="home-writings">
-            {/* Shapes */}
-						<Shapes />
 
 						<div>
 							<div className="row">

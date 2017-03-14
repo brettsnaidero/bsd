@@ -6,7 +6,6 @@ import * as _ from 'lodash';
 import { Motion, spring } from 'react-motion';
 
 import ShowcaseItem from './showcase-item';
-import Shapes from './shapes';
 
 import showcaseItems from '../data/showcase-items.js';
 
@@ -29,10 +28,6 @@ export default class Showcase extends Component {
 	render() {
         return (
           <section className="work">
-
-            {/* Shapes */}
-			<Shapes />
-
 			{/* Modal */}
 			<Motion style={{
 				x: ( this.state.isModalActive ? spring(1) : spring(0) )
