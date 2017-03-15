@@ -7,19 +7,335 @@
 
 	.shape {
 		position: absolute;
-		
-		&.s1 {
-			top: 50%;
-			left: 50%;
-		}
+		top: 50%;
+		left: 50%;
 	}
 }
 
 .intro-anim svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
 	display: block;
-	width: 100px;
-	height: 100px;
+}
+
+.intro-anim .shape-center {
+	transform: translate(-50%, -50%);
+}
+
+.intro-anim {
+	.shape-1 {
+		top: 56.5%;
+		left: 8%;
+	}
+	.shape-2 {
+		top: 41%;
+		left: 14%;
+	}
+	.shape-3 {
+		top: 24.5%;
+		left: 17%;
+	}
+	.shape-4 {
+		top: 18.5%;
+		left: 34%;
+	}
+	.shape-5 {
+		top: 29%;
+		left: 28%;
+	}
+	.shape-6 {
+		top: 28%;
+		left: 32%;
+	}
+	.shape-7 {
+		top: 23%;
+		left: 49.5%;
+	}
+	.shape-8 {
+		top: 54%;
+		left: 20%;
+	}
+	.shape-9 {
+		top: 37.5%;
+		left: 83.5%;
+	}
+	.shape-10 {
+		top: 76.5%;
+		left: 11.5%;
+	}
+	.shape-11 {
+		top: 82%;
+		left: 18%;
+	}
+	.shape-12 {
+		top: 72.5%;
+		left: 22.5%;
+	}
+	.shape-13 {
+		top: 62%;
+		left: 23%;
+	}
+	.shape-14 {
+		top: 74.5%;
+		left: 32%;
+	}
+	.shape-15 {
+		top: 89%;
+		left: 28.5%;
+	}
+	.shape-16 {
+		top: 80%;
+		left: 37.5%;
+	}
+	.shape-17 {
+		top: 62.5%;
+		left: 36%;
+	}
+	.shape-18 {
+		top: 26%;
+		left: 87%;
+	}
+	.shape-19 {
+		top: 68%;
+		left: 56.5%;
+	}
+	.shape-20 {
+		top: 30%;
+		left: 72%;
+	}
+	.shape-21 {
+		top: 87%;
+		left: 61%;
+	}
+	.shape-22 {
+		top: 77%;
+		left: 64%;
+	}
+	.shape-23 {
+		top: 71%;
+		left: 66.5%;
+	}
+	.shape-24 {
+		top: 86%;
+		left: 72%;
+	}
+	.shape-25 {
+		top: 80.5%;
+		left: 77.5%;
+	}
+	.shape-26 {
+		top: 88.5%;
+		left: 79%;
+	}
+	.shape-27 {
+		top: 65%;
+		left: 76.5%;
+	}
+	.shape-28 {
+		top: 24%;
+		left: 17.5%;
+	}
+	.shape-29 {
+		top: 67.5%;
+		left: 84%;
+	}
+	.shape-30 {
+		top: 56%;
+		left: 92%;
+	}
+	.shape-31 {
+		top: 49.5%;
+		left: 81.5%;
+	}
+	.shape-32 {
+		top: 45%;
+		left: 90.5%;
+	}
+	.shape-33 {
+		top: 41.5%;
+		left: 26%;
+	}
+	.shape-34 {
+		top: 66%;
+		left: 18%;
+	}
+	.shape-35 {
+		top: 78.5%;
+		left: 47.5%;
+	}
+	.shape-36 {
+		top: 89%;
+		left: 48%;
+	}
+	.shape-37 {
+		top: 14%;
+		left: 74.5%;
+	}
+	.shape-38 {
+		top: 20%;
+		left: 62%;
+	}
+	.shape-39 {
+		top: 27.5%;
+		left: 57.5%;
+	}
+	.shape-40 {
+		top: 40%;
+		left: 78.5%;
+	}
+	.shape-41 {
+		top: 28%;
+		left: 42%;
+	}
+}
+
+.intro-anim {
+	.st0 {
+	    fill: url(#SVGID_1_)
+	}
+	.st1 {
+	    fill: url(#SVGID_2_)
+	}
+	.st2 {
+	    fill: url(#SVGID_3_)
+	}
+	.st3 {
+	    fill: url(#SVGID_4_)
+	}
+	.st4 {
+	    fill: url(#SVGID_5_)
+	}
+	.st5 {
+	    fill: url(#SVGID_6_)
+	}
+	.st6 {
+	    fill: url(#SVGID_7_)
+	}
+	.st7 {
+	    fill: url(#SVGID_8_)
+	}
+	.st8 {
+	    fill: url(#SVGID_9_)
+	}
+	.st9 {
+	    fill: url(#SVGID_10_)
+	}
+	.st10 {
+	    fill: none;
+	    stroke: url(#SVGID_11_);
+	    stroke-width: 5;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	    stroke-miterlimit: 10
+	}
+	.st11 {
+	    fill: url(#SVGID_12_)
+	}
+	.st12 {
+	    fill: url(#SVGID_13_)
+	}
+	.st13 {
+	    fill: url(#SVGID_14_)
+	}
+	.st14 {
+	    fill: url(#SVGID_15_)
+	}
+	.st15 {
+	    fill: url(#SVGID_16_)
+	}
+	.st16 {
+	    fill: none;
+	    stroke: url(#SVGID_17_);
+	    stroke-width: 5;
+	    stroke-miterlimit: 10
+	}
+	.st17 {
+	    fill: url(#SVGID_18_)
+	}
+	.st18 {
+	    fill: none;
+	    stroke: url(#SVGID_19_);
+	    stroke-width: 5;
+	    stroke-miterlimit: 10
+	}
+	.st19 {
+	    fill: url(#SVGID_20_)
+	}
+	.st20 {
+	    fill: url(#SVGID_21_)
+	}
+	.st21 {
+	    fill: none;
+	    stroke: url(#SVGID_22_);
+	    stroke-width: 5;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	    stroke-miterlimit: 10
+	}
+	.st22 {
+	    fill: url(#SVGID_23_)
+	}
+	.st23 {
+	    fill: url(#SVGID_24_)
+	}
+	.st24 {
+	    fill: url(#SVGID_25_)
+	}
+	.st25 {
+	    fill: url(#SVGID_26_)
+	}
+	.st26 {
+	    fill: url(#SVGID_27_)
+	}
+	.st27 {
+	    fill: url(#SVGID_28_)
+	}
+	.st28 {
+	    fill: url(#SVGID_29_)
+	}
+	.st29,
+	.st30 {
+	    fill: none;
+	    stroke: #2508f9;
+	    stroke-width: 4;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	    stroke-miterlimit: 10
+	}
+	.st30 {
+	    stroke: url(#SVGID_30_);
+	    stroke-width: 5
+	}
+	.st31 {
+	    fill: url(#SVGID_31_)
+	}
+	.st32 {
+	    fill: url(#SVGID_32_)
+	}
+	.st33 {
+	    fill: url(#SVGID_33_)
+	}
+	.st34 {
+	    fill: url(#SVGID_34_)
+	}
+	.st35 {
+	    fill: url(#SVGID_35_)
+	}
+	.st36 {
+	    fill: none;
+	    stroke: url(#SVGID_36_);
+	    stroke-width: 9;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	    stroke-miterlimit: 10
+	}
+	.st37 {
+	    fill: #2c41ff
+	}
+	.st38 {
+	    fill: none;
+	    stroke: url(#SVGID_37_);
+	    stroke-width: 9;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	    stroke-miterlimit: 10
+	}
 }
