@@ -4,73 +4,22 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	.shape {
+		position: absolute;
+		
+		&.s1 {
+			top: 50%;
+			left: 50%;
+		}
+	}
 }
 
-.intro-anim .dot {
+.intro-anim svg {
 	position: absolute;
-	top: 10%;
-	width: 8px;
-	margin-left: -4px;
-	height: 8px;
-	margin-top: -4px;
-	border-radius: 50%;
-	background-color: #0c1b78; // #3a1fc3
-
-	&.one {
-		left: 10%;
-		opacity: 0.25;
-	}
-	&.two {
-		left: 20%;
-	}
-	&.three {
-		left: 30%;
-	}
-	&.four {
-		left: 40%;
-	}
-	&.five {
-		left: 50%;
-	}
-	&.six {
-		left: 60%;
-	}
-	&.seven {
-		left: 70%;
-	}
-	&.eight {
-		left: 80%;
-	}
-	&.nine {
-		left: 90%;
-		opacity: 0.75;
-	}
-
-	&.row-2 {
-		top: 20%;
-	}
-	&.row-3 {
-		top: 30%;
-	}
-	&.row-4 {
-		top: 40%;
-	}
-	&.row-5 {
-		top: 50%;
-	}
-	&.row-6 {
-		top: 60%;
-	}
-	&.row-7 {
-		top: 70%;
-		opacity: 0.75;
-	}
-	&.row-8 {
-		top: 80%;
-		opacity: 0.5;
-	}
-	&.row-9 {
-		top: 90%;
-		opacity: 0.25;
-	}
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100px;
+	height: 100px;
 }

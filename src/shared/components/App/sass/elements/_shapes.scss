@@ -1,90 +1,3 @@
-/**** Shapes ****/
-@keyframes show-shapes {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
-@keyframes show-shapes2 {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  10% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
-@keyframes show-shapes3 {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  20% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
-@keyframes show-shapes4 {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  30% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
-@keyframes show-shapes5 {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  40% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
-@keyframes show-shapes6 {
-	0% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  50% {
-		transform: translate(-50%, -500%);
-    opacity: 0;
-	}
-  100% {
-		transform: translate(-50%, -50%);
-    opacity: 1;
-	}
-}
-
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
@@ -92,72 +5,6 @@
   100% {
 		transform: rotate(360deg);
 	}
-} 
-
-/* Squiggle */
-.squiggle {
-  width: 50px * $sizing-ratio;
-  height: 50px * $sizing-ratio;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 75%;
-  left: 65%;
-  z-index: 3;
-
-  animation: spin 2s ease 0s normal;
-
-  &.second {
-		top: 20%;
-    left: 30%;
-    animation: show-shapes2 2.2s ease 0s normal;
-
-    svg {
-      stroke: $shape-color;
-    }
-  }
-
-  svg {
-    position: absolute;
-    bottom: -48px * $sizing-ratio;
-    left: -48px * $sizing-ratio;
-    width: 100px * $sizing-ratio;
-    height: 100px * $sizing-ratio;
-
-    transition: 1s all ease;
-
-    fill: none;
-    stroke: $shape-color;
-    stroke-miterlimit: 10;
-    stroke-width: 8;
-    stroke-linecap: round;
-
-    stroke-dasharray: 190;
-    stroke-dashoffset: 186;
-
-    transform: translate(0, 0);
-
-    animation-duration: 3s;
-    animation-name: squiggle;
-    animation-iteration-count: infinite;
-    animation-direction: linear;
-    animation-timing-function: linear;
-  }
-
-  &:hover svg,
-  &.second:hover svg {
-    stroke: $third-color;
-  }
-}
-
-@keyframes squiggle {
-  0% {
-    stroke-dashoffset: 186;
-    transform: translate(0, 0);
-  }
-  100% {
-    stroke-dashoffset: 355;
-    transform: translate((43px * $sizing-ratio), (-43px * $sizing-ratio));
-  }
 }
 
 /* Cross */
@@ -166,20 +13,24 @@
   width: 40px * $sizing-ratio;
   height: 40px * $sizing-ratio;
   transform: translate(-50%, -50%);
-	top: 25%;
-	left: 85%;
-  animation: show-shapes3 2.4s ease 0s normal;
+	top: 22.5%;
+	left: 82%;
+
+	&.two {
+		top: 80%;
+		left: 10%;
+	}
 
   .cross {
     position: absolute;
     width: 40px * $sizing-ratio;
     height: 40px * $sizing-ratio;
-    animation-name: spinCross;
-    animation-duration: 2s;
+    animation-name: spin;
+    animation-duration: 80s;
     animation-iteration-count: infinite;
-    animation-direction: linear;
+    animation-direction: reverse;
     animation-delay: 0s;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-timing-function: linear;
 
     &:before {
       content: '';
@@ -236,7 +87,15 @@
   transform: translate(-50%, -50%);
   top: 7.5%;
   left: 14%;
-  animation: show-shapes4 2.6s ease 0s normal;
+
+	&.two {
+		top: 95%;
+		left: 35%;
+
+		svg {
+			animation: spin 80s linear 0s alternate infinite;
+		}
+	}
 
   svg {
     fill: none;
@@ -244,9 +103,8 @@
     stroke-miterlimit: 10;
     stroke-width: 8;
     stroke-linecap: round;
-		transform-origin: -(55px * $sizing-ratio) -(30px * $sizing-ratio);
-		transform: rotate(-10deg);
-
+		transform-origin: (55px * $sizing-ratio / 2) (30px * $sizing-ratio / 2);
+		animation: spin 50s linear 0s normal infinite;
     transition: 1s all ease;
   }
 
@@ -255,24 +113,28 @@
   }
 }
 
-.semicircle-line {
-  width: 55px * $sizing-ratio;
-  height: 55px * $sizing-ratio;
+/* Triangle BG */
+.triangle-bg {
   position: absolute;
-  top: 95%;
-  left: 75%;
+  height: 120px * $sizing-ratio;
+  width: 220px * $sizing-ratio;
   transform: translate(-50%, -50%);
-  animation: show-shapes5 2.8s ease 0s normal;
+  top: 64%;
+  left: 78%;
 
   svg {
-    fill: none;
-    stroke: $shape-color;
+    fill: $shape-color;
+    stroke: none;
     stroke-miterlimit: 10;
     stroke-width: 8;
     stroke-linecap: round;
+		transform-origin: (220px * $sizing-ratio / 2) (120px * $sizing-ratio / 2);
+		opacity: 0.25;
+		animation: spin 50s linear 0s normal infinite;
 
     transition: 1s all ease;
   }
+
   &:hover svg {
     stroke: $third-color;
   }
@@ -286,8 +148,6 @@
     top: 40%;
     left: 85%;
     transform: translate(-50%, -50%);
-    z-index: 3;
-    animation: show-shapes6 2s ease 0s normal;
 
     .circle {
         width: 40px * $sizing-ratio;
@@ -311,8 +171,6 @@
     top: 6%;
     left: 20%;
     transform: translate(-50%, -50%);
-    z-index: 3;
-    animation: show-shapes6 2s ease 0s normal;
 
     .circle {
         width: 120px * $sizing-ratio;
@@ -333,18 +191,21 @@
 	top: 30%;
 	left: 10%;
 	transform: translate(-50%, -50%);
-	z-index: 3;
+
+	&.two {
+		top: 85%;
+		left: 75%;
+	}
 
 	.semicircle {
 		width: 50px * $sizing-ratio;
 		height: 100px * $sizing-ratio;
 		background-color: $shape-color;
-		border-radius: 0 100px 100px 0;
+		border-radius: (5px * $sizing-ratio) (100px * $sizing-ratio) (100px * $sizing-ratio) (5px * $sizing-ratio);
 		opacity: 0.25;
 
 		transform-origin: (50px * $sizing-ratio / 2) (100px * $sizing-ratio / 2);
-		animation: spin 10s linear 0s normal;
-		animation-iteration-count: infinite;
+		animation: spin 100s linear 0s normal infinite;
 
 		transition: 1s all ease;
 	}
@@ -355,18 +216,34 @@
     width: 60px * $sizing-ratio;
     height: 60px * $sizing-ratio;
     position: absolute;
-    top: 42%;
+    top: 41%;
     left: 87%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+
+		&.two {
+			top: 51.5%;
+			left: 17%;
+			width: 60px * $sizing-ratio;
+	    height: 60px * $sizing-ratio;
+
+			.square {
+				transform: rotate(-15deg);
+				width: 60px * $sizing-ratio;
+		    height: 60px * $sizing-ratio;
+				border-radius: 10px;
+				background: transparent;
+				border: 10px solid $shape-color;
+				opacity: 1;
+				animation: spin 60s linear 0s reverse infinite;
+			}
+		}
 
     .square {
         width: 60px * $sizing-ratio;
         height: 60px * $sizing-ratio;
 				background-color: $shape-color;
 				opacity: 0.25;
-				transform: rotate(30deg);
-
+				animation: spin 80s linear 0s normal infinite;
         transition: 1s all ease;
     }
 }

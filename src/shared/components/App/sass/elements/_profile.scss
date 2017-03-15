@@ -1,6 +1,5 @@
 .profile {
-	max-height: 800px;
-  height: 100vh;
+	min-height: 800px;
   padding: 220px 0;
   position: relative;
 
@@ -14,7 +13,7 @@
 @media screen and (max-width: $tablet) {
 	.profile {
 		height: auto;
-		max-height: none;
+		min-height: 0;
 		padding: 100px 0;
 	}
 }

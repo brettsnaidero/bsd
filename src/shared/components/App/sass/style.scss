@@ -4,8 +4,8 @@
 @import 'primary/_print';
 @import 'primary/_screen';
 
-$background-color: #000943;
-$background-color-two: #090675;
+$background-color: #102496;
+$background-color-two: #0d104d;
 $secondary-color: #bdbbff;
 // body {
 // 	--main-color: black;
@@ -13,7 +13,7 @@ $secondary-color: #bdbbff;
 // $shape-color: var(--main-color);
 $third-color: #ff0b81;
 $text-color: #fff;
-$shape-color: rgba(#302ad9,0.8);
+$shape-color: #2823cc;
 $slight: #7380ff;
 
 ::selection { background: #ff0b81; }
@@ -31,12 +31,11 @@ $slight: #7380ff;
 @import 'elements/_work-page';
 @import 'elements/_writings';
 
-
 @import 'plugins/_nav';
 @import 'plugins/_slick';
 
 body {
-	background-color: $background-color;
+	background-color: $background-color-two;
 }
 
 .clearfix:after {
@@ -51,8 +50,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-	background-color: #1328a1;
-	background-color: #1c1c1c;
+	background-color: #a1a7ad;
 }
 
 body::-webkit-scrollbar-thumb {
