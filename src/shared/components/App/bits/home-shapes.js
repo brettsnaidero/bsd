@@ -34,8 +34,8 @@ export default class HomeShapes extends Component {
 						        <stop offset="1" stopColor="#2508f9"/>
 						    </linearGradient>
 							<linearGradient id="gradient-high">
-						        <stop offset="0" stopColor="#2c41ff"/>
-						        <stop offset="1" stopColor="#080670"/>
+						        <stop offset="0" stopColor="#2c41ff" opacity="1" />
+						        <stop offset="1" stopColor="#2c41ff" opacity="0" />
 						    </linearGradient>
 						</defs>
 						<path className="st0" d="M51 53H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h49c1.1 0 2 .9 2 2v49c0 1.1-.9 2-2 2z"/>
