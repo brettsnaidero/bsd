@@ -36,9 +36,9 @@ export default class Intro extends Component {
 						</ISeeYou>
 
 						{/* Animation! */}
-						<div className="intro-anim">
+						<ISeeYou classesForChild="intro-anim">
 							<HomeShapes />
-						</div>
+						</ISeeYou>
 
             <Footer/>
 
