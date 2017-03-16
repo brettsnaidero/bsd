@@ -21,7 +21,7 @@ export default class HomeShapes extends Component {
           <div>
 
 			{/* Shape 1 */}
-			<div className="shape shape-1">
+			<div className="shape shape-1 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-01" viewBox="0 0 53 53" width="53" height="53">
@@ -77,7 +77,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 6 */}
-			<div className="shape shape-6">
+			<div className="shape shape-6 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-06" viewBox="0 0 10.3 10.3" width="10.3" height="10.3">
@@ -97,7 +97,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 8 */}
-			<div className="shape shape-8">
+			<div className="shape shape-8 mobile-hide">
 				<div className="shape-center">
 					<svg id="shape-08" viewBox="0 0 22.5 22.5" width="22.5" height="22.5">
 						<circle className="st0" cx="11.3" cy="11.3" r="11.3"/>
@@ -136,7 +136,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 12 */}
-			<div className="shape shape-12">
+			<div className="shape shape-12 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-12" viewBox="0 0 54.4 27.3" width="54.4" height="27.3">
@@ -167,7 +167,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 15 */}
-			<div className="shape shape-15">
+			<div className="shape shape-15 mobile-hide">
 				<div className="shape-center">
 					<svg id="shape-15" viewBox="0 0 10.4 10.4" width="10.4" height="10.4">
 						<circle className="st0" cx="5.2" cy="5.2" r="5.2"/>
@@ -176,7 +176,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 16 */}
-			<div className="shape shape-16">
+			<div className="shape shape-16 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-16" viewBox="0 0 39.3 33" width="39.3" height="33">
@@ -198,7 +198,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 18 */}
-			<div className="shape shape-18">
+			<div className="shape shape-18 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-18" viewBox="0 0 48.8 48.8" width="48.8" height="48.8">
@@ -231,7 +231,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 21 */}
-			<div className="shape shape-21">
+			<div className="shape shape-21 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-21" viewBox="0 0 34.8 34.8" width="34.8" height="34.8">
@@ -374,7 +374,7 @@ export default class HomeShapes extends Component {
 			</div>
 
 			{/* Shape 35 */}
-			<div className="shape shape-35">
+			<div className="shape shape-35 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
 						<svg id="shape-35" viewBox="0 0 47.9 47.9" width="47.9" height="47.9">

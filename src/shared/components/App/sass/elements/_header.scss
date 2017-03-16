@@ -376,12 +376,12 @@ header.stuck.light {
 }
 
 header.light .menu-btn span {
-    background: $background-color-two;
+    background: $background-color;
 }
 
 header.light a.logo {
   svg path.line {
-      stroke: $background-color-two;
+      stroke: $background-color;
   }
   svg path.shape {
       fill: none;

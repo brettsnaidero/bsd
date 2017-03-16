@@ -68,13 +68,13 @@
 }
 
 .blog-page article h1 {
-    font-size: 40px;
-    font-size: 2.5em;
-    line-height: 1.2;
+    font-size: 32px;
+    font-size: calc(20.4448px + 1.11111vw);
+    line-height: 1.35;
     font-weight: bold;
     text-align: center;
     margin: 0 0 10px 0;
-    color: $background-color-two;
+    color: $background-color;
 }
 
 .blog-page article time {
