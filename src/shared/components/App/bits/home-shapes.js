@@ -25,15 +25,15 @@ export default class HomeShapes extends Component {
 				<div className="shape-center">
 					<svg id="shape-01" viewBox="0 0 53 53" width="53" height="53">
 						<defs>
-							<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" y1="11.563" x2="23.125" y2="11.563">
+							<linearGradient id="gradient-pink">
 								<stop offset="0" stopColor="#df0b93"/>
 								<stop offset="1" stopColor="#a00ab5"/>
 							</linearGradient>
-							<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" y1="11.792" x2="23.583" y2="11.792">
+							<linearGradient id="gradient-normal">
 						        <stop offset="0" stopColor="#2c41ff"/>
 						        <stop offset="1" stopColor="#2508f9"/>
 						    </linearGradient>
-							<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" y1="4.469" x2="8.938" y2="4.469">
+							<linearGradient id="gradient-high">
 						        <stop offset="0" stopColor="#2c41ff"/>
 						        <stop offset="1" stopColor="#080670"/>
 						    </linearGradient>
@@ -74,7 +74,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-5">
 				<div className="shape-center">
 					<svg id="shape-05" viewBox="0 0 37.3 37.3" width="37.3" height="37.3">
-						<path className="st29" d="M18.7 25.3v10M18.7 2v10M2 18.7h10M25.3 18.7h10"/>
+						<path className="lined-nograd" d="M18.7 25.3v10M18.7 2v10M2 18.7h10M25.3 18.7h10"/>
 					</svg>
 				</div>
 			</div>
@@ -128,8 +128,8 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-11">
 				<div className="shape-center">
 					<svg id="shape-11" viewBox="0 0 68.6 21.3" width="68.6" height="21.3">
-						<path d="M64.1 4.5C47.6 21 21 21 4.5 4.5" fill="none" stroke="url(#SVGID_1_)" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10"/>
-						<ellipse transform="rotate(-45.001 64.074 4.5)" className="st37" cx="64.1" cy="4.5" rx="4.5" ry="4.5"/>
+						<path className="line" d="M64.1 4.5C47.6 21 21 21 4.5 4.5" />
+						<ellipse className="circle" transform="rotate(-45.001 64.074 4.5)" cx="64.1" cy="4.5" rx="4.5" ry="4.5"/>
 					</svg>
 				</div>
 			</div>
@@ -147,7 +147,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-13">
 				<div className="shape-center">
 					<svg id="shape-13" viewBox="0 0 23.1 23.1" width="23.1" height="23.1">
-						<circle cx="11.6" cy="11.6" r="9.1" fill="none" stroke="url(#SVGID_1_)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10"/>
+						<circle cx="11.6" cy="11.6" r="9.1" className="lined-pink"/>
 					</svg>
 				</div>
 			</div>
@@ -156,7 +156,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-14">
 				<div className="shape-center">
 					<svg id="shape-14" viewBox="0 0 22.9 22.9" width="22.9" height="22.9">
-						<path className="st29" d="M20.9 2L2 20.9M2 2l18.9 18.9"/>
+						<path className="lined-nograd" d="M20.9 2L2 20.9M2 2l18.9 18.9"/>
 					</svg>
 				</div>
 			</div>
@@ -201,7 +201,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-19">
 				<div className="shape-center">
 					<svg id="shape-19" viewBox="0 0 27.6 27.6" width="27.6" height="27.6">
-						<path className="st29" d="M9.1 18.5L2 25.6M25.6 2l-7.1 7.1M2 2l7.1 7.1M18.5 18.5l7.1 7.1"/>
+						<path className="lined-nograd" d="M9.1 18.5L2 25.6M25.6 2l-7.1 7.1M2 2l7.1 7.1M18.5 18.5l7.1 7.1"/>
 					</svg>
 				</div>
 			</div>
@@ -219,7 +219,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-21">
 				<div className="shape-center">
 					<svg id="shape-21" viewBox="0 0 34.8 34.8" width="34.8" height="34.8">
-						<path className="st29" d="M17.4 2v30.8M2 17.4h30.8"/>
+						<path className="lined-nograd" d="M17.4 2v30.8M2 17.4h30.8"/>
 					</svg>
 				</div>
 			</div>
@@ -228,7 +228,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-22">
 				<div className="shape-center">
 					<svg id="shape-22" viewBox="0 0 24.6 24.6" width="24.6" height="24.6">
-						<path d="M7.8 3.9L2.6 19.5c-.5 1.6 1 3.1 2.5 2.5l15.6-5.2c1.4-.5 1.8-2.3.8-3.3L11.1 3.1c-1-1.1-2.8-.6-3.3.8z" fill="none" stroke="url(#SVGID_1_)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10"/>
+						<path d="M7.8 3.9L2.6 19.5c-.5 1.6 1 3.1 2.5 2.5l15.6-5.2c1.4-.5 1.8-2.3.8-3.3L11.1 3.1c-1-1.1-2.8-.6-3.3.8z" className="lined-pink"/>
 					</svg>
 				</div>
 			</div>
@@ -291,7 +291,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-29">
 				<div className="shape-center">
 					<svg id="shape-29" viewBox="0 0 30.9 30.9" width="30.9" height="30.9">
-						<path d="M26.4 28.4H4.5c-1.1 0-2-.9-2-2V4.5c0-1.1.9-2 2-2h21.9c1.1 0 2 .9 2 2v21.9c0 1.1-.9 2-2 2z" fill="none" stroke="url(#SVGID_1_)" strokeWidth="5" strokeMiterlimit="10"/>
+						<path d="M26.4 28.4H4.5c-1.1 0-2-.9-2-2V4.5c0-1.1.9-2 2-2h21.9c1.1 0 2 .9 2 2v21.9c0 1.1-.9 2-2 2z" className="lined-normal"/>
 					</svg>
 				</div>
 			</div>
@@ -309,8 +309,8 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-31">
 				<div className="shape-center">
 					<svg id="shape-31" viewBox="0 0 68.6 21.3" width="68.6" height="21.3">
-						<path d="M4.5 16.8C21 .4 47.6.4 64.1 16.8" fill="none" stroke="url(#SVGID_1_)" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10"/>
-						<ellipse transform="rotate(-45.001 4.5 16.838)" className="st37" cx="4.5" cy="16.8" rx="4.5" ry="4.5"/>
+						<path className="line" d="M4.5 16.8C21 .4 47.6.4 64.1 16.8" />
+						<ellipse className="circle" transform="rotate(-45.001 4.5 16.838)" cx="4.5" cy="16.8" rx="4.5" ry="4.5"/>
 					</svg>
 				</div>
 			</div>
@@ -364,7 +364,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-37">
 				<div className="shape-center">
 					<svg id="shape-37" viewBox="0 0 49.8 49.8" width="49.8" height="49.8">
-						<circle cx="24.9" cy="24.9" r="22.4" fill="none" stroke="url(#SVGID_1_)" strokeWidth="5" strokeMiterlimit="10"/>
+						<circle cx="24.9" cy="24.9" r="22.4" className="lined-normal"/>
 					</svg>
 				</div>
 			</div>
@@ -373,7 +373,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-38">
 				<div className="shape-center">
 					<svg id="shape-38" viewBox="0 0 32 32" width="32" height="32">
-						<path className="st29" d="M16 2v28M2 16h28"/>
+						<path className="lined-nograd" d="M16 2v28M2 16h28"/>
 					</svg>
 				</div>
 			</div>
@@ -382,7 +382,7 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-39">
 				<div className="shape-center">
 					<svg id="shape-39" viewBox="0 0 21.9 21.9" width="21.9" height="21.9">
-						<path d="M2.5 16.4V5.5c0-1.7 1.3-3 3-3h10.9c1.7 0 3 1.3 3 3v10.9c0 1.7-1.3 3-3 3H5.5c-1.7 0-3-1.4-3-3z" fill="none" stroke="url(#SVGID_1_)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10"/>
+						<path d="M2.5 16.4V5.5c0-1.7 1.3-3 3-3h10.9c1.7 0 3 1.3 3 3v10.9c0 1.7-1.3 3-3 3H5.5c-1.7 0-3-1.4-3-3z" className="lined-pink"/>
 					</svg>
 				</div>
 			</div>
