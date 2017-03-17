@@ -11,7 +11,10 @@ const showcaseItems = [
         period: '2016-2017',
 				team: 'Internetrix',
         client: 'MMJ Real Estate',
-				expertise: 'Design',
+				expertise: [
+					'Design'
+				],
+				link: 'http://mmjrealestate.com.au',
         description: (
             <p><strong>MMJ</strong> are a leading Australian real estate agency, with offices right across the country. I collaborated with them on their new website, desgining a stylish new web home for the brand.</p>
         ),
@@ -39,9 +42,16 @@ const showcaseItems = [
         height: 320,
         period: '2016',
         client: 'Myself',
-				expertise: 'Branding, Full Stack Development',
+				expertise: [
+					'Logo Design',
+					'Branding',
+					'UI/UX',
+					'CMS Development',
+					'Full Stack'
+				],
+				link: 'http://illawarradj.com.au',
         description: (
-            <p><strong>Illawarra DJ</strong> was an enterprise started by myself and my best mate, Marc. I designed the brand, and developed a simple website for the business. Lorem ipsum dolor sit amet.</p>
+            <p>A side project developed by me and a friend, I was able to design the digital presence of this business from the ground up.</p>
         ),
         imageList: [
             {
@@ -67,14 +77,23 @@ const showcaseItems = [
         height: 320,
         period: '',
         client: '',
+				expertise: [
+					'Branding',
+					'Full Stack Development'
+				],
+				link: 'http://?.com.au',
         description: (
-            <p>In late 2016, I took a General Assembly course to build up my Javascript skills. As part of the course, I completed this as a major project, utilising React to develop a simple web app for finding chaep petrol. I hooked in to a freely available API provided by the NSW government, this site visualises Petrol Stations and their daily set prices, allowing people to quickly find the cheapest petrol available to them.</p>
+            <p>A simple browser app for finding cheap petrol prices nearby, which could save you thousands in petrol costs each year.</p>
         ),
         imageList: [
             {
                 type: 'image',
                 content: 'img/work/show-bowser1.jpg'
-            }
+            },
+						{
+							type: 'text',
+							content: 'In late 2016, I took a General Assembly course to build up my Javascript skills. As part of the course, I completed this as a major project, utilising React to develop a simple web app for finding chaep petrol. I hooked in to a freely available API provided by the NSW government, this site visualises Petrol Stations and their daily set prices, allowing people to quickly find the cheapest petrol available to them.'
+						}
         ]
     },
     {
@@ -86,6 +105,11 @@ const showcaseItems = [
         height: 320,
         period: '',
         client: '',
+				expertise: [
+					'Branding',
+					'Full Stack Development'
+				],
+				link: 'http://leagueandlegends.com.au',
         description: (
             <p>League and Legends are a successful online store, who sell a large variety of NRL Merchandise, right across Australia. Since their original website was launched, the usage of mobile tablets has increased and so has the number of people using them to purchase online.</p>
         ),
@@ -113,6 +137,11 @@ const showcaseItems = [
         height: 320,
         period: '',
         client: '',
+				expertise: [
+					'Branding',
+					'Full Stack Development'
+				],
+				link: 'http://polidex.com.au',
         description: (
             <p><strong>Polidex</strong> is a side-project I began in 2015, with the aim of making it a little easier to keep track of Australian politics. Built with the React Javascript library, the site uses public data to generate a directory of Australian federal politicians, with some insightful information on each politician. The directory is easily searchable, and allows users to quickly sort through the politicians currently sitting in our two parliamentary houses.</p>
         ),
@@ -132,8 +161,12 @@ const showcaseItems = [
         height: 320,
         period: '2015-2016',
         client: 'Internetrix',
+				expertise: [
+					'Branding',
+					'Full Stack Development'
+				],
         description: (
-            <p>When I started at Internetrix as an Interactive Designer in 2014, the agency was undergoing a shift in brand, as it moved into a new physical space and new ownership took helm. I had a unique opportunity to contribute to the development of the Internetrix brand over my 4 years there, working on the internal website, branding, marketing, internal processes, and much, much more.</p>
+            <p>I led the front-end development at this growing digital agency from Wollongong.</p>
         ),
         imageList: [
             {
@@ -142,7 +175,7 @@ const showcaseItems = [
             },
 						{
                 type: 'text',
-                content: 'hello'
+                content: 'When I started at Internetrix as an Interactive Designer in 2014, the agency was undergoing a shift in brand, as it moved into a new physical space and new ownership took helm. I had a unique opportunity to contribute to the development of the Internetrix brand over my 4 years there, working on the internal website, branding, marketing, internal processes, and much, much more.'
             },
 						{
                 type: 'image',

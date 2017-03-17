@@ -37,39 +37,38 @@ export default class Home extends Component {
 			this.scrollLoad(this.props.location.hash);
 		}
 
-		// Call SVG4Everybody
-		svg4everybody();
-
 		// Scroll Events
-		$(window).bind('scroll', this.handleScroll);
-
-		// Debounce
-		function debounce(func, wait, immediate) {
-			var timeout;
-			return function() {
-				var context = this, args = arguments;
-				var later = function() {
-					timeout = null;
-					if (!immediate) func.apply(context, args);
-				};
-				var callNow = immediate && !timeout;
-				clearTimeout(timeout);
-				timeout = setTimeout(later, wait);
-				if (callNow) func.apply(context, args);
-			};
-		};
+		window.addEventListener('scroll', this.debounce(
+			this.handleScroll.bind(this), 100
+		));
 	}
 
 	componentWillUnmount() {
-    $(window).unbind('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.debounce(
+			this.handleScroll.bind(this), 100
+		));
   }
 
+	// Debounce
+	debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	}
+
 	handleScroll() {
-		// $(window).on('scroll', debounce( function(e) {}, 100));
 		// Sticky header
 		let headerEl = document.querySelector('#header');
-		let bodyEl = document.querySelector('body');
-		if ($(window).scrollTop() > 300) {
+		if (window.pageYOffset > 300) {
 			headerEl.classList.add('stuck');
 		} else {
 			headerEl.classList.remove('stuck');
