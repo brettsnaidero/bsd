@@ -68,7 +68,7 @@ const showcaseItems = [
         id: 'npm-gulp-and-sass',
         title: 'A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS! (For Designers)',
         date: '20th September, 2016',
-		img: 'img/work/mmj.png',
+		img: 'img/blog/npm/npm.jpg',
         content: (
             <div>
                 <p>Firstly let's address some immediate questions that you probably have:</p>
@@ -139,6 +139,17 @@ const showcaseItems = [
                     {"// Foundation\n@import 'foundation/_foundation';\n@import 'foundation/_global';\n@include foundation-everything;"}
                 </Highlight>
                 <p>Note that you can then go into the <strong>/foundation</strong> subfolder in your SASS folder, and easily remove/change settings as needed.</p>
+            </div>
+        )
+    },
+    {
+        id: 'test',
+        title: 'Frustrating doors: The principles of human centered design',
+        date: '4th March, 2017',
+		img: 'img/blog/doors/door.jpg',
+        content: (
+            <div>
+
             </div>
         )
     },

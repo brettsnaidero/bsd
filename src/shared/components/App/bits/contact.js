@@ -146,72 +146,114 @@ export default class Contact extends Component {
             {/* Text */}
 			<ISeeYou classesForChild="lineof-text">
 				<div className="row">
-	              <h2>Lets make something <span>great together —</span></h2>
-	              <div className="cols">
-	                <div className="left-col">
-						{ this.state.sent ? (
-							<div className="commentForm">
-								{ this.state.sendError ? (
-									<div className="message failure">
-										Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages :)
-									</div>
-								) : (
-									<div className="message success">
-										Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
-									</div>
-								)}
+					<div className="shape-holder">
+						{/* Shape 11 */}
+						<div className="shape shape-1">
+							<div className="shape-center">
+								<svg id="shape-11" viewBox="0 0 68.6 21.3" width="68.6" height="21.3">
+									<path className="line" d="M64.1 4.5C47.6 21 21 21 4.5 4.5" />
+									<ellipse className="circle" transform="rotate(-45.001 64.074 4.5)" cx="64.1" cy="4.5" rx="4.5" ry="4.5"/>
+								</svg>
 							</div>
-						) : (
-							<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
-	                    <div className="field">
-	                      <input
-							ref="contactname"
-							type="text"
-							placeholder="Name*"
-							value={this.state.contactname}
-							onChange={this.handleNameChange.bind(this)}
-						  />
-						  { this.state.contactnameError ? <div className="message error">Please enter your name</div> : "" }
-	                    </div>
-	                    <div className="field">
-	                      <input
-							ref="email"
-							type="text"
-							placeholder="Email*"
-							value={this.state.email}
-			          		onChange={this.handleEmailChange.bind(this)}
-							/>
-							{ this.state.emailError ? <div className="message error">Please enter your email</div> : "" }
-	                    </div>
-	                    <div className="field">
-	                      <textarea
-										rows={5}
-										ref="text"
-										placeholder="Message*"
-										name="message"
-										value={this.state.text}
-			          		onChange={this.handleTextChange.bind(this)}
-						/>
-						{ this.state.textError ? <div className="message error">Please enter your message</div> : "" }
 						</div>
-	                    <div className="field">
-	                      <input type="submit" value="Send Enquiry" />
-	                    </div>
-	                  </form>
-									)}
-	                </div>
-	                <div className="right-col">
-	                  <h5>What should I chat about?</h5>
-	                  <p>I am currently open to job offers in Sydney or Melbourne, looking specifically for roles where I can use my front-end development expertise to achieve goals.</p>
-										<h5>Icebreakers</h5>
-	                  <p>Please feel very welcome talk to me about the following things:</p>
-										<ul>
-											<li>Ritz crackers > Jatz crackers?</li>
-											<li>How good was <a href="#">Party Down</a></li>
-											<li>Paul F. Tompkins on podcasts</li>
-										</ul>
+
+						{/* Shape 12 */}
+						<div className="shape shape-2">
+							<div className="shape-center">
+								<div className="shape-spin">
+									<div className="shape-float">
+										<svg id="shape-12" viewBox="0 0 54.4 27.3" width="54.4" height="27.3">
+											<path className="st0" d="M52.4 0H2C.8 0-.1 1 0 2.2c1.1 14.1 12.9 25.1 27.2 25.1 14.3 0 26.1-11.1 27.2-25.1.1-1.2-.8-2.2-2-2.2z"/>
+										</svg>
 									</div>
-	              </div>
+								</div>
+							</div>
+						</div>
+
+						{/* Shape 13 */}
+						<div className="shape shape-3">
+							<div className="shape-center">
+								<svg id="shape-13" viewBox="0 0 23.1 23.1" width="23.1" height="23.1">
+									<circle cx="11.6" cy="11.6" r="9.1" className="lined-pink"/>
+								</svg>
+							</div>
+						</div>
+						
+						{/* Shape 15 */}
+						<div className="shape shape-5">
+							<div className="shape-center">
+								<svg id="shape-15" viewBox="0 0 10.4 10.4" width="10.4" height="10.4">
+									<circle className="st0" cx="5.2" cy="5.2" r="5.2"/>
+								</svg>
+							</div>
+						</div>
+		              <h2>Lets make something <span>great together —</span></h2>
+		              <div className="cols">
+		                <div className="left-col">
+							{ this.state.sent ? (
+								<div className="commentForm">
+									{ this.state.sendError ? (
+										<div className="message failure">
+											Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages :)
+										</div>
+									) : (
+										<div className="message success">
+											Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
+										</div>
+									)}
+								</div>
+							) : (
+								<form className="commentForm" onSubmit={this.handleSubmit.bind(this)}>
+		                    <div className="field">
+		                      <input
+								ref="contactname"
+								type="text"
+								placeholder="Name*"
+								value={this.state.contactname}
+								onChange={this.handleNameChange.bind(this)}
+							  />
+							  { this.state.contactnameError ? <div className="message error">Please enter your name</div> : "" }
+		                    </div>
+		                    <div className="field">
+		                      <input
+								ref="email"
+								type="text"
+								placeholder="Email*"
+								value={this.state.email}
+				          		onChange={this.handleEmailChange.bind(this)}
+								/>
+								{ this.state.emailError ? <div className="message error">Please enter your email</div> : "" }
+		                    </div>
+		                    <div className="field">
+		                      <textarea
+											rows={5}
+											ref="text"
+											placeholder="Message*"
+											name="message"
+											value={this.state.text}
+				          		onChange={this.handleTextChange.bind(this)}
+							/>
+							{ this.state.textError ? <div className="message error">Please enter your message</div> : "" }
+							</div>
+		                    <div className="field">
+		                      <input type="submit" value="Send Enquiry" />
+		                    </div>
+		                  </form>
+										)}
+		                </div>
+		                <div className="right-col">
+		                  <h5>What should I chat about?</h5>
+		                  <p>I am currently open to job offers in Sydney or Melbourne, looking specifically for roles where I can use my front-end development expertise to achieve goals.</p>
+											<h5>Icebreakers</h5>
+		                  <p>Please feel very welcome talk to me about the following things:</p>
+											<ul>
+												<li>Ritz crackers > Jatz crackers?</li>
+												<li>How good was <a href="#">Party Down</a></li>
+												<li>Paul F. Tompkins on podcasts</li>
+											</ul>
+										</div>
+		              </div>
+					</div>
 				</div>
             </ISeeYou>
           </section>

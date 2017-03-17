@@ -189,6 +189,12 @@ $sizing-ratio: 2;
 	}
 }
 
+.home-contact .cols:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .home-contact .left-col {
     width: 72.5%;
     float: left;
@@ -289,4 +295,54 @@ $sizing-ratio: 2;
 				background-color: $background-color;
 			}
 		}
+}
+
+.home-contact .shape-holder {
+    position: relative;
+}
+
+.home-contact .shape-1 {
+	position: absolute;
+	top: 0%;
+	left: 85%;
+	fill: none;
+    animation: float-x 10s linear infinite;
+
+    .line {
+        stroke-width: 9;
+    	stroke-linecap: round;
+    	stroke-linejoin: round;
+    	stroke-miterlimit: 10;
+    	stroke: url(#gradient-pink);
+    }
+}
+
+.home-contact .shape-2 {
+	position: absolute;
+	top: 5%;
+	left: 95%;
+	fill: url(#gradient-normal);
+	animation: spin 20s linear infinite;
+}
+
+.home-contact .shape-3 {
+	position: absolute;
+    top: 40%;
+    left: 0%;
+	fill: none;
+	stroke-width: 5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	stroke: url(#gradient-normal);
+}
+.home-contact .shape-5 {
+	position: absolute;
+    top: 0;
+    left: 100%;
+	fill: url(#gradient-normal);
+}
+
+.home-contact .shape-float {
+	animation: float-x 5s linear infinite;
 }

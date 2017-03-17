@@ -59,10 +59,10 @@ export default class Writings extends Component {
 								<div className="flex">
 
 									{/* Image */}
-									<div className="image-holder">
+									<div className={"image-holder" + " selected-" + this.state.selected}>
 										<div className="spacer">
 											{ _.map(this.state.blogList, (item, index) => (
-												<div key={index} className={"slide" + (index == this.state.selected ? " selected" : " notselected")} style={{ backgroundImage: 'url(' + item.img + ')' }}>
+												<div key={index} className={ "slide num-" + index } style={{ backgroundImage: 'url(' + item.img + ')' }}>
 												</div>
 											))}
 										</div>
@@ -74,15 +74,11 @@ export default class Writings extends Component {
 											<li
 												key={index}
 												onMouseEnter={ () => this.onMouseEnter(index) }
-	            					onMouseLeave={ () => this.onMouseLeave(index) }
 												className={ index == this.state.selected ? " selected" : " notselected" }
 											>
 												<Link to={"/writings/" + item.id}>
+													<sup><time className="Date">{ item.date }</time></sup>
 													{ item.title }
-													<sup>
-														<time className="Date">{ item.date }</time>
-													</sup>
-													<span className="Slash"></span>
 												</Link>
 											</li>
 										))}
