@@ -24,23 +24,25 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-1 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-01" viewBox="0 0 53 53" width="53" height="53">
-							<defs>
-								<linearGradient id="gradient-pink">
-									<stop offset="0" stopColor="#df0b93"/>
-									<stop offset="1" stopColor="#a00ab5"/>
-								</linearGradient>
-								<linearGradient id="gradient-normal">
-							        <stop offset="0" stopColor="#2c41ff"/>
-							        <stop offset="1" stopColor="#2508f9"/>
-							    </linearGradient>
-								<linearGradient id="gradient-high">
-							        <stop offset="0" stopColor="#2c41ff" stopOpacity="1" />
-							        <stop offset="1" stopColor="#2c41ff" stopOpacity="0.25" />
-							    </linearGradient>
-							</defs>
-							<path className="st0" d="M51 53H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h49c1.1 0 2 .9 2 2v49c0 1.1-.9 2-2 2z"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-01" viewBox="0 0 53 53" width="53" height="53">
+								<defs>
+									<linearGradient id="gradient-pink">
+										<stop offset="0" stopColor="#df0b93"/>
+										<stop offset="1" stopColor="#a00ab5"/>
+									</linearGradient>
+									<linearGradient id="gradient-normal">
+								        <stop offset="0" stopColor="#2c41ff"/>
+								        <stop offset="1" stopColor="#2508f9"/>
+								    </linearGradient>
+									<linearGradient id="gradient-high">
+								        <stop offset="0" stopColor="#2c41ff" stopOpacity="1" />
+								        <stop offset="1" stopColor="#2c41ff" stopOpacity="0.25" />
+								    </linearGradient>
+								</defs>
+								<path className="st0" d="M51 53H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h49c1.1 0 2 .9 2 2v49c0 1.1-.9 2-2 2z"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -59,9 +61,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 4 */}
 			<div className="shape shape-4">
 				<div className="shape-center">
-					<svg id="shape-04" viewBox="0 0 8.9 8.9" width="8.9" height="8.9">
-						<circle className="st0" cx="4.5" cy="4.5" r="4.5"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-04" viewBox="0 0 8.9 8.9" width="8.9" height="8.9">
+							<circle className="st0" cx="4.5" cy="4.5" r="4.5"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -80,9 +84,11 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-6 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-06" viewBox="0 0 10.3 10.3" width="10.3" height="10.3">
-							<path className="st0" d="M0 0h10.3v10.3H0z"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-06" viewBox="0 0 10.3 10.3" width="10.3" height="10.3">
+								<path className="st0" d="M0 0h10.3v10.3H0z"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -99,9 +105,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 8 */}
 			<div className="shape shape-8 mobile-hide">
 				<div className="shape-center">
-					<svg id="shape-08" viewBox="0 0 22.5 22.5" width="22.5" height="22.5">
-						<circle className="st0" cx="11.3" cy="11.3" r="11.3"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-08" viewBox="0 0 22.5 22.5" width="22.5" height="22.5">
+							<circle className="st0" cx="11.3" cy="11.3" r="11.3"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -119,9 +127,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 10 */}
 			<div className="shape shape-10">
 				<div className="shape-center">
-					<svg id="shape-10" viewBox="0 0 19.8 19.8" width="19.8" height="19.8">
-						<circle className="st0" cx="9.9" cy="9.9" r="9.9"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-10" viewBox="0 0 19.8 19.8" width="19.8" height="19.8">
+							<circle className="st0" cx="9.9" cy="9.9" r="9.9"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -139,9 +149,11 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-12 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-12" viewBox="0 0 54.4 27.3" width="54.4" height="27.3">
-							<path className="st0" d="M52.4 0H2C.8 0-.1 1 0 2.2c1.1 14.1 12.9 25.1 27.2 25.1 14.3 0 26.1-11.1 27.2-25.1.1-1.2-.8-2.2-2-2.2z"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-12" viewBox="0 0 54.4 27.3" width="54.4" height="27.3">
+								<path className="st0" d="M52.4 0H2C.8 0-.1 1 0 2.2c1.1 14.1 12.9 25.1 27.2 25.1 14.3 0 26.1-11.1 27.2-25.1.1-1.2-.8-2.2-2-2.2z"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -159,9 +171,11 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-14">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-14" viewBox="0 0 22.9 22.9" width="22.9" height="22.9">
-							<path className="lined-nograd" d="M20.9 2L2 20.9M2 2l18.9 18.9"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-14" viewBox="0 0 22.9 22.9" width="22.9" height="22.9">
+								<path className="lined-nograd" d="M20.9 2L2 20.9M2 2l18.9 18.9"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -201,9 +215,11 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-18 mobile-hide">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-18" viewBox="0 0 48.8 48.8" width="48.8" height="48.8">
-							<path className="st0" d="M48.8 2v44.8c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h44.8c1.1 0 2 .9 2 2z"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-18" viewBox="0 0 48.8 48.8" width="48.8" height="48.8">
+								<path className="st0" d="M48.8 2v44.8c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h44.8c1.1 0 2 .9 2 2z"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -223,9 +239,11 @@ export default class HomeShapes extends Component {
 			<div className="shape shape-20">
 				<div className="shape-center">
 					<div className="shape-spin">
-						<svg id="shape-20" viewBox="0 0 9.7 9.7" width="9.7" height="9.7">
-							<path className="st0" d="M8.4.1L2.6 2c-.3.1-.5.3-.6.6L.1 8.4c-.3.8.5 1.5 1.3 1.3l5.8-1.9c.3-.1.5-.3.6-.6l1.9-5.8C9.9.5 9.1-.2 8.4.1z"/>
-						</svg>
+						<div className="shape-float">
+							<svg id="shape-20" viewBox="0 0 9.7 9.7" width="9.7" height="9.7">
+								<path className="st0" d="M8.4.1L2.6 2c-.3.1-.5.3-.6.6L.1 8.4c-.3.8.5 1.5 1.3 1.3l5.8-1.9c.3-.1.5-.3.6-.6l1.9-5.8C9.9.5 9.1-.2 8.4.1z"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -275,9 +293,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 25 */}
 			<div className="shape shape-25">
 				<div className="shape-center">
-					<svg id="shape-25" viewBox="0 0 22.4 22.4" width="22.4" height="22.4">
-						<circle className="st0" cx="11.2" cy="11.2" r="11.2"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-25" viewBox="0 0 22.4 22.4" width="22.4" height="22.4">
+							<circle className="st0" cx="11.2" cy="11.2" r="11.2"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -304,9 +324,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 28 */}
 			<div className="shape shape-28">
 				<div className="shape-center">
-					<svg id="shape-28" viewBox="0 0 16.9 16.9" width="16.9" height="16.9">
-						<circle className="st0" cx="8.4" cy="8.4" r="8.4"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-28" viewBox="0 0 16.9 16.9" width="16.9" height="16.9">
+							<circle className="st0" cx="8.4" cy="8.4" r="8.4"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -335,10 +357,12 @@ export default class HomeShapes extends Component {
 			{/* Shape 31 */}
 			<div className="shape shape-31">
 				<div className="shape-center">
-					<svg id="shape-31" viewBox="0 0 68.6 21.3" width="68.6" height="21.3">
-						<path className="line" d="M4.5 16.8C21 .4 47.6.4 64.1 16.8" />
-						<ellipse className="circle" transform="rotate(-45.001 4.5 16.838)" cx="4.5" cy="16.8" rx="4.5" ry="4.5"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-31" viewBox="0 0 68.6 21.3" width="68.6" height="21.3">
+							<path className="line" d="M4.5 16.8C21 .4 47.6.4 64.1 16.8" />
+							<ellipse className="circle" transform="rotate(-45.001 4.5 16.838)" cx="4.5" cy="16.8" rx="4.5" ry="4.5"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -356,9 +380,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 33 */}
 			<div className="shape shape-33">
 				<div className="shape-center">
-					<svg id="shape-33" viewBox="0 0 56.8 56.8" width="28.4" height="28.4">
-						<circle className="st0" cx="28.4" cy="28.4" r="28.4"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-33" viewBox="0 0 56.8 56.8" width="28.4" height="28.4">
+							<circle className="st0" cx="28.4" cy="28.4" r="28.4"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -398,9 +424,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 37 */}
 			<div className="shape shape-37">
 				<div className="shape-center">
-					<svg id="shape-37" viewBox="0 0 49.8 49.8" width="49.8" height="49.8">
-						<circle cx="24.9" cy="24.9" r="22.4" className="lined-normal"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-37" viewBox="0 0 49.8 49.8" width="49.8" height="49.8">
+							<circle cx="24.9" cy="24.9" r="22.4" className="lined-normal"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
@@ -429,9 +457,11 @@ export default class HomeShapes extends Component {
 			{/* Shape 40 */}
 			<div className="shape shape-40">
 				<div className="shape-center">
-					<svg id="shape-40" viewBox="0 0 54.4 54.4" width="54.4" height="54.4">
-						<circle className="st0" cx="27.2" cy="27.2" r="27.2"/>
-					</svg>
+					<div className="shape-float">
+						<svg id="shape-40" viewBox="0 0 54.4 54.4" width="54.4" height="54.4">
+							<circle className="st0" cx="27.2" cy="27.2" r="27.2"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 

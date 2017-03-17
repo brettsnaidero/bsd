@@ -36,6 +36,11 @@ $slight: #7380ff;
 
 body {
 	background-color: $background-color-two;
+	background-attachment: fixed;
+	background-position: top left;
+	background-size: 100%;
+	background-size: cover;
+	background-image: linear-gradient(0deg, $background-color 0%, $background-color-two 100%); 
 }
 
 .clearfix:after {

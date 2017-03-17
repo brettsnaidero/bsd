@@ -89,7 +89,7 @@ export default class Home extends Component {
 								<Intro />
 							</Element>
 							<div className="shape-holder">
-								<Shapes />
+								{/* <Shapes /> */}
 								<Element name="profile" id="profile">
 									<Profile />
 								</Element>

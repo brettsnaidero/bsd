@@ -144,7 +144,7 @@ export default class Contact extends Component {
         return (
           <section className="home-contact">
             {/* Text */}
-			<ISeeYou classesForChild="banner-text">
+			<ISeeYou classesForChild="lineof-text">
 				<div className="row">
 	              <h2>Lets make something <span>great together —</span></h2>
 	              <div className="cols">
