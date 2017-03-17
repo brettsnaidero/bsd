@@ -40,6 +40,9 @@ export default class Home extends Component {
 		// Call SVG4Everybody
 		svg4everybody();
 
+		// Scroll Events
+		$(window).bind('scroll', this.handleScroll);
+
 		// Debounce
 		function debounce(func, wait, immediate) {
 			var timeout;
@@ -55,30 +58,22 @@ export default class Home extends Component {
 				if (callNow) func.apply(context, args);
 			};
 		};
+	}
 
-		// Header stick
+	componentWillUnmount() {
+    $(window).unbind('scroll', this.handleScroll);
+  }
+
+	handleScroll() {
+		// $(window).on('scroll', debounce( function(e) {}, 100));
+		// Sticky header
 		let headerEl = document.querySelector('#header');
 		let bodyEl = document.querySelector('body');
-		$(window).on('scroll', debounce( function(e) {
-			// Sticky header
-			if (bodyEl.scrollTop > 300) {
-			  headerEl.classList.add('stuck');
-			} else {
-			  headerEl.classList.remove('stuck');
-			};
-		}, 100));
-
-		// Toggler
-		var togglerElements = document.querySelectorAll('.toggler');
-		Array.from(togglerElements).forEach(function(item) {
-		    var attr = item.getAttribute('data-toggleplz');
-		    var toggleMe = document.getElementById(attr);
-		    item.addEventListener('click', function(event) {
-		        event.preventDefault;
-		        item.classList.toggle('toggled');
-		        toggleMe.classList.toggle('show');
-		    });
-		});
+		if ($(window).scrollTop() > 300) {
+			headerEl.classList.add('stuck');
+		} else {
+			headerEl.classList.remove('stuck');
+		};
 	}
 
 	render() {

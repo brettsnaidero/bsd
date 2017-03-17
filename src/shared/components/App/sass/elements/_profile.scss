@@ -76,6 +76,49 @@
 
 .profile .image {
 	max-width: 400px;
+	position: relative;
+}
+
+.profile .image .shape-1 {
+	position: absolute;
+	top: 70%;
+	left: 0%;
+	fill: none;
+	stroke-width: 5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	stroke: url(#gradient-pink);
+	animation: spin 10s linear infinite;
+}
+
+.profile .image .shape-2 {
+	position: absolute;
+	top: 0%;
+	left: 90%;
+	fill: none;
+	stroke-width: 5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	stroke: url(#gradient-normal);
+	animation: spin 20s linear infinite;
+}
+
+.profile .image .shape-3 {
+	position: absolute;
+	top: 90%;
+	left: 10%;
+	fill: none;
+	stroke-width: 5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	stroke: url(#gradient-normal);
+}
+
+.profile .image .shape-float {
+	animation: float-x 5s linear infinite;
 }
 
 .profile img {
