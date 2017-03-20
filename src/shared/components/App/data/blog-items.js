@@ -66,7 +66,7 @@ const showcaseItems = [
     },
     {
         id: 'npm-gulp-and-sass',
-        title: 'A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS! (For Designers)',
+        title: 'A comprehensive and encyclopedic guide to using NPM, Gulp, and SASS!',
         date: '20th September, 2016',
 		img: 'img/blog/npm/npm.jpg',
         content: (

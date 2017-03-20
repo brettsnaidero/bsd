@@ -497,3 +497,74 @@
 	display: block;
 	max-width: 100%;
 }
+
+/* Shapes */
+.work .work-listings {
+	.shape {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: 3s top ease-out, 3s left ease-out;
+	}
+
+	svg {
+		display: block;
+	}
+
+	.shape-center {
+		transform: translate(-50%, -50%);
+	}
+
+	.shape-spin {
+		animation: spin 10s linear infinite;
+	}
+
+	.shape-float {
+		animation: float-x 10s infinite;
+	}
+
+	.shape-16 {
+		fill: url(#gradient-normal);
+
+		top: 102.5%;
+		left: 60%;
+	}
+	.shape-17 {
+		fill: url(#gradient-normal);
+
+		top: 62.5%;
+		left: 36%;
+	}
+	.shape-31 {
+		.line {
+			fill: none;
+			stroke-width: 9;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-miterlimit: 10;
+			stroke: url(#gradient-normal);
+
+			animation: showLine 7.5s ease alternate infinite;
+		}
+		.circle {
+			fill: #2c41ff;
+		}
+
+		top: 2.5%;
+		left: 22.5%;
+	}
+	.shape-35 {
+		fill: url(#gradient-normal);
+
+		top: 70%;
+		left: 10%;
+	}
+	.shape-39 {
+		stroke: url(#gradient-pink);
+		stroke-width: 5;
+		fill: none;
+
+		top: 33.5%;
+		left: 57.5%;
+	}
+}

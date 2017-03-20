@@ -46,6 +46,7 @@
     color: $text-color;
 	position: relative;
     text-decoration: none;
+    display: block;
 }
 
 .home-writings .writings-list a:hover,
@@ -387,4 +388,59 @@
         z-index: 3;
         transform: scale3d(.95,.95,1);
     }
+}
+
+/* Shapes */
+.home-writings .image-holder {
+	.shape {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: 3s top ease-out, 3s left ease-out;
+        z-index: 5;
+	}
+
+	svg {
+		display: block;
+	}
+
+	.shape-center {
+		transform: translate(-50%, -50%);
+	}
+
+	.shape-spin {
+		animation: spin 10s linear infinite;
+	}
+
+	.shape-float {
+		animation: float-x 10s infinite;
+	}
+
+	.shape-13 {
+		stroke: url(#gradient-pink);
+		stroke-width: 5;
+		fill: none;
+
+		top: -5%;
+		left: 87.5%;
+	}
+
+    .shape-19 {
+        fill: none;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke: #2c41ff;
+
+		top: 102.5%;
+		left: 10%;
+	}
+
+    .shape-20 {
+		fill: url(#gradient-normal);
+
+        top: -7.5%;
+        left: 75%;
+	}
 }
