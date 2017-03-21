@@ -123,6 +123,10 @@ const showcaseItems = [
                 content: 'In early 2015, the Internetrix team were tasked with the responsive redesign of the League & Legends website to increase mobile friendliness, in recognition to the fact that it would lead to higher conversion rates.',
             },
             {
+                type: 'image',
+                content: 'img/work/show-landl2.jpg'
+            },
+            {
                 type: 'text',
                 content: 'Since we completed the responsive upgrade, not only have League and Legends seen a rapid rise in conversion rates, but their website has also been ‘visually refreshed’, helping to better reflect the vibrant energy of the League & Legends brand.'
             }

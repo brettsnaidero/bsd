@@ -148,9 +148,9 @@ $sizing-ratio: 2;
 
 /* Home Contact */
 .home-contact {
-  min-height: 100vh;
+  // min-height: 100vh;
   width: 100%;
-  padding: 200px 0;
+  padding: 120px 0;
 
   display: flex;
   flex-direction: column;
@@ -292,7 +292,6 @@ $sizing-ratio: 2;
 				float: none;
 				min-width: 0;
 				width: 100%;
-				background-color: $background-color;
 			}
 		}
 }

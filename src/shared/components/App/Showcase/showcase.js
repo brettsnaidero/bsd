@@ -102,7 +102,6 @@ export default class WorkPage extends Component {
 					<div className="row">
 						<ISeeYou classesForChild="text">
 							<div className="client">Client: {this.state.page.title}</div>
-							<h1>{this.state.page.title}</h1>
 							<Link className="back" to="/#work">
 								<svg viewBox="0 0 125 125">
 									<rect x="0" width="25" height="25"/>
