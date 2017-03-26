@@ -147,12 +147,16 @@ const showcaseItems = [
 				],
 				link: 'http://polidex.com.au',
         description: (
-            <p><strong>Polidex</strong> is a side-project I began in 2015, with the aim of making it a little easier to keep track of Australian politics. Built with the React Javascript library, the site uses public data to generate a directory of Australian federal politicians, with some insightful information on each politician. The directory is easily searchable, and allows users to quickly sort through the politicians currently sitting in our two parliamentary houses.</p>
+            <p><strong>Polidex</strong> is a side-project I began in 2015, with the aim of making it a little easier to keep track of Australian politics.</p>
         ),
         imageList: [
             {
                 type: 'image',
                 content: 'img/work/show-polidex.png'
+            },
+            {
+              type: 'text',
+              content: 'Built with the React Javascript library, the site uses public data to generate a directory of Australian federal politicians, with some insightful information on each politician. The directory is easily searchable, and allows users to quickly sort through the politicians currently sitting in our two parliamentary houses.'
             }
         ]
     },

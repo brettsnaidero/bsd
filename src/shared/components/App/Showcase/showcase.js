@@ -29,10 +29,30 @@ export default class WorkPage extends Component {
 	}
 
 	componentWillMount() {
-		let page = _.find(showcaseItems, {'id': this.props.params.id});
-		this.setState({
-			page: page
-		})
+		if (this.props.params.id) {
+			let page = _.find(showcaseItems, { 'id': this.props.params.id });
+			let index = _.findIndex(showcaseItems, { 'id': this.props.params.id });
+			let nextIndex = 0;
+			if ( showcaseItems.length !== index ) {
+				nextIndex = index + 1;
+			}
+			if (page) {
+				this.setState({
+					index: index,
+					nextIndex: nextIndex,
+					page: page
+				})
+			} else {
+				this.setState({
+					index: index,
+					nextIndex: nextIndex,
+					page: {
+						title: 'Project Not Found',
+						id: ''
+					}
+				})
+			}
+		}
 	}
 
 	render() {
@@ -69,35 +89,59 @@ export default class WorkPage extends Component {
 						</ISeeYou>
 					</div>
 				</section>
+				{/*
+				<ISeeYou classesForChild="showcase-icu">
+					<div className="image-bit">
+						<img src={"../" + this.state.page.image} />
+					</div>
+				</ISeeYou>
+				*/}
 				{/* Images */}
 				<section className="work-images">
-					<div className="row">
+
 						{_.map(this.state.page.imageList, (each, key) => (
 							<div key={key}>
 							{ each.type == 'image' ? (
-								<ISeeYou classesForChild="showcase-icu">
-									<div className="image-bit">
-										<img src={"../" + each.content} />
-									</div>
-								</ISeeYou>
+								<div className="row">
+									<ISeeYou classesForChild="showcase-icu">
+										<div className="image-bit">
+											<img src={"../" + each.content} />
+										</div>
+									</ISeeYou>
+								</div>
 							) : (
-								<ISeeYou classesForChild="showcase-icu">
-									<div className="text-bit">
-										<p>{each.content}</p>
-									</div>
-								</ISeeYou>
+								<div className="row">
+									<ISeeYou classesForChild="showcase-icu">
+										<div className="text-bit">
+											<p>{each.content}</p>
+										</div>
+									</ISeeYou>
+								</div>
 							) }
 							</div>
 						))}
-					</div>
+
+						{ this.state.page.link && (
+							<div className="visit">
+								<a href={this.state.page.link} title={this.state.page.title}>
+									<span>Visit Site</span>
+								</a>
+							</div>
+						)}
 				</section>
 
 				{/* Banner */}
+				<section className="work-link">
+					<Link to={'/work/' + showcaseItems[this.state.nextIndex].id} title={showcaseItems[this.state.nextIndex].title}>
+						<div className="image" style={{ backgroundImage: 'url(../' + showcaseItems[this.state.nextIndex].image + ')' }}></div>
+						<div className="title">
+							<div className="text">Next Project <span>{showcaseItems[this.state.nextIndex].title}</span></div>
+						</div>
+					</Link>
+				</section>
+				{/*
 				<section
 					className="work-banner"
-					style={{
-						backgroundImage: 'url(../' + this.state.page.image + ')'
-					}}
 				>
 					<div className="row">
 						<ISeeYou classesForChild="text">
@@ -119,6 +163,7 @@ export default class WorkPage extends Component {
 						</ISeeYou>
 					</div>
 				</section>
+				*/}
             </div>
         );
     }
