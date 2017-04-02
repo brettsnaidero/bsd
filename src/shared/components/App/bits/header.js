@@ -88,7 +88,7 @@ export default class Header extends Component {
 							<LocalLink activeClass="active" to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
 						</li>
 					</ul>
-				)}
+				)} 
                 </nav>
                 <div className="c2a">
 					{ this.props.nothome ? (

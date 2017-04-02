@@ -10,6 +10,11 @@ import './sass/style.scss';
 import NotFound from './NotFound/notfound';
 import { safeConfigGet } from '../../utils/config';
 
+import * as _ from 'lodash';
+
+import showcaseItems from './data/showcase-items.js';
+import blogItems from './data/blog-items.js';
+
 function App() {
   return (
     <div>
@@ -24,7 +29,10 @@ function App() {
 	        meta={safeConfigGet(['htmlPage', 'meta'])}
 	        link={safeConfigGet(['htmlPage', 'links'])}
 	        script={safeConfigGet(['htmlPage', 'scripts'])}
-	      />
+	      >
+          {/* <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; options inline-script" /> */}
+        </Helmet>
+
 	    	<Match
 	    		exactly
 	    		pattern="/"
@@ -35,22 +43,22 @@ function App() {
 	    		}
 	    	/>
 
-	      <Match
-	    		exactly
-	    		pattern="/work/:id"
-	    		render={routerProps =>
-	    			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
-	    				{ ({ Work }) => Work && <Work {...routerProps} /> }
-	    			</CodeSplit>
-	    		}
-	    	/>
-
-	      <Match
+        <Match
 	    		exactly
 	    		pattern="/writings/:id"
 	    		render={routerProps =>
 	    			<CodeSplit chunkName="blog" modules={{ Blog: require('./Blog/blog') }}>
 	    				{ ({ Blog }) => Blog && <Blog {...routerProps} /> }
+	    			</CodeSplit>
+	    		}
+	    	/>
+
+        <Match
+	    		exactly
+	    		pattern="/work/:id"
+	    		render={routerProps =>
+	    			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
+	    				{ ({ Work }) => Work && <Work {...routerProps} /> }
 	    			</CodeSplit>
 	    		}
 	    	/>

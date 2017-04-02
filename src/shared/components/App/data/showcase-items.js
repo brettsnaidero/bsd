@@ -12,7 +12,9 @@ const showcaseItems = [
 				team: 'Internetrix',
         client: 'MMJ Real Estate',
 				expertise: [
-					'Design'
+					'Design',
+          'Front End Development',
+          'React'
 				],
 				link: 'http://mmjrealestate.com.au',
         description: (
@@ -25,11 +27,23 @@ const showcaseItems = [
             },
 						{
 							type: 'text',
-							content: `They are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.`
+							content: `MMJ are a highly respected property management brand, so when we started working on their new website together, it needed to meet their high standards. I'm very happy with what we ended up with, as the collaborative design process brought us to a very stylish and uncompromising website, which takes the MMJ brand to exciting new places, while delivering a highly functional and friendly user experience.`
+						},
+            {
+                type: 'image',
+                content: 'img/work/mmj-wireframes.jpg'
+            },
+            {
+							type: 'text',
+							content: `I worked closely with MMJ through the planning process, working together to identify the goals of the project. This process included sitemapping, information architecture planning, and then creating high-fidelity mock-ups.`
 						},
 						{
                 type: 'image',
                 content: 'img/work/show-mmj2.jpg'
+            },
+            {
+                type: 'text',
+                content: `Finally, I worked on the front-end development of the website, building a highly performant and content flexible website. I worked with a back-end developer on a React implementation to handle the property search functions of the site. I'm very happy with the results, with a fast and stylish web presence representing the forward-thinking MMJ brand.`
             }
         ]
     },
@@ -46,12 +60,11 @@ const showcaseItems = [
 					'Logo Design',
 					'Branding',
 					'UI/UX',
-					'CMS Development',
-					'Full Stack'
+					'CMS Development'
 				],
 				link: 'http://illawarradj.com.au',
         description: (
-            <p>A side project developed by me and a friend, I was able to design the digital presence of this business from the ground up.</p>
+            <p>A side project developed by me and a friend, I designed the digital presence of this business from the ground up.</p>
         ),
         imageList: [
             {
@@ -60,12 +73,16 @@ const showcaseItems = [
             },
 						{
 							type: 'text',
-							content: 'Another side project of mine, the Illawarra DJ site gave people on the South Coast an easy way to organise a DJ for their parties and events. This was a project that was cooked up by a friend of mine, and I took on the design and website development for the idea. I designed the brand for the site first, putting together an angular and geometric logo and pairing it with a dark, club-inspired colour scheme to give the site a stylish vibe. This brand was then applied to the website, which I built into a simple CMS installation to give us quick control over the content on the site.'
+							content: 'Another side project of mine, the Illawarra DJ site gave people on the South Coast an easy way to organise a DJ for their parties and events. This was a project that was cooked up by a friend of mine, and I took on the design and website development for the idea.'
 						},
 						{
                 type: 'image',
                 content: 'img/work/show-iydj2.jpg'
-            }
+            },
+            {
+							type: 'text',
+							content: `I designed the brand for the site first, putting together an angular and geometric logo and pairing it with a dark, club-inspired colour scheme to give the site a stylish vibe. This brand was then applied to the website, which I built into a simple CMS installation to give us quick control over the content on the site.`
+						}
         ]
     },
     {
@@ -92,7 +109,7 @@ const showcaseItems = [
             },
 						{
 							type: 'text',
-							content: 'In late 2016, I took a General Assembly course to build up my Javascript skills. As part of the course, I completed this as a major project, utilising React to develop a simple web app for finding chaep petrol. I hooked in to a freely available API provided by the NSW government, this site visualises Petrol Stations and their daily set prices, allowing people to quickly find the cheapest petrol available to them.'
+							content: 'In late 2016, I took a General Assembly course to build up my Javascript skills. As part of the course, I completed this as a major project, utilising React to develop a simple web app for finding cheap petrol. I hooked in to a freely available API provided by the NSW government, in order to visualise Petrol Stations and their daily set prices, allowing people to quickly find the cheapest petrol available to them.'
 						}
         ]
     },
@@ -106,12 +123,13 @@ const showcaseItems = [
         period: '',
         client: '',
 				expertise: [
-					'Branding',
-					'Full Stack Development'
+          'Information Architecture',
+					'UX Design',
+					'Front End Development'
 				],
 				link: 'http://leagueandlegends.com.au',
         description: (
-            <p>League and Legends are a successful online store, who sell a large variety of NRL Merchandise, right across Australia. Since their original website was launched, the usage of mobile tablets has increased and so has the number of people using them to purchase online.</p>
+            <p><strong>League &amp; Legends</strong> are an NRL merchandise store. I designed the new responsive home of this e-commerce success story.</p>
         ),
         imageList: [
             {
@@ -143,7 +161,8 @@ const showcaseItems = [
         client: '',
 				expertise: [
 					'Branding',
-					'Full Stack Development'
+					'Full Stack Development',
+          'React'
 				],
 				link: 'http://polidex.com.au',
         description: (
