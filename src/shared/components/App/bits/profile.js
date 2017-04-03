@@ -19,6 +19,13 @@ export default class Profile extends Component {
     return (
       <section className="profile">
 
+				{/* BG */}
+				<div className="bg-bits">
+					<div className="contain">
+						<h2>Profile</h2>
+					</div>
+				</div>
+
         {/* Content */}
         <div className="row">
           <ISeeYou classesForChild="l-col">

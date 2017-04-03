@@ -141,7 +141,7 @@ const showcaseItems = [
     },
     {
         id: 'test',
-        title: 'Frustrating doors: The principles of human centered design',
+        title: 'Test Four',
         date: '4th March, 2017',
 		img: 'img/blog/doors/door.jpg',
         content: (

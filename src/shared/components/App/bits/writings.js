@@ -54,6 +54,13 @@ export default class Writings extends Component {
         return (
           <section className="home-writings">
 
+						{/* BG */}
+						<div className="bg-bits">
+							<div className="contain">
+								<h2>Writings</h2>
+							</div>
+						</div>
+
 						<div>
 							<div className="row">
 								<div className="flex">

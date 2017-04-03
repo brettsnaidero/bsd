@@ -73,3 +73,55 @@ em {
 /* Responsive Embed */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* BG */
+.bg-bits {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.bg-bits .contain {
+	width: 1320px;
+  margin: 0px auto;
+}
+
+.bg-bits h2 {
+	// text-decoration: line-through;
+	opacity: 0.65;
+	color: #102496;
+	background: -webkit-linear-gradient( #102496, rgba(#102496,0.65));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	font-size: 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+	.bg-bits .contain {
+		width: 800px;
+	}
+	.bg-bits h2 {
+		font-size: 5rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.bg-bits .contain {
+		width: 640px;
+	}
+	.bg-bits h2 {
+		font-size: 4rem;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.bg-bits .contain {
+		width: auto;
+		padding: 0 50px;
+	}
+	.bg-bits h2 {
+		font-size: 3rem;
+	}
+}

@@ -1,9 +1,6 @@
 @import 'base/_reset';
 @import 'base/_fonts';
 
-@import 'primary/_print';
-@import 'primary/_screen';
-
 $background-color: #102496;
 $background-color-two: #0d104d;
 $secondary-color: #bdbbff;
@@ -15,6 +12,9 @@ $third-color: #ff0b81;
 $text-color: #fff;
 $shape-color: #2823cc;
 $slight: #7380ff;
+
+@import 'primary/_print';
+@import 'primary/_screen';
 
 ::selection { background: #ff0b81; }
 

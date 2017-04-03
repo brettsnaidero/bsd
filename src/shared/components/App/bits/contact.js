@@ -143,6 +143,13 @@ export default class Contact extends Component {
 	render() {
         return (
           <section className="home-contact">
+						{/* BG */}
+						<div className="bg-bits">
+							<div className="contain">
+								<h2>Contact</h2>
+							</div>
+						</div>
+
             {/* Text */}
 			<ISeeYou classesForChild="lineof-text">
 				<div className="row">
@@ -178,7 +185,7 @@ export default class Contact extends Component {
 								</svg>
 							</div>
 						</div>
-						
+
 						{/* Shape 15 */}
 						<div className="shape shape-5">
 							<div className="shape-center">
