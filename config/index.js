@@ -20,7 +20,7 @@ const config = {
   host: getStringEnvVar('SERVER_HOST', 'http://bsd.guywatson.com.au'),
 
   // The port on which the server should run.
-  port: getIntEnvVar('PORT', 1337),
+  port: getIntEnvVar('PORT', 80),
 
   // The port on which the client bundle development server should run.
   clientDevServerPort: getIntEnvVar('CLIENT_DEVSERVER_PORT', 7331),
