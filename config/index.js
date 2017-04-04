@@ -157,11 +157,11 @@ const config = {
   htmlPage: {
     htmlAttributes: { lang: 'en' },
     titleTemplate: 'React, Universally - %s',
-    defaultTitle: 'React, Universally',
+    defaultTitle: 'The Internet Home of Brett Snaidero',
     meta: [
       {
         name: 'description',
-        content: 'A starter kit giving you the minimum requirements for a production ready universal react application.',
+        content: 'Designer and front-end developer.',
       },
       // Default content encoding.
       { name: 'charset', content: 'utf-8' },
