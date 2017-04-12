@@ -86,8 +86,8 @@ const showcaseItems = [
         ]
     },
     {
-        id: 'bowser',
-        title: 'Bowser Browser',
+        id: 'servoscanner',
+        title: 'ServoScanner',
         subtitle: 'Cheap Petrol Finder',
         image: 'img/work/bowser.jpg',
         width: 240,
@@ -96,11 +96,12 @@ const showcaseItems = [
         client: '',
 				expertise: [
 					'Branding',
+					'React',
 					'Full Stack Development'
 				],
-				link: 'http://?.com.au',
+				link: 'https://servoscanner.info/',
         description: (
-            <p>A simple browser app for finding cheap petrol prices nearby, which could save you thousands in petrol costs each year.</p>
+            <p>A simple browser app for finding cheap petrol prices nearby, which could save you hundreds in petrol costs each year.</p>
         ),
         imageList: [
             {
@@ -190,7 +191,8 @@ const showcaseItems = [
         client: 'Internetrix',
 				expertise: [
 					'Branding',
-					'Full Stack Development'
+					'UX Design',
+					'Front End Development'
 				],
         description: (
             <p>I led the front-end development at this growing digital agency from Wollongong.</p>
