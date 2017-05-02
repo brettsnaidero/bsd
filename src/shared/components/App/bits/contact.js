@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 // Utils
+import 'whatwg-fetch';
 import * as _ from 'lodash';
 
 import ISeeYou from './iseeyou';
@@ -117,7 +118,14 @@ export default class Contact extends Component {
 		fetch(this.state.url, {
 			method: 'post',
 			body: JSON.stringify({ data: comment }).replace(/{|}/gi, "")
-		}).then(data => {
+		}).then( res => {
+				if(res.ok) {
+					return res.json();
+				} else {
+					console.log('Network response was not ok.');
+					window.alert('Could not connect, please try again later.');
+				}
+		}).then( data => {
 			console.log('Submitted form', this.state);
 			this.setState({
 				sent: true
