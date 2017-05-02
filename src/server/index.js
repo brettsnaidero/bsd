@@ -16,7 +16,7 @@ import nodemailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
 import bodyParser from 'body-parser';
 
-const OutlookPassword = process.env.OUTLOOK_SECRET;
+const OutlookPassword = process.env.args;
 
 // Create our express based server.
 const app = express();
