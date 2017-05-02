@@ -17,7 +17,7 @@ if (process.env.IS_CLIENT) {
 
 const config = {
   // The host on which the server should run.
-  host: getStringEnvVar('SERVER_HOST', 'localhost'), // localhost
+  host: getStringEnvVar('SERVER_HOST', 'http://brettsnaidero.com/'), // localhost
 
   // The port on which the server should run.
   port: getIntEnvVar('PORT', 1337),
