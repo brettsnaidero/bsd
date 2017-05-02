@@ -2,6 +2,18 @@ import React from 'react';
 import Highlight from 'react-highlight';
 
 const showcaseItems = [
+		{
+				id: 'newsite',
+				title: 'New Website',
+				date: '1st May, 2017',
+				img: 'img/blog/doors/door.jpg',
+				content: (
+						<div>
+							<p className="intro">Hi! Welcome to my new website &mdash; there's still a lot to do, so please stick with me while I fix it up.</p>
+							<p>The site is built on React, replacing my previous CMS based site.</p>
+						</div>
+				)
+		},
     {
         id: 'norman-doors-and-the-web',
         title: 'Frustrating doors: The principles of human centered design',
@@ -136,17 +148,6 @@ const showcaseItems = [
                     {"// Foundation\n@import 'foundation/_foundation';\n@import 'foundation/_global';\n@include foundation-everything;"}
                 </Highlight>
                 <p>Note that you can then go into the <strong>/foundation</strong> subfolder in your SASS folder, and easily remove/change settings as needed.</p>
-            </div>
-        )
-    },
-    {
-        id: 'test',
-        title: 'Test Four',
-        date: '4th March, 2017',
-		img: 'img/blog/doors/door.jpg',
-        content: (
-            <div>
-
             </div>
         )
     },
