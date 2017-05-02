@@ -114,30 +114,40 @@ export default class Contact extends Component {
   }
 
 	handleCommentSubmit(comment) {
-	 $.ajax({
-		 url: this.state.url,
-		 dataType: 'json',
-		 type: 'POST',
-		 data: comment,
-		 success: function(data) {
-			 this.setState({
-				 sent: true
-			 });
-		 }.bind(this),
-		 error: function(xhr, status, err) {
-			 console.error(this.state.url, status, err.toString());
-			 this.setState({
-				sent: true,
-				sendError: true
-		 	});
-		 }.bind(this)
-	 });
 		fetch(this.state.url, {
 			method: 'post',
-			body: JSON.stringify({
-				data: comment
-			}).replace(/{|}/gi, "")
+			body: JSON.stringify({ data: comment }).replace(/{|}/gi, "")
+		}).then(data => {
+			console.log('Submitted form', this.state);
+			this.setState({
+				sent: true
+			});
+		}).catch(error => {
+			console.error(this.state.url, error.toString());
+			this.setState({
+			 sent: true,
+			 sendError: true
+		 });
 		})
+
+	//  $.ajax({
+	// 	 url: this.state.url,
+	// 	 dataType: 'json',
+	// 	 type: 'POST',
+	// 	 data: comment,
+	// 	 success: function(data) {
+	// 		 this.setState({
+	// 			 sent: true
+	// 		 });
+	// 	 }.bind(this),
+	// 	 error: function(xhr, status, err) {
+	// 		 console.error(this.state.url, status, err.toString());
+	// 		 this.setState({
+	// 			sent: true,
+	// 			sendError: true
+	// 	 	});
+	// 	 }.bind(this)
+	//  });
 	}
 
 	render() {

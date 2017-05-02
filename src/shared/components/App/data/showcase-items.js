@@ -5,7 +5,7 @@ const showcaseItems = [
         id: 'mmj',
         title: 'MMJ Real Estate',
         subtitle: 'Real Estate Website',
-        image: 'img/work/mmj.png',
+        image: 'img/work/mmj-banner.jpg',
         width: 360,
         height: 450,
         period: '2016-2017',
