@@ -154,7 +154,7 @@ const showcaseItems = [
         id: 'svg-icon-system',
         title: 'Implementing An SVG Icon System',
         date: '4th April, 2016',
-		img: 'img/work/mmj.png',
+		img: 'img/work/mmj-banner.jpg',
         content: (
             <div>
                 <p className="intro"><strong>Why write about SVG in 2016?</strong> Well I think that although a lot has been said of the benefits of SVG icon systems, there remains a lot of people who still see them as a bit of an unknown. The specifics of how to implement SVG in particular can get some short shrift (although there are some great articles out there). So I thought I'd tell you about one specific use case for SVG, and how to go about implementing that: using <strong>an SVG icon system</strong>, ideally to replace your icon fonts and sprited background-images.</p>
