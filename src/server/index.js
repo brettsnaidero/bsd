@@ -30,7 +30,7 @@ router.post('/', handleSayHello);
 
 function handleSayHello(req, res) {
 		console.log(req.body);
-    console.log(OutlookPassword);
+    console.log(process.env);
     // Not the movie transporter!
     var transporter = nodemailer.createTransport(smtpTransport({
         service: "hotmail",
