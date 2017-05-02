@@ -19,7 +19,7 @@ import bodyParser from 'body-parser';
 const OutlookPassword = process.env.OUTLOOK_SECRET;
 
 // Create our express based server.
-const app = express(); 
+const app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -29,6 +29,7 @@ app.use('/sayHello', router);
 router.post('/', handleSayHello);
 
 function handleSayHello(req, res) {
+		console.log(req.body);
     // Not the movie transporter!
     var transporter = nodemailer.createTransport(smtpTransport({
         service: "hotmail",
@@ -57,8 +58,8 @@ function handleSayHello(req, res) {
 		    } else {
 		        console.log('Message sent: ' + info.response);
 		        res.json({
-					yo: info.response
-				});
+							yo: info.response
+						});
 		    };
 		});
 }

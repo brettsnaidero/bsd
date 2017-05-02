@@ -12,18 +12,18 @@ export default class Contact extends Component {
       super(props);
 
       this.state = {
-			success: false,
-			url: '/sayHello',
-			contactname: '',
-			contactnameError: false,
-			text: '',
-			textError: false,
-			email: '',
-			emailError: false,
-			emailInvalidError: false,
-			sent: false,
-			sending: false,
-			sentError: false
+				success: false,
+				url: '/sayHello',
+				contactname: '',
+				contactnameError: false,
+				text: '',
+				textError: false,
+				email: '',
+				emailError: false,
+				emailInvalidError: false,
+				sent: false,
+				sending: false,
+				sentError: false
       }
   }
 
@@ -115,9 +115,14 @@ export default class Contact extends Component {
   }
 
 	handleCommentSubmit(comment) {
+		console.log(comment);
 		fetch(this.state.url, {
 			method: 'post',
-			body: JSON.stringify({ data: comment }).replace(/{|}/gi, "")
+			headers: {
+		    'Accept': 'application/json, text/plain, */*',
+		    'Content-Type': 'application/json'
+		  },
+			body: JSON.stringify(comment)
 		}).then( res => {
 				if(res.ok) {
 					return res.json();
@@ -137,25 +142,6 @@ export default class Contact extends Component {
 			 sendError: true
 		 });
 		})
-
-	//  $.ajax({
-	// 	 url: this.state.url,
-	// 	 dataType: 'json',
-	// 	 type: 'POST',
-	// 	 data: comment,
-	// 	 success: function(data) {
-	// 		 this.setState({
-	// 			 sent: true
-	// 		 });
-	// 	 }.bind(this),
-	// 	 error: function(xhr, status, err) {
-	// 		 console.error(this.state.url, status, err.toString());
-	// 		 this.setState({
-	// 			sent: true,
-	// 			sendError: true
-	// 	 	});
-	// 	 }.bind(this)
-	//  });
 	}
 
 	render() {
@@ -219,11 +205,11 @@ export default class Contact extends Component {
 								<div className="commentForm">
 									{ this.state.sendError ? (
 										<div className="message failure">
-											Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages :)
+											Sorry, there was an error sending the message. Please find me on Twitter and message me there, to let me know my website sucks and can't sent messages 😊
 										</div>
 									) : (
 										<div className="message success">
-											Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can :)
+											Thanks for your message {this.state.contactname}, I will get back to you as quickly as I can 😊
 										</div>
 									)}
 								</div>
@@ -261,7 +247,22 @@ export default class Contact extends Component {
 							{ this.state.textError ? <div className="message error">Please enter your message</div> : "" }
 							</div>
 		                    <div className="field">
-		                      <input type="submit" value="Send Enquiry" />
+		                      <button disabled={this.state.sending ? true : false} className={ this.state.sent ? 'success' : ( this.state.sending ? 'loading' : ( this.state.sentError ? 'error' : 'ready')) } type="submit">
+														Send Enquiry
+														<svg className="progress" viewBox="0 0 100 100">
+														  <circle className="circle" cx="50" cy="50" r="30" fill="none" />
+														</svg>
+														<svg className="tick" width="70" height="70">
+															<path d="m31.5,46.5l15.3,-23.2" />
+															<path d="m31.5,46.5l-8.5,-7.1" />
+														</svg>
+														<svg className="cross" width="70" height="70">
+															<path d="m35,35l-9.3,-9.3" />
+															<path d="m35,35l9.3,9.3" />
+															<path d="m35,35l-9.3,9.3" />
+															<path d="m35,35l9.3,-9.3" />
+														</svg>
+													</button>
 		                    </div>
 		                  </form>
 										)}

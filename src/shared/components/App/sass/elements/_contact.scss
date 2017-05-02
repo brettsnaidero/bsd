@@ -285,17 +285,16 @@ form {
     }
 
     /* Submit Buttons */
-    input[type="submit"],
-    input[type="button"],
     button {
-		border-radius: 4px;
-		line-height: 60px;
-		padding: 0 32px 0 32px;
-		background: none;
-		color: $text-color;
-		font-size: 20px;
+				border-radius: 4px;
+				line-height: 60px;
+				padding: 0;
+				background: none;
+				background-color: rgba(0,0,0,0);
+				color: $text-color;
+				font-size: 20px;
 
-		border: 2px solid rgba($slight,0.5);
+				border: 2px solid rgba($slight,0.5);
 
         cursor: pointer;
         margin: 12px 0px;
@@ -303,8 +302,13 @@ form {
 
         outline: none;
         float: right;
-        min-width: 180px;
+        width: 220px;
         text-align: center;
+				position: relative;
+				white-space: nowrap;
+				overflow: hidden;
+
+				transition: 1s border ease, 1s width ease, 1s background-color ease;
 
         &:hover,
 				&:focus {
@@ -313,6 +317,64 @@ form {
 					border-color: $main-colour;
         }
     }
+
+		button svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 50px;
+			margin-left: -25px;
+			margin-top: -25px;
+			fill: none;
+			stroke: #FFF;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+
+			opacity: 0;
+			visibility: hidden;
+			transition: 0.3s opacity ease, 0.3s visibility ease;
+		}
+
+		/* Loading */
+		button.loading,
+		button.success,
+		button.error {
+				width: 64px;
+				border-color: rgba(0,0,0,0);
+				background-color: rgba(0,0,0,0.2);
+				text-indent: 260px;
+		}
+
+		button svg.progress circle {
+			animation: 8s loader ease infinite alternate,  2s loader2 linear infinite;
+		  stroke: url(#gradient-pink);
+		  stroke-linecap: round;
+		  stroke-width: 8px;
+		  stroke-dasharray: 94.0955352783px 94.0955352783px;
+		  stroke-dashoffset: 0px;
+		}
+
+		@keyframes loader {
+		  0% {
+		    stroke-dasharray: 84.0955352783px 104.0955352783px;
+		  }
+		  100% {
+		    stroke-dasharray: 178.19107055664062px 10px;
+		  }
+		}
+		@keyframes loader2 {
+		  0% {
+		    stroke-dashoffset: 0px;
+		  }
+		  100% {
+		    stroke-dashoffset: -188.19107055664062px;
+		  }
+		}
+
+		button.loading svg.progress { opacity: 1; visibility: visible; }
+		button.success svg.tick { opacity: 1; visibility: visible; }
+		button.error svg.cross { opacity: 1; visibility: visible; }
 
     /* Reset Buttons */
     input[type="reset"] {
