@@ -16,7 +16,7 @@ import nodemailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
 import bodyParser from 'body-parser';
 
-const OutlookPassword = process.env.OUTLOOK_SECRET;
+const OutlookPassword = process.env.args;
 
 // Create our express based server.
 const app = express();
@@ -30,7 +30,7 @@ router.post('/', handleSayHello);
 
 function handleSayHello(req, res) {
 		console.log(req.body);
-    console.log(OutlookPassword);
+    console.log(process.env);
     // Not the movie transporter!
     var transporter = nodemailer.createTransport(smtpTransport({
         service: "hotmail",
