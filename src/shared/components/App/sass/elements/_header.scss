@@ -452,28 +452,17 @@ header.light nav ul li a {
 }
 header.light .c2a a {
     color: #000;
-    border: 2px solid $secondary-color;
 }
 
-header.light .c2a a:hover,
-header.light .c2a a:focus,
-header.light .c2a a.active {
-	border-color: $third-color;
+header.light .c2a a svg rect.bottom {
+    stroke: $secondary-color;
 }
 
 /* White */
-header.white {
-}
 header.white nav ul li a {
   color: #FFF;
 }
 
-header.white .c2a a {
-    border: 2px solid #FFF;
-}
-
-header.white .c2a a:hover,
-header.white .c2a a:focus,
-header.white .c2a a.active {
-	border-color: $third-color;
+header.white .c2a a svg rect.bottom {
+  stroke: #FFF;
 }
