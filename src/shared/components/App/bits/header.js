@@ -88,13 +88,25 @@ export default class Header extends Component {
 							<LocalLink activeClass="active" to="writing" spy={true} smooth={true} offset={50} duration={500}>Writing</LocalLink>
 						</li>
 					</ul>
-				)} 
+				)}
                 </nav>
                 <div className="c2a">
 					{ this.props.nothome ? (
-						<Link to="/#contact">Let’s chat!</Link>
+						<Link to="/#contact">
+							<svg viewBox="0 0 130 70" width="130" height="70">
+							  <rect className="bottom" x="5" y="5" rx="10" ry="10" width="120" height="60" />
+								<rect className="top" x="5" y="5" rx="10" ry="10" width="120" height="60" />
+							</svg>
+							Let&rsquo;s chat!
+						</Link>
 					) : (
-						<LocalLink activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>Let’s chat!</LocalLink>
+						<LocalLink activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
+							<svg viewBox="0 0 130 70" width="130" height="70">
+							  <rect className="bottom" x="5" y="5" rx="10" ry="10" width="120" height="60" />
+								<rect className="top" x="5" y="5" rx="10" ry="10" width="120" height="60" />
+							</svg>
+							Let’s chat!
+						</LocalLink>
 					)}
                   <button className={"menu-btn" + (this.state.mobileMenuActive ? " open" : "")} onClick={ () => this.toggleMobileMenu() }>
                     Menu

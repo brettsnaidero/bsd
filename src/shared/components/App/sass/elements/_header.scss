@@ -58,10 +58,19 @@ header.stuck {
   }
 
   .c2a a {
-      padding: 8px 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    height: 40px;
+    width: 93px;
+  }
 
-      font-size: 14px;
-    }
+  .c2a a svg {
+  	position: absolute;
+  	top: -10px;
+  	left: -10px;
+  	width: 111.428571429px;
+  	height: 60px;
+  }
 }
 
 header:after {
@@ -214,34 +223,66 @@ header nav ul li a {
 
 /*  */
 header .c2a a {
-    padding: 18px 26px;
+    transform: rotate(5deg);
+    padding: 20px 0;
 
     font-size: 16px;
     display: block;
+
     line-height: 20px;
     text-decoration: none;
     color: #FFFFFF;
     position: relative;
-    // letter-spacing: 0.1em;
+    text-align: center;
     font-weight: bold;
-    border: 2px solid rgba($slight,0.5);
-    border-radius: 3px;
     font-variant-ligatures: none;
     cursor: pointer;
 
     transition: 1s all ease;
+
+		height: 60px;
+		width: 120px;
+
+		@media screen and (max-width: 1000px) {
+		    header .c2a a {
+		        padding: 18px 14px;
+		        letter-spacing: 0;
+		    }
+		}
 }
 
-@media screen and (max-width: 1000px) {
-    header .c2a a {
-        padding: 18px 14px;
-        letter-spacing: 0;
-    }
+header .c2a a svg {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 130px;
+	height: 70px;
+}
+
+header .c2a a svg rect.bottom {
+	stroke: rgba($slight,0.5);
+	stroke-width: 2px;
+  fill: none;
+}
+
+header .c2a a svg rect.top {
+	stroke: $third-color;
+	stroke-width: 2px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 342.427001953125px;
+  stroke-dashoffset: 342.427001953125px;
+  transition: 1s stroke-dasharray linear, 1s stroke-dashoffset linear;
+}
+
+header .c2a a:hover svg rect.top {
+  stroke-dashoffset: 0px;
 }
 
 header .c2a a:hover,
 header .c2a a:focus,
 header .c2a a.active {
+  transform: rotate(0deg);
 	border-color: $third-color;
 }
 
