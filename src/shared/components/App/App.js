@@ -7,7 +7,12 @@ import { CodeSplit } from 'code-split-component';
 
 import './sass/style.scss';
 
+// Pages
+import Home from './Home/home';
+import Blog from './Blog/blog';
+import Work from './Showcase/showcase';
 import NotFound from './NotFound/notfound';
+
 import { safeConfigGet } from '../../utils/config';
 
 import * as _ from 'lodash';
@@ -30,7 +35,7 @@ function App() {
 	        link={safeConfigGet(['htmlPage', 'links'])}
 	        script={safeConfigGet(['htmlPage', 'scripts'])}
 	      >
-          {/* <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; options inline-script" /> */}
+          <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; options inline-script" />
         </Helmet>
 
 	    	<Match
