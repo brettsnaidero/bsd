@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import { CodeSplitProvider, rehydrateState } from 'code-split-component';
 import ReactHotLoader from './components/ReactHotLoader';
 import App from '../shared/components/App';

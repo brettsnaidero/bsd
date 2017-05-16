@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Utils
 import * as _ from 'lodash';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Scroll from 'react-scroll';
 const LocalLink  = Scroll.Link;
 const Element    = Scroll.Element;
