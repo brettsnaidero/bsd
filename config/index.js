@@ -17,7 +17,7 @@ if (process.env.IS_CLIENT) {
 
 const config = {
   // The host on which the server should run.
-  host: getStringEnvVar('SERVER_HOST', 'http://brettsnaidero.com/'), // localhost
+  host: getStringEnvVar('SERVER_HOST', 'http://brettsnaidero.com/'), 
 
   // The port on which the server should run.
   port: getIntEnvVar('PORT', 1337),
@@ -235,6 +235,7 @@ const config = {
           'react-dom',
           'react-helmet',
           'react-router',
+          'react-router-dom'
         ],
 
         // The name of the vendor DLL.

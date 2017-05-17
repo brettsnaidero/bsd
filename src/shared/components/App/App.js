@@ -1,19 +1,21 @@
 import React from 'react';
-import { MatchRoutes, Match, Miss } from 'react-router';
-import { TransitionMotion, spring } from 'react-motion'
+import { Switch, Route } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Helmet from 'react-helmet';
 import { CodeSplit } from 'code-split-component';
 
 import './sass/style.scss';
 
+// Pages
+import Home from './Home/home';
+import Blog from './Blog/blog';
+import Work from './Showcase/showcase';
 import NotFound from './NotFound/notfound';
+
 import { safeConfigGet } from '../../utils/config';
 
 import * as _ from 'lodash';
-
-import showcaseItems from './data/showcase-items.js';
-import blogItems from './data/blog-items.js';
 
 function App() {
   return (
@@ -30,40 +32,36 @@ function App() {
 	        link={safeConfigGet(['htmlPage', 'links'])}
 	        script={safeConfigGet(['htmlPage', 'scripts'])}
 	      >
-          {/* <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; options inline-script" /> */}
+          <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.youtube.com; options inline-script" />
         </Helmet>
 
-	    	<Match
-	    		exactly
-	    		pattern="/"
-	    		render={routerProps =>
-	    			<CodeSplit chunkName="home" modules={{ Home: require('./Home/home') }}>
-	    				{ ({ Home }) => Home && <Home {...routerProps} /> }
-	    			</CodeSplit>
-	    		}
-	    	/>
+        <Route render={({ location }) => (
+          <ReactCSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+          >
+          <Switch key={location.key}>
+    	    	<Route
+    	    		exact
+    	    		path="/"
+    	    		component={Home}
+    	    	/>
 
-        <Match
-	    		exactly
-	    		pattern="/writings/:id"
-	    		render={routerProps =>
-	    			<CodeSplit chunkName="blog" modules={{ Blog: require('./Blog/blog') }}>
-	    				{ ({ Blog }) => Blog && <Blog {...routerProps} /> }
-	    			</CodeSplit>
-	    		}
-	    	/>
+            <Route
+    	    		path="/writings/:id"
+    	    		component={Blog}
+    	    	/>
 
-        <Match
-	    		exactly
-	    		pattern="/work/:id"
-	    		render={routerProps =>
-	    			<CodeSplit chunkName="work" modules={{ Work: require('./Showcase/showcase') }}>
-	    				{ ({ Work }) => Work && <Work {...routerProps} /> }
-	    			</CodeSplit>
-	    		}
-	    	/>
+            <Route
+    	    		path="/work/:id"
+    	    		component={Work}
+    	    	/>
 
-	    	<Miss component={NotFound} />
+    	    	<Route component={NotFound} />
+          </Switch>
+          </ReactCSSTransitionGroup>
+        )}/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { ServerRouter, createServerRenderContext } from 'react-router';
+import { StaticRouter } from 'react-router';
 import { CodeSplitProvider, createRenderContext } from 'code-split-component';
 import Helmet from 'react-helmet';
 import generateHTML from './generateHTML';
@@ -37,9 +37,9 @@ function reactApplicationMiddleware(request, response) {
     return;
   }
 
-  // First create a context for <ServerRouter>, which will allow us to
+  // First create a context for <StaticRouter>, which will allow us to
   // query for the results of the render.
-  const reactRouterContext = createServerRenderContext();
+  const reactRouterContext = {};
 
   // We also create a context for our <CodeSplitProvider> which will allow us
   // to query which chunks/modules were used during the render process.
@@ -48,9 +48,9 @@ function reactApplicationMiddleware(request, response) {
   // Create our React application and render it into a string.
   const reactAppString = renderToString(
     <CodeSplitProvider context={codeSplitContext}>
-      <ServerRouter location={request.url} context={reactRouterContext}>
+      <StaticRouter location={request.url} context={reactRouterContext}>
         <App />
-      </ServerRouter>
+      </StaticRouter>
     </CodeSplitProvider>,
   );
 
@@ -70,27 +70,15 @@ function reactApplicationMiddleware(request, response) {
     codeSplitState: codeSplitContext.getState(),
   });
 
-  // Get the render result from the server render context.
-  const renderResult = reactRouterContext.getResult();
-
-  // Check if the render result contains a redirect, if so we need to set
+  // Check if the react router context contains a redirect url, if so we need to set
   // the specific status and redirect header and end the response.
-  if (renderResult.redirect) {
-    response.status(301).setHeader('Location', renderResult.redirect.pathname);
+  if (reactRouterContext.url) {
+    response.writeHead(302, { Location: reactRouterContext.url });
     response.end();
     return;
   }
 
-  response
-    .status(
-      renderResult.missed
-        // If the renderResult contains a "missed" match then we set a 404 code.
-        // Our App component will handle the rendering of an Error404 view.
-        ? 404
-        // Otherwise everything is all good and we send a 200 OK status.
-        : 200,
-    )
-    .send(html);
+  response.status(200).send(html);
 }
 
 export default (reactApplicationMiddleware);

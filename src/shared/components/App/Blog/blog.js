@@ -27,7 +27,7 @@ export default class WritingsPage extends Component {
 	}
 
 	componentWillMount() {
-		let page = _.find(blogItems, {'id': this.props.params.id});
+		let page = _.find(blogItems, {'id': this.props.match.params.id});
 		this.setState({
 			page: page
 		})

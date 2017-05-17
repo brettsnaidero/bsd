@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 // Utils
 import * as _ from 'lodash';
@@ -37,7 +37,7 @@ export default class WorkPage extends Component {
 		this.setState({
 			loading: true
 		});
-		this.findContent(newProps.params.id);
+		this.findContent(newProps.match.params.id);
 		window.scrollTo(0,0);
 	}
 
@@ -47,7 +47,7 @@ export default class WorkPage extends Component {
 		if (newProps) {
 			id = newProps;
 		} else {
-			id = this.props.params.id;
+			id = this.props.match.params.id;
 		}
 		console.log(id);
 		if (id) {

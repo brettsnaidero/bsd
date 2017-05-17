@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
 
 // Utils
 import * as _ from "lodash";
@@ -67,13 +67,13 @@ export default class Header extends Component {
 					{ this.props.nothome ? (
                   <ul>
                     <li>
-						<Link to="/#profile">Profile</Link>
+						<NavLink to="/#profile">Profile</NavLink>
 					</li>
 					<li>
-						<Link to="/#work">Work</Link>
+						<NavLink to="/#work">Work</NavLink>
 					</li>
                     <li>
-						<Link to="/#writing">Writing</Link>
+						<NavLink to="/#writing">Writing</NavLink>
 					</li>
                   </ul>
 						) : (
