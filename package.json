@@ -3,9 +3,6 @@
   "version": "12.0.0",
   "description": "Portfolio",
   "main": "build/server/index.js",
-  "engines": {
-    "node": "6.9.5"
-  },
   "scripts": {
     "preinstall": "node tools/scripts/preinstall",
     "clean": "babel-node tools/scripts/clean",
